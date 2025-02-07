@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moore&#39;s Falls Historical Plaques Eagle Scout Project</title>
+      <link>http://localhost:1313/post/community-work/moores-falls/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/community-work/moores-falls/</guid>
+      <description>&lt;p&gt;Every town has their stories of how they were created and developed over the years.&#xA;In my hometown of Litchfield, New Hampshire, I had the opportunity to re-discover that history and&#xA;create write about it for visitors to see.&lt;/p&gt;&#xA;&lt;p&gt;The project consisted of five pages, or plaques, spread through the trail loop slowly explaining the&#xA;historical significance of the &lt;a href=&#34;https://www.google.com/maps/place/Moore%27s&amp;#43;Falls&amp;#43;Conservation&amp;#43;Area/@42.889804,-71.4576986,802m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89e24cbf7350056d:0xed373f3adc07f897!8m2!3d42.8898001!4d-71.4551237!16s%2Fg%2F11c528d249?entry=ttu&amp;amp;g_ep=EgoyMDI1MDIwNC4wIKXMDSoASAFQAw%3D%3D&#34;&gt;Moore&amp;rsquo;s Falls Trail&lt;/a&gt;&#xA;over the course of the hike. In retrospect, the&#xA;original writings were a bit long considering the length of the trail, but it was a culmination of&#xA;research between multiple town historians and &lt;a href=&#34;http://www.middlesexcanal.org/&#34;&gt;The Middlesex Canal Association&lt;/a&gt;,&#xA;a historical group dedicated to preserving the history of the canal system Moore&amp;rsquo;s Falls was known for historically.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/community-work/ap-comp-sci-a-ta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/community-work/ap-comp-sci-a-ta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/current-projects/thesis-selective-pose-detection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/current-projects/thesis-selective-pose-detection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/education/snhu-comp-sci/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/education/snhu-comp-sci/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/past-projects/3tene-ahk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/3tene-ahk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/past-projects/eventified/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/eventified/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/past-projects/pond-jumper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/pond-jumper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/past-projects/roundhouse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/roundhouse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/past-projects/yabi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/yabi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/software-libraries/flutter-m-ble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/flutter-m-ble/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Js on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/tags/js/</link>
+    <description>Recent content in Js on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moore&#39;s Falls Historical Plaques Eagle Scout Project</title>
+      <link>http://localhost:1313/post/community-work/moores-falls/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/community-work/moores-falls/</guid>
+      <description>&lt;p&gt;Every town has their stories of how they were created and developed over the years.&#xA;In my hometown of Litchfield, New Hampshire, I had the opportunity to re-discover that history and&#xA;create write about it for visitors to see.&lt;/p&gt;&#xA;&lt;p&gt;While working on the project, I gained&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
