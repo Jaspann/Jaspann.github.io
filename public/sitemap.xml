@@ -68,7 +68,25 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/past-projects/chord-llama/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/past-projects/eventified/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/past-projects/flight-sure/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/past-projects/multi-repo-coding-assistant/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
