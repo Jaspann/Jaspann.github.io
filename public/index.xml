@@ -24,10 +24,10 @@
         <description>&lt;p&gt;The intention of this site is to provide a place where I can record the past projects I worked on.
 It&amp;rsquo;s meant to be somewhere between a portfolio and a retrospective blog, where I discuss what I
 worked on from a technical perspective and show off the design process behind the features that were added.&lt;/p&gt;
-&lt;p&gt;The date of the post the approximate date I worked I finished the project, not the date of writing.&lt;/p&gt;
+&lt;p&gt;The date of the post the approximate date I finished the project, not the date of writing.&lt;/p&gt;
 &lt;p&gt;Here is a list of all of the post I have planned:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Moore&amp;rsquo;s Falls Eagle Scout Project&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Moore&amp;rsquo;s Falls Eagle Scout Project&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; APCSA TA&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Computer Science Club VP&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FreeMoveVR&lt;/li&gt;
@@ -37,6 +37,9 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Comp Sci Education&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene ahk&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Eventified&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FlightSure&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ChordLlama&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Multi-Repo Coding Assistant&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Pond Jumper&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; RoundHouse&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Yabi&lt;/li&gt;
@@ -57,17 +60,19 @@ worked on from a technical perspective and show off the design process behind th
       
         <description>&lt;p&gt;Every town has their stories of how they were created and developed over the years.
 In my hometown of Litchfield, New Hampshire, I had the opportunity to re-discover that history and
-create write about it for visitors to see.&lt;/p&gt;
+create historical plaques about it for visitors to see.&lt;/p&gt;
 &lt;p&gt;The project consisted of five pages, or plaques, spread through the trail loop slowly explaining the
 historical significance of the &lt;a href=&#34;https://www.google.com/maps/place/Moore%27s&amp;#43;Falls&amp;#43;Conservation&amp;#43;Area/@42.889804,-71.4576986,802m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89e24cbf7350056d:0xed373f3adc07f897!8m2!3d42.8898001!4d-71.4551237!16s%2Fg%2F11c528d249?entry=ttu&amp;amp;g_ep=EgoyMDI1MDIwNC4wIKXMDSoASAFQAw%3D%3D&#34;&gt;Moore&amp;rsquo;s Falls Trail&lt;/a&gt;
 over the course of the hike.&lt;/p&gt;
-&lt;p&gt;This project consisted of several factors. Funding for the project needed to be secured via work with local businesses and the local news paper.
-Stakeholders needed updates on the project and proof of work to approve the necessary steps. The most notable stakeholder being the
-&lt;a href=&#34;https://www.facebook.com/litchfieldnhconservationcommission/&#34;&gt;Litchfield Conservation Commission&lt;/a&gt;, a governmental board of the town
-responsible for the trails and the group that originally requested the project. Finally it required organizing and leading a team of
+&lt;p&gt;This project consisted of several factors. Funding for the project needed to be secured via work with local businesses and the local newspaper.
+Stakeholders needed updates on the project and proof of work to approve the necessary steps. The most notable stakeholder was
+&lt;a href=&#34;https://www.facebook.com/litchfieldnhconservationcommission/&#34;&gt;The Litchfield Conservation Commission&lt;/a&gt;, a governmental board of the town
+responsible for the trails and the group that originally requested the project. Finally, it required organizing and leading a team of
 scouts in building and setting the plaques across the trail.&lt;/p&gt;
 &lt;p&gt;In retrospect, the original writings were a bit long considering the length of the trail, but it was a culmination of
-research between multiple town historians, including Chuck Mower, The book &lt;a href=&#34;https://www.google.com/books/edition/The_Incredible_Ditch/DmGCsEpGExQC&#34;&gt;The Incredible Ditch: A Bicentennial History of the Middlesex Canal&lt;/a&gt; and most notably &lt;a href=&#34;http://www.middlesexcanal.org/&#34;&gt;The Middlesex Canal Association&lt;/a&gt;,
+research between multiple town historians, including Chuck Mower, The book
+&lt;a href=&#34;https://www.google.com/books/edition/The_Incredible_Ditch/DmGCsEpGExQC&#34;&gt;The Incredible Ditch: A Bicentennial History of the Middlesex Canal&lt;/a&gt;,
+and most notably &lt;a href=&#34;http://www.middlesexcanal.org/&#34;&gt;The Middlesex Canal Association&lt;/a&gt;,
 a historical group and museum dedicated to preserving the history of the canal system on the Merrimack River.&lt;/p&gt;
 &lt;p&gt;Additionally, I would like to thank &lt;a href=&#34;https://lccpnh.org/scouts-bsa/&#34;&gt;BSA Troop 11&lt;/a&gt;, as the project would not have been possible without them.&lt;/p&gt;
 

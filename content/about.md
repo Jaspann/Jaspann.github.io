@@ -14,10 +14,10 @@ The intention of this site is to provide a place where I can record the past pro
 It's meant to be somewhere between a portfolio and a retrospective blog, where I discuss what I 
 worked on from a technical perspective and show off the design process behind the features that were added.
 
-The date of the post the approximate date I worked I finished the project, not the date of writing.
+The date of the post the approximate date I finished the project, not the date of writing.
 
 Here is a list of all of the post I have planned:
-- [ ] Moore's Falls Eagle Scout Project
+- [x] Moore's Falls Eagle Scout Project
 - [ ] APCSA TA
 - [ ] SNHU Computer Science Club VP
 - [ ] FreeMoveVR
@@ -27,6 +27,9 @@ Here is a list of all of the post I have planned:
 - [ ] SNHU Comp Sci Education
 - [ ] 3tene ahk
 - [ ] Eventified
+- [ ] FlightSure
+- [ ] ChordLlama
+- [ ] Multi-Repo Coding Assistant
 - [ ] Pond Jumper
 - [ ] RoundHouse
 - [ ] Yabi
