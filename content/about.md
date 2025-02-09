@@ -1,7 +1,6 @@
 ---
 title: "About"
-# date: 2017-08-20T21:38:52+08:00
-lastmod: 2025-02-06
+lastmod: 2025-02-09
 menu: "main"
 weight: 50
 
@@ -16,7 +15,7 @@ worked on from a technical perspective and show off the design process behind th
 
 The date of the post the approximate date I finished the project, not the date of writing.
 
-Here is a list of all of the post I have planned:
+Here is a list of all of the posts I have planned:
 - [x] Moore's Falls Eagle Scout Project
 - [ ] APCSA TA
 - [ ] SNHU Computer Science Club VP

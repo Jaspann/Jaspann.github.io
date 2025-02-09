@@ -9,7 +9,7 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Thu, 06 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,7 @@
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
-      <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/about/</guid>
       
@@ -25,7 +25,7 @@
 It&amp;rsquo;s meant to be somewhere between a portfolio and a retrospective blog, where I discuss what I
 worked on from a technical perspective and show off the design process behind the features that were added.&lt;/p&gt;
 &lt;p&gt;The date of the post the approximate date I finished the project, not the date of writing.&lt;/p&gt;
-&lt;p&gt;Here is a list of all of the post I have planned:&lt;/p&gt;
+&lt;p&gt;Here is a list of all of the posts I have planned:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Moore&amp;rsquo;s Falls Eagle Scout Project&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; APCSA TA&lt;/li&gt;
@@ -75,6 +75,7 @@ research between multiple town historians, including Chuck Mower, The book
 and most notably &lt;a href=&#34;http://www.middlesexcanal.org/&#34;&gt;The Middlesex Canal Association&lt;/a&gt;,
 a historical group and museum dedicated to preserving the history of the canal system on the Merrimack River.&lt;/p&gt;
 &lt;p&gt;Additionally, I would like to thank &lt;a href=&#34;https://lccpnh.org/scouts-bsa/&#34;&gt;BSA Troop 11&lt;/a&gt;, as the project would not have been possible without them.&lt;/p&gt;
+
 
 
 &lt;object

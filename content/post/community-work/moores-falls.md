@@ -2,7 +2,8 @@
 title: "Moore's Falls Historical Plaques Eagle Scout Project"
 description: ""
 tags: []
-date: "2018-10-01"
+publishdate: 2018-10-01
+lastmod: 2025-02-09
 categories: [
     "community-work",
 ]

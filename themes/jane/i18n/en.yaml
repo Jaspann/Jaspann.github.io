@@ -65,7 +65,7 @@
   translation: Author
 
 - id: lastMod
-  translation: LastMod
+  translation: Modified
 
 - id: markdown
   translation: Markdown
