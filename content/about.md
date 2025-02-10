@@ -17,7 +17,7 @@ The date of the post the approximate date I finished the project, not the date o
 
 Here is a list of all of the posts I have planned:
 - [x] Moore's Falls Eagle Scout Project
-- [ ] APCSA TA
+- [x] APCSA TA
 - [ ] SNHU Computer Science Club VP
 - [ ] FreeMoveVR
 - [ ] SJSU MS Thesis

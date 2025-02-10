@@ -28,7 +28,7 @@ worked on from a technical perspective and show off the design process behind th
 &lt;p&gt;Here is a list of all of the posts I have planned:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Moore&amp;rsquo;s Falls Eagle Scout Project&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; APCSA TA&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; APCSA TA&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Computer Science Club VP&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FreeMoveVR&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS Thesis&lt;/li&gt;
