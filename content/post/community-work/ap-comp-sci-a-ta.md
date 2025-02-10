@@ -9,9 +9,10 @@ categories: [
 ]
 ---
 
+*By my senior year in high school, I had nearly complete freedom to do what I wanted,*
+*so I chose to help teach programming to my friends.*
+
 ## Background
-By my senior year in high school, I had nearly complete freedom to do what I wanted, 
-so I chose to help teach programming to my friends.
 
 Most people can probably agree that high school can be as easy as you want it to be. 
 In my school, I needed a total of 24 credits. There were eight class slots per year. 

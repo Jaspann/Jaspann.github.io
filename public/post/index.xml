@@ -12,18 +12,32 @@
     <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>3tene AutoHotKey</title>
+      <link>http://localhost:1313/post/past-projects/3tene-ahk/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/3tene-ahk/</guid>
+      <description>&lt;p&gt;Allowing V-tubers to express themselfs though hotkeys.&lt;/p&gt;&#xA;&lt;p&gt;tests test st&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AP Computer Science A Teacher&#39;s Assistant</title>
+      <link>http://localhost:1313/post/community-work/ap-comp-sci-a-ta/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/community-work/ap-comp-sci-a-ta/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;By my senior year in high school, I had nearly complete freedom to do what I wanted,&#xA;so I chose to help teach programming to my friends.&lt;/p&gt;&#xA;&lt;p&gt;Most people can probably agree that high school can be as easy as you want it to be.&#xA;In my school, I needed a total of 24 credits. There were eight class slots per year.&#xA;One of those slots was often taken up by a free block, so the average student often&#xA;would gain seven a semester. Even if you complexly fail a class every semester,&#xA;you would still have six credits a year, multiplied by four years will give you the&#xA;24 credits needed to graduate. If you do well in school, you could easily skip the&#xA;free block and have eight credits a year, which means you would be theoretically able&#xA;to graduate a whole year early. Anyone that was that smart though would spend time&#xA;working on AP classes to get a head start in college.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pond Jumper</title>
+      <link>http://localhost:1313/post/past-projects/pond-jumper/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/pond-jumper/</guid>
+      <description>&lt;p&gt;My First Large Project: an Arcade Game for Smart Phones.&lt;/p&gt;&#xA;&lt;p&gt;Looking back at how I first learned software development, I feel very fortunate to have taken the path I did.&#xA;In my junior year of high school I took &lt;a href=&#34;https://apstudents.collegeboard.org/courses/ap-computer-science-a&#34;&gt;AP Computer Science A&lt;/a&gt;,&#xA;which was taught extremely thoroughly on &lt;a href=&#34;https://vlacs.org/&#34;&gt;VLACS&lt;/a&gt; and&#xA;is probably the best course I took in high school despite it being online. My senior year I needed to do a senior&#xA;project, and for this, I decided to re-implement an idea I had made previously, reimagining it using &lt;a href=&#34;https://unity.com/&#34;&gt;Unity&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Moore&#39;s Falls Historical Plaques Eagle Scout Project</title>
       <link>http://localhost:1313/post/community-work/moores-falls/</link>
       <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/community-work/moores-falls/</guid>
       <description>&lt;p&gt;Every town has their stories of how they were created and developed over the years.&#xA;In my hometown of Litchfield, New Hampshire, I had the opportunity to re-discover that history and&#xA;create historical plaques about it for visitors to see.&lt;/p&gt;&#xA;&lt;p&gt;The project consisted of five pages, or plaques, spread through the trail loop slowly explaining the&#xA;historical significance of the &lt;a href=&#34;https://www.google.com/maps/place/Moore%27s&amp;#43;Falls&amp;#43;Conservation&amp;#43;Area/@42.889804,-71.4576986,802m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89e24cbf7350056d:0xed373f3adc07f897!8m2!3d42.8898001!4d-71.4551237!16s%2Fg%2F11c528d249?entry=ttu&amp;amp;g_ep=EgoyMDI1MDIwNC4wIKXMDSoASAFQAw%3D%3D&#34;&gt;Moore&amp;rsquo;s Falls Trail&lt;/a&gt;&#xA;over the course of the hike.&lt;/p&gt;&#xA;&lt;p&gt;This project consisted of several factors. Funding for the project needed to be secured via work with local businesses and the local newspaper.&#xA;Stakeholders needed updates on the project and proof of work to approve the necessary steps. The most notable stakeholder was&#xA;&lt;a href=&#34;https://www.facebook.com/litchfieldnhconservationcommission/&#34;&gt;The Litchfield Conservation Commission&lt;/a&gt;, a governmental board of the town&#xA;responsible for the trails and the group that originally requested the project. Finally, it required organizing and leading a team of&#xA;scouts in building and setting the plaques across the trail.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/community-work/ap-comp-sci-a-ta/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/community-work/ap-comp-sci-a-ta/</guid>
-      <description></description>
     </item>
     <item>
       <title></title>
@@ -37,13 +51,6 @@
       <link>http://localhost:1313/post/education/snhu-comp-sci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/education/snhu-comp-sci/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/past-projects/3tene-ahk/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/3tene-ahk/</guid>
       <description></description>
     </item>
     <item>
@@ -72,13 +79,6 @@
       <link>http://localhost:1313/post/past-projects/multi-repo-coding-assistant/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/past-projects/multi-repo-coding-assistant/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/past-projects/pond-jumper/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/pond-jumper/</guid>
       <description></description>
     </item>
     <item>

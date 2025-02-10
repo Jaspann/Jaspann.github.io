@@ -23,6 +23,34 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/past-projects/3tene-ahk/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/community-work/ap-comp-sci-a-ta/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/best-practices/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/c-sharp/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-02-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -37,14 +65,57 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/community-work/moores-falls/</loc>
+    <loc>http://localhost:1313/tags/google-play/</loc>
     <lastmod>2025-02-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/community-work/ap-comp-sci-a-ta/</loc>
+    <loc>http://localhost:1313/tags/java/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/leadership/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/past-projects/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/past-projects/pond-jumper/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/unity/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/community-work/moores-falls/</loc>
+    <lastmod>2025-02-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -57,12 +128,6 @@
   
   <url>
     <loc>http://localhost:1313/post/education/snhu-comp-sci/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/past-projects/3tene-ahk/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -92,12 +157,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/past-projects/pond-jumper/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/post/past-projects/roundhouse/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -117,12 +176,6 @@
   
   <url>
     <loc>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

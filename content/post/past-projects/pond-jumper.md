@@ -9,7 +9,7 @@ categories: [
 ]
 ---
 
-My First Large Project: an Arcade Game for Smart Phones.
+*My First Large Project: an Arcade Game for Smart Phones.*
 
 Looking back at how I first learned software development, I feel very fortunate to have taken the path I did.
 In my junior year of high school I took [AP Computer Science A](https://apstudents.collegeboard.org/courses/ap-computer-science-a), 
