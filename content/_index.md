@@ -6,6 +6,7 @@ introductionWidget:
   title: William Parker
   description: |
     Software developer passionate about innovative solutions across platforms and technologies.
+    
     Publish Date is the date of the completed project, not the date of writing.
 
     The site is a work in progress. I currently have **16** pages in draft and **3** complete.
