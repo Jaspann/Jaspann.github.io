@@ -107,10 +107,10 @@
       <li class="menu-item">
         {{ with .Site.GetPage "home" -}}
         {{- with .OutputFormats.Get "RSS" -}}
-        <a class="menu-item-link" href="{{ .Permalink }}" rel="noopener {{ .Rel }}" type="{{ .MediaType.Type }}"
-          title="rss" target="_blank">
+        <a class="menu-item-link" href="https://github.com/Jaspann" rel="noopener {{ .Rel }}"
+          title="GitHub" target="_blank">
           {{ partial "icons/icon" (dict
-          "path" "icons/header/rss.svg"
+          "path" "icons/social/github.svg"
           "className" "icon--rss"
           ) }}
         </a>
