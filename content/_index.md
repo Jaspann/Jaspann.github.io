@@ -7,8 +7,8 @@ introductionWidget:
   description: |
     Software developer passionate about innovative solutions across platforms and technologies.
 
-    The site is a work in progress. I currently have **18** pages in draft and **1** complete.
-  avatar: /WilliamParker.png
+    The site is a work in progress. I currently have **17** pages in draft and **2** complete.
+  avatar: /william_parker.png
   showSocial: true
 
 postWidget:

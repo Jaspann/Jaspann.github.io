@@ -31,4 +31,4 @@ a historical group and museum dedicated to preserving the history of the canal s
 
 Additionally, I would like to thank [BSA Troop 11](https://lccpnh.org/scouts-bsa/), as the project would not have been possible without them. 
 
-{{< pdf src="/MooresFallsCombined.pdf" width="100%" height="800px" >}}
+{{< pdf src="/community-work/moores-falls/moores_falls_combined.pdf" width="100%" height="800px" >}}
