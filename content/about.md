@@ -24,7 +24,7 @@ Here is a list of all of the posts I have planned:
 - [ ] Unified Live Chat
 - [ ] SJSU MS AI Education
 - [ ] SNHU Comp Sci Education
-- [ ] 3tene ahk
+- [x] 3tene ahk
 - [ ] Eventified
 - [ ] FlightSure
 - [ ] ChordLlama

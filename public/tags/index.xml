@@ -12,6 +12,34 @@
     <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AutoHotKey</title>
+      <link>http://localhost:1313/tags/autohotkey/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/autohotkey/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bodge</title>
+      <link>http://localhost:1313/tags/bodge/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/bodge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pose Estimation</title>
+      <link>http://localhost:1313/tags/pose-estimation/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/pose-estimation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>http://localhost:1313/tags/windows/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Best Practices</title>
       <link>http://localhost:1313/tags/best-practices/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>

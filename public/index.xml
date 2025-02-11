@@ -35,7 +35,7 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unified Live Chat&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS AI Education&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Comp Sci Education&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene ahk&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene ahk&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Eventified&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FlightSure&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ChordLlama&lt;/li&gt;
@@ -47,6 +47,94 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Google Mediapipe Pose Detection&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Arity Android Engineer Intern&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>3tene AutoHotKey</title>
+      <link>http://localhost:1313/post/past-projects/3tene-autohotkey/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/3tene-autohotkey/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;Allowing VTubers to express themselves through global hotkeys.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;finding-vtubing-and-3tene&#34;&gt;Finding VTubing and 3tene&lt;/h2&gt;
+&lt;p&gt;Once the coronavirus pandemic hit and society was in lockdown, I started watching more Twitch.
+Around this time, VTubing was taking off, as people could remain semi-anonymous online while
+attempting to grow a following on video-based platforms. The concept was in good fun and not too serious
+as you would expect from a mildly popular casual entertainment genre. This was my first look at human
+positional tracking systems, and I was impressed with the underlying technology. The problem often was in
+the feature set of the applications used for this growing genre of entertainment, where key features I
+would expect to find in popularly recommended apps seemed to be missing for the technology to
+be used more seriously.&lt;/p&gt;
+&lt;p&gt;The app I grew affectionate towards was &lt;a href=&#34;https://3tene.com/&#34;&gt;3tene&lt;/a&gt;. 3tene was primarily meant for facial
+tracking at the time and seemed to have a mix of customizability and community support. When I watched VTubers,
+I noticed that the facial expressions sometimes changed with what they were saying, and I wanted to do
+something like that in 3tene. While the feature existed in the app, I was disappointed that as soon as I
+clicked on another window I could no longer use the shortcut to change my emotion. As a relatively new programmer,
+I wanted to see if I could solve this problem.&lt;/p&gt;
+&lt;h2 id=&#34;solving-with-autohotkey&#34;&gt;Solving With AutoHotKey&lt;/h2&gt;
+&lt;p&gt;The first thought I would expect most people to have comes down to: &amp;ldquo;Windows says &amp;lsquo;No&amp;rsquo; and 3tene says &amp;lsquo;No&amp;rsquo; so you
+can&amp;rsquo;t program your way out of it.&amp;rdquo; That is a pretty fair response, as I can&amp;rsquo;t edit either of these pieces of software
+myself, and creating a stand-alone app, which is all I knew how to do, does nothing in this problem. I only knew Java
+and Unity, and nothing that I had learned in school felt like it could help me in any way. Thinking about
+how to solve the problem, an old Tom Scott video came into mind for how to create duct-tape solutions in Windows.
+&lt;a href=&#34;https://youtu.be/lIFE7h3m40U&#34;&gt;The Art of the Bodge: How I Made The Emoji Keyboard&lt;/a&gt; seemed to use
+&lt;a href=&#34;https://www.autohotkey.com/&#34;&gt;AutoHotKey&lt;/a&gt; (AHK) for a similar type of otherwise impossible solution I was looking for.
+There was good documentation for everything I could need and there was enough of a user base to find all of the questions I had online.&lt;/p&gt;
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+&lt;p&gt;As a novice programmer, I searched through Google to find something in AHK that could send keystrokes from anywhere on the
+desktop into an application. The solutions online often did not work, as &lt;code&gt;ControlSend&lt;/code&gt; did not send the update to 3tene
+unless the window was first focused. 3tene didn&amp;rsquo;t like the num pad much, which was annoying because that was how I assumed most
+users would control their avatar. I found a working solution though over the course of a day or two and simply copied and pasted the
+five lines a dozen times over to create a key bind for each number on the num pad. The solution worked, and that&amp;rsquo;s all
+that needed to matter as a new developer.&lt;/p&gt;
+&lt;h2 id=&#34;publishing&#34;&gt;Publishing&lt;/h2&gt;
+&lt;p&gt;Once I wrote the script and verified that everything worked, I posted about it on&lt;br&gt;
+&lt;a href=&#34;https://www.reddit.com/r/VirtualYoutubers/comments/ikxoq1/solution_to_using_hotkeys_without_focus_on_3tene/&#34;&gt;r/VirtualYoutubers&lt;/a&gt;
+and 3tene&amp;rsquo;s &lt;a href=&#34;https://steamcommunity.com/app/871170/discussions/0/2945872608881921166/&#34;&gt;Steam Page&lt;/a&gt;. I got a few upvotes and
+comments saying thanks, and I was happy that someone else was benefiting from what I made.&lt;/p&gt;
+&lt;p&gt;A few months later, I found out that a YouTube video by Blossom Baphomet had made a tutorial on my script.
+To my surprise, the video has garnered over 1.7 thousand views since its release,
+exceeding all of my expectations for its reach when I first created it.&lt;/p&gt;
+&lt;p&gt;Blossom Baphomet delisted her videos on her channel,
+but I was granted permission to link the video for this post.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/OO6NMm2qoB8?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;retrospective&#34;&gt;Retrospective&lt;/h2&gt;
+&lt;p&gt;As this was the first software project I published on GitHub, I had some difficulties. The biggest issue I see looking
+back on the project was the README file, as I treated it more like a dev log + instructional essay rather than a clear
+and concise document for readers. I also should have tried harder for the script to be more user-friendly.
+While the code is not long, users needed to input the shortcuts they want directly into the script,
+and the code block needed to be copied each time the user wanted to add a new emotion to their character.
+I should have made the code block into a function, and making the variables the user inputs into
+a single data structure to manipulate.&lt;/p&gt;
+&lt;p&gt;As I had effectively been self-taught via online classes and was completely unaware of coding outside of the
+Eclipse Editor and the Unity engine, this project greatly expanded what I saw to be possible with programming.
+Looking back, it was likely very beneficial to my outlook on software development that such a unique
+problem and solution was the my first published project. It allowed me to be much more innovative when
+creating project ideas, which in my opinion shows in the novelties of RoundHouse, Unified Live Chat, and FreeMoveVR.&lt;/p&gt;
+&lt;h2 id=&#34;rewrite&#34;&gt;Rewrite&lt;/h2&gt;
+&lt;p&gt;As part of this post, I decided I wanted to re-write the script with these edits in mind and see if my
+original code even worked on modern software. Since its release, Windows 11 came out, AHK v2.0 was released,
+and 3tene had many small updates over the years. When I tested it on AHK v1.1, to my surprise it actually
+worked completely! AHK and Windows both pride themselves on backward completely, and there were never any
+big overhauls in 3tene. I still wanted to make my changes so I started working on a AHK v2.0 version of the script.&lt;/p&gt;
+&lt;p&gt;To start the re-write, the list of shortcuts was turned into a map, where users only needed to change one line to add their
+key binds rather than copy and paste five lines and edit small components inside the code block. I added
+some additional examples in the comments after the map for non-technical users in case they wanted to use the control, alt,
+or shift in their key binds. Then, it was as simple as creating a function that directs input into the
+window and sends the appropriate button, and then creating a for loop to apply the function to each hotkey in the map.&lt;/p&gt;
+&lt;p&gt;I wanted to make sure that my README instructions also improved, so after re-writing, I had a non-technical friend
+read over it and try to follow it. My friend may have been a bit &lt;em&gt;too&lt;/em&gt; non-technical, but from the exercise,
+we cleaned up some ambiguities in the instructions. Additionally, a popup was added when the user enabled or disabled
+the script for visual feedback that it was working.&lt;/p&gt;
+&lt;p&gt;This is the first real project I made intended for others to use, and despite its size,
+it holds a special place in my heart and defines how I approach software development to this day.&lt;/p&gt;
+&lt;p&gt;The repo is available at &lt;a href=&#34;https://github.com/Jaspann/3tene-AutoHotKey&#34;&gt;https://github.com/Jaspann/3tene-AutoHotKey&lt;/a&gt;.&lt;/p&gt;
 </description>
       
     </item>

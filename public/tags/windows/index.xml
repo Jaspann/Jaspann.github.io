@@ -13,10 +13,10 @@
     <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3tene AutoHotKey</title>
-      <link>http://localhost:1313/post/past-projects/3tene-ahk/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/3tene-ahk/</guid>
-      <description>&lt;p&gt;Allowing VTubers to express themselves though emote hotkeys.&lt;/p&gt;</description>
+      <link>http://localhost:1313/post/past-projects/3tene-autohotkey/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/3tene-autohotkey/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Allowing VTubers to express themselves though emotion hotkeys.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;finding-vtubing-and-3tene&#34;&gt;Finding VTubing and 3tene&lt;/h2&gt;&#xA;&lt;p&gt;Once the coronavirus pandemic hit and society was in lock down, I started watching more Twitch.&#xA;Around this time was when VTubers were taking off, as people could remain semi-anonymous online while&#xA;attempting to grow a following on video based platforms. The concept was in good fun and not too serious&#xA;as you would expect from a mildly popular casual entertainment genre. This was my fist look at human&#xA;positional tracking systems, and I came to the conclusion that while the underlying technology was good,&#xA;some key features I would expect seemed to be missing from apps for people to use this seriously.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
