@@ -5,7 +5,7 @@ tags: ["AutoHotKey", "Windows", "Pose Estimation", "Bodge"]
 publishdate: 2020-09-01
 lastmod: 2025-02-09
 categories: [
-    "past-projects",
+    "ai-projects",
 ]
 ---
 

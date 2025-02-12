@@ -5,7 +5,7 @@ tags: ["C Sharp", "Unity", "Google Play"]
 publishdate: 2020-03-01
 lastmod: 2025-02-09
 categories: [
-    "past-projects",
+    "mobile-projects",
 ]
 ---
 

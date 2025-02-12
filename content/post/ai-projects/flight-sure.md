@@ -5,7 +5,7 @@ tags: [Python, Machine Learning, Gradio, APIs]
 publishdate: 2024-05-01
 lastmod: 2025-02-11
 categories: [
-    "past-projects",
+    "ai-projects",
 ]
 ---
 

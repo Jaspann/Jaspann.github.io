@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai-Projects on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/categories/ai-projects/</link>
+    <description>Recent content in Ai-Projects on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai-projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FlightSure</title>
+      <link>http://localhost:1313/post/past-projects/flight-sure/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/flight-sure/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Using Machine Learning to Find the Chance a Flight is on Time.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I had recently returned to San Jose after visiting my family across the country.&#xA;While waiting at Logan Airport in Boston, I was watching the snowfall and wondered&#xA;if it would delay my flight. It had just started and light snow is a normal occurrence for&#xA;the area, so it was unlikely but possible. I then considered San Jose&amp;rsquo;s Airport. While they have&#xA;different weather they need to account for, there is no infrastructure in place for even&#xA;light snow. In addition, many drivers would not know how to handle slippery roads, which&#xA;would probably cause significant problems across the city.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

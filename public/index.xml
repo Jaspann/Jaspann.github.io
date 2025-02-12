@@ -34,14 +34,14 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS Thesis&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unified Live Chat&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS AI Education&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;em&gt;SNHU Comp Sci Education&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene ahk&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Comp Sci Education&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene AHK&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Eventified&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;FlightSure&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ChordLlama&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Multi-Repo Coding Assistant&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FlightSure&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;ChordLlama&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Multi-Repo Coding Assistant&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Pond Jumper&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;em&gt;RoundHouse&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; RoundHouse&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Yabi&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Flutter M BLE&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Google Mediapipe Pose Detection&lt;/strong&gt;&lt;/li&gt;
@@ -53,10 +53,10 @@ worked on from a technical perspective and show off the design process behind th
     
     <item>
       <title>FlightSure</title>
-      <link>http://localhost:1313/post/past-projects/flight-sure/</link>
+      <link>http://localhost:1313/post/ai-projects/flight-sure/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/flight-sure/</guid>
+      <guid>http://localhost:1313/post/ai-projects/flight-sure/</guid>
       
         <description>&lt;p&gt;&lt;em&gt;Using Machine Learning to Find the Chance a Flight is on Time.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -84,7 +84,7 @@ Looking into National Aviation System Delays further, weather makes up almost ha
 While there are clearly several other factors that can cause flights to be delayed, predicting based on weather
 seemed like the best predictor we could realistically use without insider knowledge of internal systems.&lt;/p&gt;
 
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
+
 &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
 &lt;figure  class=&#34;bordered-image&#34;  itemprop=&#34;associatedMedia&#34;
   itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
@@ -188,10 +188,10 @@ I have the work I did here in the back of my mind as reference for how to solve 
     
     <item>
       <title>3tene AutoHotKey</title>
-      <link>http://localhost:1313/post/past-projects/3tene-autohotkey/</link>
+      <link>http://localhost:1313/post/ai-projects/3tene-autohotkey/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/3tene-autohotkey/</guid>
+      <guid>http://localhost:1313/post/ai-projects/3tene-autohotkey/</guid>
       
         <description>&lt;p&gt;&lt;em&gt;Allowing VTubers to express themselves through global hotkeys.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;finding-vtubing-and-3tene&#34;&gt;Finding VTubing and 3tene&lt;/h2&gt;
@@ -357,10 +357,10 @@ class at the school.&lt;/p&gt;
     
     <item>
       <title>Pond Jumper</title>
-      <link>http://localhost:1313/post/past-projects/pond-jumper/</link>
+      <link>http://localhost:1313/post/mobile-projects/pond-jumper/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/pond-jumper/</guid>
+      <guid>http://localhost:1313/post/mobile-projects/pond-jumper/</guid>
       
         <description>&lt;p&gt;&lt;em&gt;My First Large Project: an Arcade Game for Smart Phones.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Looking back at how I first learned software development, I feel very fortunate to have taken the path I did.
@@ -540,6 +540,28 @@ a historical group and museum dedicated to preserving the history of the canal s
     
     <item>
       <title></title>
+      <link>http://localhost:1313/post/ai-projects/chord-llama/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/chord-llama/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://localhost:1313/post/current-projects/thesis-selective-pose-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
@@ -562,10 +584,10 @@ a historical group and museum dedicated to preserving the history of the canal s
     
     <item>
       <title></title>
-      <link>http://localhost:1313/post/past-projects/chord-llama/</link>
+      <link>http://localhost:1313/post/mobile-projects/eventified/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/chord-llama/</guid>
+      <guid>http://localhost:1313/post/mobile-projects/eventified/</guid>
       
         <description></description>
       
@@ -573,43 +595,10 @@ a historical group and museum dedicated to preserving the history of the canal s
     
     <item>
       <title></title>
-      <link>http://localhost:1313/post/past-projects/eventified/</link>
+      <link>http://localhost:1313/post/mobile-projects/yabi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/eventified/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/past-projects/multi-repo-coding-assistant/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/multi-repo-coding-assistant/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/past-projects/roundhouse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/roundhouse/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/past-projects/yabi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/yabi/</guid>
+      <guid>http://localhost:1313/post/mobile-projects/yabi/</guid>
       
         <description></description>
       
@@ -632,6 +621,17 @@ a historical group and museum dedicated to preserving the history of the canal s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/web-projects/roundhouse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/web-projects/roundhouse/</guid>
       
         <description></description>
       
