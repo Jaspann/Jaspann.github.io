@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FlightSure</title>
+      <link>http://localhost:1313/post/past-projects/flight-sure/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/flight-sure/</guid>
+      <description>&lt;p&gt;text&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://snhu-my.sharepoint.com/personal/william_parker3_snhu_edu/_layouts/15/Doc.aspx?sourcedoc={7c99e7c6-d945-4519-b61f-44f1aefaeb82}&amp;amp;action=embedview&amp;amp;wdAr=1.7777777777777777&#34; width=&#34;476px&#34; height=&#34;288px&#34; frameborder=&#34;0&#34;&gt;This is an embedded &lt;a target=&#34;_blank&#34; href=&#34;https://office.com&#34;&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=&#34;_blank&#34; href=&#34;https://office.com/webapps&#34;&gt;Office&lt;/a&gt;.&lt;/iframe&gt;&#xD;&#xA;&lt;p&gt;more text&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

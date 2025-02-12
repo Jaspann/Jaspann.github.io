@@ -18,10 +18,10 @@ postWidget:
     title: Work Experiences
     category: work-experiences
     count: 2
-  - type: category
-    title: Current Projects
-    category: current-projects
-    count: 3
+  # - type: category
+  #   title: Current Projects
+  #   category: current-projects
+  #   count: 3
   - type: category
     title: Software Libraries
     category: software-libraries

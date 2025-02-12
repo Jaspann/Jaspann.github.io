@@ -17,7 +17,7 @@ which was taught extremely thoroughly on [VLACS](https://vlacs.org/) and
 is probably the best course I took in high school despite it being online. My senior year I needed to do a senior 
 project, and for this, I decided to re-implement an idea I had made previously, reimagining it using [Unity](https://unity.com/). 
 
-![Pond Jumper Title](/past-projects/pond_jumper/pond_jumper_home.png)
+![Pond Jumper Title Screen](/past-projects/pond_jumper/pond_jumper_home.png)
 
 *The Pond Jumper Title Screen.*
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>
     
-     - William Parker&#39;s Personal Site
+    FlightSure - William Parker&#39;s Personal Site
     </title>
   
 
@@ -36,27 +36,45 @@
 
 
 
-<meta name="author" content="William Parker" />
-<meta name="description" content="" />
+<meta name="author" content="William Parker" /><meta name="description" content="Using Machine Learning to Find the Chance a Flight is on Time" />
+
+
+
+
+
+  
 
 
 
 
 
 
-
+<meta name="keywords" content="Python, Machine Learning, Gradio, APIs" />
 
 
 <meta property="og:url" content="http://localhost:1313/post/past-projects/flight-sure/">
   <meta property="og:site_name" content="William Parker&#39;s Personal Site">
-  <meta property="og:title" content="William Parker&#39;s Personal Site">
+  <meta property="og:title" content="FlightSure">
+  <meta property="og:description" content="Using Machine Learning to Find the Chance a Flight is on Time">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-05-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-11T00:00:00+00:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Gradio">
+    <meta property="article:tag" content="APIs">
 
-  <meta itemprop="name" content="William Parker&#39;s Personal Site">
+  <meta itemprop="name" content="FlightSure">
+  <meta itemprop="description" content="Using Machine Learning to Find the Chance a Flight is on Time">
+  <meta itemprop="datePublished" content="2024-05-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-02-11T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1298">
+  <meta itemprop="keywords" content="Python,Machine Learning,Gradio,APIs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="William Parker&#39;s Personal Site">
+  <meta name="twitter:title" content="FlightSure">
+  <meta name="twitter:description" content="Using Machine Learning to Find the Chance a Flight is on Time">
 
 <link rel="icon" href="/favicon.ico" />
 
@@ -97,6 +115,8 @@
   })();
 </script>
 
+
+<link rel="stylesheet" href="/css/image.css">
 
 </head>
 
@@ -233,7 +253,7 @@
     <article class="post">
       
       <header class="post-header">
-        <h1 class="post-title"></h1>
+        <h1 class="post-title">FlightSure</h1>
         
 
 
@@ -253,11 +273,16 @@
   <div class="post-meta-item post-meta-time">
     
 <svg aria-hidden="true" class="lucide lucide-calendar-days hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-    <time datetime=" 0001-01-01">
-      Jan 1 0001
+    <time datetime=" 2024-05-01">
+      May 1 2024
     </time>
 
 
+    
+    <span class="post-meta-item post-meta-lastmod">
+      (Modified:
+      Feb 11 2025)
+    </span>
     
 
   </div>
@@ -266,7 +291,12 @@
   <div class="post-meta__right">
     
 
-    
+    <div class="post-meta-item post-meta-category">
+      
+        
+          
+        <a href="http://localhost:1313/categories/past-projects/">past-projects</a>
+    </div>
 
 
     
@@ -282,7 +312,131 @@
 
       
       <div class="post-content">
-        
+        <p><em>Using Machine Learning to Find the Chance a Flight is on Time.</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>I had recently returned to San Jose after visiting my family across the country.
+While waiting at Logan Airport in Boston, I was watching the snowfall and wondered
+if it would delay my flight. It had just started and light snow is a normal occurrence for
+the area, so it was unlikely but possible. I then considered San Jose&rsquo;s Airport. While they have
+different weather they need to account for, there is no infrastructure in place for even
+light snow. In addition, many drivers would not know how to handle slippery roads, which
+would probably cause significant problems across the city.</p>
+<p>While I can&rsquo;t do much about the weather, I wanted to see if I could put a numerical value to the
+chance my flight would be delayed or canceled as an outside observer.</p>
+<h2 id="verifying-intuition">Verifying Intuition</h2>
+<p>Flights are often canceled only a few hours before they otherwise would be scheduled to take off.
+The airline&rsquo;s app or website is the best you can make plans around, but I
+wanted to try to predict what would happen up to a few days in advance.</p>
+<p>The first thought would be that most flight problems, and the easiest to predict, are ones due to weather.
+A look at the United States Department of Transportation (US DOT) statistics shows that this assumption has some merit.
+While their page on
+<a href="https://www.transtats.bts.gov/ot_delay/OT_DelayCause1.asp?20=E">Airline On-Time Statistics and Delay Causes</a>
+shows that only 0.22% of all flights are impacted by weather (filter between Jan 2021 and Dec 2023). This statistic fails to account for
+<a href="https://www.transtats.bts.gov/ot_delay/ot_delaycause1.asp?6B2r=I&amp;20=E">National Aviation System Delays</a>
+which make up the greatest category of flight problems outside of delayed arrivals and &ldquo;air carrier delays&rdquo;.
+Looking into National Aviation System Delays further, weather makes up almost half of all delays in this category.
+While there are clearly several other factors that can cause flights to be delayed, predicting based on weather
+seemed like the best predictor we could realistically use without insider knowledge of internal systems.</p>
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" style="display: flex; justify-content: center; align-items: center;">
+<figure  class="bordered-image"  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/past-projects/flight-sure/On-Time_Arrival_Performance.png" alt="Airline On Time Statistics and Delay Causes, Jan 2021 to Dec 2023."/>
+    </div>
+    <a href="/past-projects/flight-sure/On-Time_Arrival_Performance.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Airline On Time Statistics and Delay Causes, Jan 2021 to Dec 2023.</p>
+      </figcaption>
+  </figure>
+</div>
+
+<div style="margin: 2rem 0;"></div>
+
+
+<div class="box" style="display: flex; justify-content: center; align-items: center;">
+<figure  class="bordered-image"  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/past-projects/flight-sure/Causes_of_National_Aviation_System_Delays.png" alt="National Aviation System Delays, Jan 2021 to Dec 2023"/>
+    </div>
+    <a href="/past-projects/flight-sure/Causes_of_National_Aviation_System_Delays.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>National Aviation System Delays, Jan 2021 to Dec 2023</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h2 id="gathering-data">Gathering Data</h2>
+<p>The US DOT and National Oceanic and Atmospheric Administration (NOAA) both have public
+records of statistics in their respective domains freely accessible to the public. I wanted to build classical
+machine learning models for each airport to measure delays and cancellations, so I needed to merge tabular data
+based on time and airport to find under what conditions cancellations and delays occur.</p>
+<p>NOAA has a page called
+<a href="https://www.climate.gov/maps-data/dataset/past-weather-zip-code-data-table">Past Weather by Zip Code - Data Table</a>
+Which was available to the public to access weather reporting.
+While this looked like everything I needed, there were problems working with it,
+and I ended up using Automated Surface Observing System (ASOS) Network instead. A frontend to the data was available through 
+<a href="https://mesonet.agron.iastate.edu/ASOS/">Iowa State University</a>, which had more data and hourly reports from all major US airports,
+which was perfect for our use case. Similarly, the US DOT has a page called
+<a href="https://transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&amp;QO_fu146_anzr=b0-gvzr">On-Time : Reporting Carrier On-Time Performance (1987-present)</a>
+which allows the public to get extremely detailed information on exact logs of airline cancellations and delays. I decided to get the past three years
+of data for the 30 most popular airports in the country.</p>
+<h2 id="data-cleaning-and-eda">Data Cleaning and EDA</h2>
+<p>I needed to clean the data, converting times and locations to exactly match between datasets, and merge the two together.
+Interacting with such a large dataset turned out to be unreasonable for the software I was using, so I decided I would split the
+data by airport and loop over the datasets separately so I would not encounter any issues with size.</p>
+<p>I then needed to figure out which weather variables most correlated with flight problems so I would not be passing in useless information
+to the model. I created a heatmap correlating weather events to delays and cancellations and removed all the variables that looked
+like they had no impact on the flight.</p>
+<p>Another issue I found when preparing for modeling was the imbalance of classes. About ten percent of the flights were delayed, with many
+only being delayed a few minutes. I decided that I should classify between lengths of time delayed when classifying delays, but I should
+have another model that predicts how long it will be delayed as well.</p>
+<p>Studying how models perform under a class imbalance, I used weighted class random forests for classification, and I applied simple linear
+regression to predict the length of the delay. I only would attempt to find the length of the delay if there was a greater than 50% chance
+that the flight would be delayed according to the model. Due to this, the training data of the model only consisted of the delayed flights.</p>
+<h2 id="final-application">Final Application</h2>
+<p>Making my work into an end-user application for people is important to me. When discussing ideas with people, having proof of a model or algorithm
+working is often not enough. To make the idea &ldquo;click&rdquo; for people, some type of interface where the user can play around is needed.</p>
+<p>If I am accepting user input, users will not want to input all of the model&rsquo;s variables by hand. Instead, it would be much more reasonable if they
+only need to pass in the airport and time of departure, and we can do the rest automatically. To do this, of course, we need access to a weather API.
+I found that <a href="https://openweathermap.org/forecast5">OpenWeather&rsquo;s 5 Day Forecast</a> worked extremely well for our use case. It&rsquo;s free and as this was
+not meant to be published, I only need a few dozen called for bug testing and showing off the proof of concept. Thankfully, the API had all the
+data I trained my model on. I had a drop-down to choose the airport, so I then converted the airport into location data for OpenWeather&rsquo;s format
+and then parsed the JSON response to get all the necessary values to pass into the correct model. Finally, I could hook all of this up to a
+<a href="https://www.gradio.app/">Gradio</a> front end. Gradio is made for easy front ends for AI applications, which I could easily publish on HuggingFace
+so that anyone could interact with it as part of their &ldquo;Spaces&rdquo; feature. As all source code is available on HuggingFace spaces, I needed to add
+an OpenWeather API input field, but by hosting it on HuggingFace anyone can still use the app on the web.</p>
+
+
+<div class="box" style="display: flex; justify-content: center; align-items: center;">
+<figure  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/past-projects/flight-sure/flightsure_gradio.png" alt="Airline On Time Statistics and Delay Causes, Jan 2021 to Dec 2023."/>
+    </div>
+    <a href="/past-projects/flight-sure/flightsure_gradio.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Airline On Time Statistics and Delay Causes, Jan 2021 to Dec 2023.</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>This was my project for my Data Mining class at San Jose State University. I made a slide show to show off the work to the class, which I attached below.
+The main point of the class was finding the databases and cleaning the data to be used for modeling. I built the fun little Gradio app on top, but doing that is
+a necessity when showing off a work like this.</p>
+<p>I don&rsquo;t think the skills I learned in this project are that notable. Anyone in AI needs to dig through data and
+Gradio is an industry standard for being an easy framework for non-UI developers. It was, though, a critical step in my education,
+proving I know how to do these things. While I don&rsquo;t expect this application to be used by anyone, it lays the groundwork of
+my knowledge so that when I approach future machine learning problems that are novel and complex,
+I have the work I did here in the back of my mind as reference for how to solve tomorrows problems.</p>
+<iframe src="https://1drv.ms/p/c/78ac3e9c395f4290/IQRg-yVvnKWfQqwF6b_NDx-2AdW-ZZMH-EhxDafEj8CuoEQ?em=2&amp;wdAr=1.7777777777777777" width="100%" height="400px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<div style="margin: 2rem 0;"></div>
+<p>The app is available on HuggingFace at: <a href="https://huggingface.co/spaces/Jaspann/FlightSure">https://huggingface.co/spaces/Jaspann/FlightSure</a></p>
+<p>The dataset I used it on Kaggle at: <a href="https://www.kaggle.com/datasets/williamparker20/flight-ontime-reporting-with-weather/data">https://www.kaggle.com/datasets/williamparker20/flight-ontime-reporting-with-weather/data</a></p>
+
       </div>
 
       
@@ -295,7 +449,7 @@
   <p class="copyright-item">
     <span class="item-title">Modified</span>
     <span class="item-content">
-      Jan 1 0001
+      Feb 11 2025
       
     </span>
   </p>
@@ -313,24 +467,21 @@
 
 
       <footer class="post-footer">
-        
+        <div class="post-tags">
+          <a href="http://localhost:1313/tags/python/">Python</a>
+          <a href="http://localhost:1313/tags/machine-learning/">Machine Learning</a>
+          <a href="http://localhost:1313/tags/gradio/">Gradio</a>
+          <a href="http://localhost:1313/tags/apis/">APIs</a>
+          
+        </div>
 
 
         
         <nav class="post-nav">
           
-          <a class="prev" href="/post/past-projects/eventified/">
-            
-            <i class="iconfont">
-              
-<svg aria-hidden="true" class="lucide lucide-chevron-left hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m15 18-6-6 6-6"/></svg>
-            </i>
-            <span class="prev-text nav-default"></span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
           
-          <a class="next" href="/post/past-projects/multi-repo-coding-assistant/">
-            <span class="next-text nav-default"></span>
+          <a class="next" href="/post/past-projects/3tene-autohotkey/">
+            <span class="next-text nav-default">3tene AutoHotKey</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">
@@ -371,7 +522,21 @@
   </div>
 
   
-  
+  <nav class="toc" id="toc">
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-content custom-scrollbar">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#verifying-intuition">Verifying Intuition</a></li>
+    <li><a href="#gathering-data">Gathering Data</a></li>
+    <li><a href="#data-cleaning-and-eda">Data Cleaning and EDA</a></li>
+    <li><a href="#final-application">Final Application</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+  </nav>
 
 
 </div>

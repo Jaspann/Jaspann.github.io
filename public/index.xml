@@ -34,19 +34,154 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS Thesis&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unified Live Chat&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS AI Education&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Comp Sci Education&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;em&gt;SNHU Comp Sci Education&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene ahk&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Eventified&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FlightSure&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;FlightSure&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ChordLlama&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Multi-Repo Coding Assistant&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Pond Jumper&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; RoundHouse&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;em&gt;RoundHouse&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Yabi&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Flutter M BLE&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Google Mediapipe Pose Detection&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Arity Android Engineer Intern&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Flutter M BLE&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Google Mediapipe Pose Detection&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Arity Android Engineer Intern&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>FlightSure</title>
+      <link>http://localhost:1313/post/past-projects/flight-sure/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/flight-sure/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;Using Machine Learning to Find the Chance a Flight is on Time.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I had recently returned to San Jose after visiting my family across the country.
+While waiting at Logan Airport in Boston, I was watching the snowfall and wondered
+if it would delay my flight. It had just started and light snow is a normal occurrence for
+the area, so it was unlikely but possible. I then considered San Jose&amp;rsquo;s Airport. While they have
+different weather they need to account for, there is no infrastructure in place for even
+light snow. In addition, many drivers would not know how to handle slippery roads, which
+would probably cause significant problems across the city.&lt;/p&gt;
+&lt;p&gt;While I can&amp;rsquo;t do much about the weather, I wanted to see if I could put a numerical value to the
+chance my flight would be delayed or canceled as an outside observer.&lt;/p&gt;
+&lt;h2 id=&#34;verifying-intuition&#34;&gt;Verifying Intuition&lt;/h2&gt;
+&lt;p&gt;Flights are often canceled only a few hours before they otherwise would be scheduled to take off.
+The airline&amp;rsquo;s app or website is the best you can make plans around, but I
+wanted to try to predict what would happen up to a few days in advance.&lt;/p&gt;
+&lt;p&gt;The first thought would be that most flight problems, and the easiest to predict, are ones due to weather.
+A look at the United States Department of Transportation (US DOT) statistics shows that this assumption has some merit.
+While their page on
+&lt;a href=&#34;https://www.transtats.bts.gov/ot_delay/OT_DelayCause1.asp?20=E&#34;&gt;Airline On-Time Statistics and Delay Causes&lt;/a&gt;
+shows that only 0.22% of all flights are impacted by weather (filter between Jan 2021 and Dec 2023). This statistic fails to account for
+&lt;a href=&#34;https://www.transtats.bts.gov/ot_delay/ot_delaycause1.asp?6B2r=I&amp;amp;20=E&#34;&gt;National Aviation System Delays&lt;/a&gt;
+which make up the greatest category of flight problems outside of delayed arrivals and &amp;ldquo;air carrier delays&amp;rdquo;.
+Looking into National Aviation System Delays further, weather makes up almost half of all delays in this category.
+While there are clearly several other factors that can cause flights to be delayed, predicting based on weather
+seemed like the best predictor we could realistically use without insider knowledge of internal systems.&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  class=&#34;bordered-image&#34;  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/past-projects/flight-sure/On-Time_Arrival_Performance.png&#34; alt=&#34;Airline On Time Statistics and Delay Causes, Jan 2021 to Dec 2023.&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/past-projects/flight-sure/On-Time_Arrival_Performance.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Airline On Time Statistics and Delay Causes, Jan 2021 to Dec 2023.&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div style=&#34;margin: 2rem 0;&#34;&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  class=&#34;bordered-image&#34;  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/past-projects/flight-sure/Causes_of_National_Aviation_System_Delays.png&#34; alt=&#34;National Aviation System Delays, Jan 2021 to Dec 2023&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/past-projects/flight-sure/Causes_of_National_Aviation_System_Delays.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;National Aviation System Delays, Jan 2021 to Dec 2023&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;gathering-data&#34;&gt;Gathering Data&lt;/h2&gt;
+&lt;p&gt;The US DOT and National Oceanic and Atmospheric Administration (NOAA) both have public
+records of statistics in their respective domains freely accessible to the public. I wanted to build classical
+machine learning models for each airport to measure delays and cancellations, so I needed to merge tabular data
+based on time and airport to find under what conditions cancellations and delays occur.&lt;/p&gt;
+&lt;p&gt;NOAA has a page called
+&lt;a href=&#34;https://www.climate.gov/maps-data/dataset/past-weather-zip-code-data-table&#34;&gt;Past Weather by Zip Code - Data Table&lt;/a&gt;
+Which was available to the public to access weather reporting.
+While this looked like everything I needed, there were problems working with it,
+and I ended up using Automated Surface Observing System (ASOS) Network instead. A frontend to the data was available through 
+&lt;a href=&#34;https://mesonet.agron.iastate.edu/ASOS/&#34;&gt;Iowa State University&lt;/a&gt;, which had more data and hourly reports from all major US airports,
+which was perfect for our use case. Similarly, the US DOT has a page called
+&lt;a href=&#34;https://transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGJ&amp;amp;QO_fu146_anzr=b0-gvzr&#34;&gt;On-Time : Reporting Carrier On-Time Performance (1987-present)&lt;/a&gt;
+which allows the public to get extremely detailed information on exact logs of airline cancellations and delays. I decided to get the past three years
+of data for the 30 most popular airports in the country.&lt;/p&gt;
+&lt;h2 id=&#34;data-cleaning-and-eda&#34;&gt;Data Cleaning and EDA&lt;/h2&gt;
+&lt;p&gt;I needed to clean the data, converting times and locations to exactly match between datasets, and merge the two together.
+Interacting with such a large dataset turned out to be unreasonable for the software I was using, so I decided I would split the
+data by airport and loop over the datasets separately so I would not encounter any issues with size.&lt;/p&gt;
+&lt;p&gt;I then needed to figure out which weather variables most correlated with flight problems so I would not be passing in useless information
+to the model. I created a heatmap correlating weather events to delays and cancellations and removed all the variables that looked
+like they had no impact on the flight.&lt;/p&gt;
+&lt;p&gt;Another issue I found when preparing for modeling was the imbalance of classes. About ten percent of the flights were delayed, with many
+only being delayed a few minutes. I decided that I should classify between lengths of time delayed when classifying delays, but I should
+have another model that predicts how long it will be delayed as well.&lt;/p&gt;
+&lt;p&gt;Studying how models perform under a class imbalance, I used weighted class random forests for classification, and I applied simple linear
+regression to predict the length of the delay. I only would attempt to find the length of the delay if there was a greater than 50% chance
+that the flight would be delayed according to the model. Due to this, the training data of the model only consisted of the delayed flights.&lt;/p&gt;
+&lt;h2 id=&#34;final-application&#34;&gt;Final Application&lt;/h2&gt;
+&lt;p&gt;Making my work into an end-user application for people is important to me. When discussing ideas with people, having proof of a model or algorithm
+working is often not enough. To make the idea &amp;ldquo;click&amp;rdquo; for people, some type of interface where the user can play around is needed.&lt;/p&gt;
+&lt;p&gt;If I am accepting user input, users will not want to input all of the model&amp;rsquo;s variables by hand. Instead, it would be much more reasonable if they
+only need to pass in the airport and time of departure, and we can do the rest automatically. To do this, of course, we need access to a weather API.
+I found that &lt;a href=&#34;https://openweathermap.org/forecast5&#34;&gt;OpenWeather&amp;rsquo;s 5 Day Forecast&lt;/a&gt; worked extremely well for our use case. It&amp;rsquo;s free and as this was
+not meant to be published, I only need a few dozen called for bug testing and showing off the proof of concept. Thankfully, the API had all the
+data I trained my model on. I had a drop-down to choose the airport, so I then converted the airport into location data for OpenWeather&amp;rsquo;s format
+and then parsed the JSON response to get all the necessary values to pass into the correct model. Finally, I could hook all of this up to a
+&lt;a href=&#34;https://www.gradio.app/&#34;&gt;Gradio&lt;/a&gt; front end. Gradio is made for easy front ends for AI applications, which I could easily publish on HuggingFace
+so that anyone could interact with it as part of their &amp;ldquo;Spaces&amp;rdquo; feature. As all source code is available on HuggingFace spaces, I needed to add
+an OpenWeather API input field, but by hosting it on HuggingFace anyone can still use the app on the web.&lt;/p&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/past-projects/flight-sure/flightsure_gradio.png&#34; alt=&#34;Airline On Time Statistics and Delay Causes, Jan 2021 to Dec 2023.&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/past-projects/flight-sure/flightsure_gradio.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Airline On Time Statistics and Delay Causes, Jan 2021 to Dec 2023.&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This was my project for my Data Mining class at San Jose State University. I made a slide show to show off the work to the class, which I attached below.
+The main point of the class was finding the databases and cleaning the data to be used for modeling. I built the fun little Gradio app on top, but doing that is
+a necessity when showing off a work like this.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t think the skills I learned in this project are that notable. Anyone in AI needs to dig through data and
+Gradio is an industry standard for being an easy framework for non-UI developers. It was, though, a critical step in my education,
+proving I know how to do these things. While I don&amp;rsquo;t expect this application to be used by anyone, it lays the groundwork of
+my knowledge so that when I approach future machine learning problems that are novel and complex,
+I have the work I did here in the back of my mind as reference for how to solve tomorrows problems.&lt;/p&gt;
+&lt;iframe src=&#34;https://1drv.ms/p/c/78ac3e9c395f4290/IQRg-yVvnKWfQqwF6b_NDx-2AdW-ZZMH-EhxDafEj8CuoEQ?em=2&amp;amp;wdAr=1.7777777777777777&#34; width=&#34;100%&#34; height=&#34;400px&#34; frameborder=&#34;0&#34;&gt;This is an embedded &lt;a target=&#34;_blank&#34; href=&#34;https://office.com&#34;&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=&#34;_blank&#34; href=&#34;https://office.com/webapps&#34;&gt;Office&lt;/a&gt;.&lt;/iframe&gt;
+&lt;div style=&#34;margin: 2rem 0;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;The app is available on HuggingFace at: &lt;a href=&#34;https://huggingface.co/spaces/Jaspann/FlightSure&#34;&gt;https://huggingface.co/spaces/Jaspann/FlightSure&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The dataset I used it on Kaggle at: &lt;a href=&#34;https://www.kaggle.com/datasets/williamparker20/flight-ontime-reporting-with-weather/data&#34;&gt;https://www.kaggle.com/datasets/williamparker20/flight-ontime-reporting-with-weather/data&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -233,7 +368,7 @@ In my junior year of high school I took &lt;a href=&#34;https://apstudents.colle
 which was taught extremely thoroughly on &lt;a href=&#34;https://vlacs.org/&#34;&gt;VLACS&lt;/a&gt; and
 is probably the best course I took in high school despite it being online. My senior year I needed to do a senior
 project, and for this, I decided to re-implement an idea I had made previously, reimagining it using &lt;a href=&#34;https://unity.com/&#34;&gt;Unity&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/past-projects/pond_jumper/pond_jumper_home.png&#34; alt=&#34;Pond Jumper Title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/past-projects/pond_jumper/pond_jumper_home.png&#34; alt=&#34;Pond Jumper Title Screen&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The Pond Jumper Title Screen.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;game-inspiration&#34;&gt;Game Inspiration&lt;/h2&gt;
 &lt;p&gt;At that time I had recently played &lt;a href=&#34;https://undertale.com/&#34;&gt;Undertale&lt;/a&gt;. The main action of the game is a bullet-hell system where you control
@@ -376,17 +511,6 @@ a historical group and museum dedicated to preserving the history of the canal s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/past-projects/eventified/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/past-projects/flight-sure/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/flight-sure/</guid>
       
         <description></description>
       

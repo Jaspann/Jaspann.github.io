@@ -23,16 +23,16 @@ Here is a list of all of the posts I have planned:
 - [ ] SJSU MS Thesis
 - [ ] Unified Live Chat
 - [ ] SJSU MS AI Education
-- [ ] SNHU Comp Sci Education
+- [ ] *SNHU Comp Sci Education*
 - [x] 3tene ahk
 - [ ] Eventified
-- [ ] FlightSure
+- [ ] **FlightSure**
 - [ ] ChordLlama
 - [ ] Multi-Repo Coding Assistant
 - [x] Pond Jumper
-- [ ] RoundHouse
+- [ ] *RoundHouse*
 - [ ] Yabi
-- [ ] Flutter M BLE
-- [ ] Google Mediapipe Pose Detection
-- [ ] Arity Android Engineer Intern
+- [ ] **Flutter M BLE**
+- [ ] **Google Mediapipe Pose Detection**
+- [ ] **Arity Android Engineer Intern**
 

@@ -82,3 +82,9 @@ defaultContentLanguage = "en"           # Default language to use
     e-linkedin = "https://www.linkedin.com/in/william-parker-7b43a221b/"
     g-github = "https://github.com/Jaspann"
     m-instagram = "https://www.instagram.com/williampar20/"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"  # blackfriday or goldmark
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

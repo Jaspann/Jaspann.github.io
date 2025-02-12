@@ -9,14 +9,21 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FlightSure</title>
+      <link>http://localhost:1313/post/past-projects/flight-sure/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/past-projects/flight-sure/</guid>
+      <description>&lt;p&gt;text&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://snhu-my.sharepoint.com/personal/william_parker3_snhu_edu/_layouts/15/Doc.aspx?sourcedoc={7c99e7c6-d945-4519-b61f-44f1aefaeb82}&amp;amp;action=embedview&amp;amp;wdAr=1.7777777777777777&#34; width=&#34;476px&#34; height=&#34;288px&#34; frameborder=&#34;0&#34;&gt;This is an embedded &lt;a target=&#34;_blank&#34; href=&#34;https://office.com&#34;&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=&#34;_blank&#34; href=&#34;https://office.com/webapps&#34;&gt;Office&lt;/a&gt;.&lt;/iframe&gt;&#xD;&#xA;&lt;p&gt;more text&lt;/p&gt;</description>
+    </item>
     <item>
       <title>3tene AutoHotKey</title>
       <link>http://localhost:1313/post/past-projects/3tene-autohotkey/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/past-projects/3tene-autohotkey/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Allowing VTubers to express themselves though emotion hotkeys.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;finding-vtubing-and-3tene&#34;&gt;Finding VTubing and 3tene&lt;/h2&gt;&#xA;&lt;p&gt;Once the coronavirus pandemic hit and society was in lock down, I started watching more Twitch.&#xA;Around this time was when VTubers were taking off, as people could remain semi-anonymous online while&#xA;attempting to grow a following on video based platforms. The concept was in good fun and not too serious&#xA;as you would expect from a mildly popular casual entertainment genre. This was my fist look at human&#xA;positional tracking systems, and I came to the conclusion that while the underlying technology was good,&#xA;some key features I would expect seemed to be missing from apps for people to use this seriously.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Allowing VTubers to express themselves through global hotkeys.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;finding-vtubing-and-3tene&#34;&gt;Finding VTubing and 3tene&lt;/h2&gt;&#xA;&lt;p&gt;Once the coronavirus pandemic hit and society was in lockdown, I started watching more Twitch.&#xA;Around this time, VTubing was taking off, as people could remain semi-anonymous online while&#xA;attempting to grow a following on video-based platforms. The concept was in good fun and not too serious&#xA;as you would expect from a mildly popular casual entertainment genre. This was my first look at human&#xA;positional tracking systems, and I was impressed with the underlying technology. The problem often was in&#xA;the feature set of the applications used for this growing genre of entertainment, where key features I&#xA;would expect to find in popularly recommended apps seemed to be missing for the technology to&#xA;be used more seriously.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AP Computer Science A Teacher&#39;s Assistant</title>
@@ -65,13 +72,6 @@
       <link>http://localhost:1313/post/past-projects/eventified/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/past-projects/eventified/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/past-projects/flight-sure/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/flight-sure/</guid>
       <description></description>
     </item>
     <item>
