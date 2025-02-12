@@ -368,8 +368,21 @@ In my junior year of high school I took &lt;a href=&#34;https://apstudents.colle
 which was taught extremely thoroughly on &lt;a href=&#34;https://vlacs.org/&#34;&gt;VLACS&lt;/a&gt; and
 is probably the best course I took in high school despite it being online. My senior year I needed to do a senior
 project, and for this, I decided to re-implement an idea I had made previously, reimagining it using &lt;a href=&#34;https://unity.com/&#34;&gt;Unity&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/past-projects/pond_jumper/pond_jumper_home.png&#34; alt=&#34;Pond Jumper Title Screen&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The Pond Jumper Title Screen.&lt;/em&gt;&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/past-projects/pond_jumper/pond_jumper_home.png&#34; alt=&#34;The Pond Jumper Title Screen.&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/past-projects/pond_jumper/pond_jumper_home.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;The Pond Jumper Title Screen.&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;game-inspiration&#34;&gt;Game Inspiration&lt;/h2&gt;
 &lt;p&gt;At that time I had recently played &lt;a href=&#34;https://undertale.com/&#34;&gt;Undertale&lt;/a&gt;. The main action of the game is a bullet-hell system where you control
 a small character that needs to move and avoid obstacles. While many aspects of Undertale are unique, a core part of
@@ -379,10 +392,37 @@ novelty of additional rules applied to the core bullet-hell mechanic are explore
 Undyne battle complexly changed the idea of a bullet-hell, where instead of avoiding the bullets, you had a shield and needed
 to block them. The Muffet battle had the player jumping between pre-defined tracks to avoid the bullets which differed from the normal
 game where you have complete control over the movement of your character to any point within the arena.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/past-projects/pond_jumper/undyne_fight.png&#34; alt=&#34;Undyne Fight&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The Undyne Fight in Undertale. Image source: &lt;a href=&#34;https://www.dualshockers.com/undertale-hardest-boss-fights/&#34;&gt;DualShockers&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/past-projects/pond_jumper/muffet_fight.png&#34; alt=&#34;Muffet Fight&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The Muffet Fight in Undertale. Image source: &lt;a href=&#34;https://images.app.goo.gl/u9M4df3RGqbQuyYHA&#34;&gt;Very Vennie&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/past-projects/pond_jumper/undyne_fight.png&#34; alt=&#34;The Undyne Fight in Undertale. Image source: DualShockers&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/past-projects/pond_jumper/undyne_fight.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;The Undyne Fight in Undertale. Image source: DualShockers&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div style=&#34;margin: 2rem 0;&#34;&gt;&lt;/div&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/past-projects/pond_jumper/muffet_fight.png&#34; alt=&#34;The Muffet Fight in Undertale. Image source: Very Vennie&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/past-projects/pond_jumper/muffet_fight.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;The Muffet Fight in Undertale. Image source: Very Vennie&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
 &lt;p&gt;While many bullet-hell styled games did exist, these takes on the genre rarely seemed to have been expanded upon.&lt;/p&gt;
 &lt;h2 id=&#34;early-attempt&#34;&gt;Early Attempt&lt;/h2&gt;
 &lt;p&gt;For a introductory computer class I took in high school my sophomore year, we were required to create a game in
@@ -397,8 +437,21 @@ to be blocked so the player needed to both move around and block to survive. The
 assignment, and I think I got a 98% if I recall correctly. The teacher took off 2 points because I did not specify
 in the instructions that by WASD I was referring to the keys on the keyboard to move the character (she was an art teacher
 and not well-versed in technology).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/past-projects/pond_jumper/scratch_game.png&#34; alt=&#34;5x5 Bullet Avoid Game&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;My first game on Scratch.&lt;/em&gt;&lt;/p&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/past-projects/pond_jumper/scratch_game.png&#34; alt=&#34;My first game on Scratch.&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/past-projects/pond_jumper/scratch_game.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;My first game on Scratch.&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;pond-jumper&#34;&gt;Pond Jumper&lt;/h2&gt;
 &lt;p&gt;Back to the start of my senior year in high school and I knew I wanted to make a game in Unity. I understood that C# was close
 to Java, and I knew Java well from taking AP Computer Science A the previous year. I had a few ideas but none of them stuck as well
@@ -415,8 +468,21 @@ any sort of real application.&lt;/p&gt;
 &lt;p&gt;I decided to use prebuilt assets from the Unity Asset Store. I had made clear that I was building the app as an exercise in programming,
 and not for the artistic side, so this was fine to do. There was also no sound, but the prebuilt assets did have animations for when
 the player died at least.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/past-projects/pond_jumper/pond_jumper_game.png&#34; alt=&#34;Screen capture while playing Pond Jumper&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;A screenshot of Pond Jumper mid-game.&lt;/em&gt;&lt;/p&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/past-projects/pond_jumper/pond_jumper_game.png&#34; alt=&#34;A screenshot of Pond Jumper mid-game.&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/past-projects/pond_jumper/pond_jumper_game.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;A screenshot of Pond Jumper mid-game.&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
 &lt;p&gt;The programming for the game honestly was not bad in comparison to all of the work I needed to do for AP Computer Science A, and despite
 having an incredible senior project for the school it felt like the coding was easy for what I was doing. It heavily relied on
 timers to know when to spawn bullets, or now birds to match the theme with my assets, and to properly give points to the player. I needed to

@@ -17,9 +17,8 @@ which was taught extremely thoroughly on [VLACS](https://vlacs.org/) and
 is probably the best course I took in high school despite it being online. My senior year I needed to do a senior 
 project, and for this, I decided to re-implement an idea I had made previously, reimagining it using [Unity](https://unity.com/). 
 
-![Pond Jumper Title Screen](/past-projects/pond_jumper/pond_jumper_home.png)
-
-*The Pond Jumper Title Screen.*
+{{< figure src="/past-projects/pond_jumper/pond_jumper_home.png" 
+    caption="The Pond Jumper Title Screen.">}}
 
 ## Game Inspiration
 At that time I had recently played [Undertale](https://undertale.com/). The main action of the game is a bullet-hell system where you control 
@@ -32,13 +31,13 @@ Undyne battle complexly changed the idea of a bullet-hell, where instead of avoi
 to block them. The Muffet battle had the player jumping between pre-defined tracks to avoid the bullets which differed from the normal 
 game where you have complete control over the movement of your character to any point within the arena.
 
-![Undyne Fight](/past-projects/pond_jumper/undyne_fight.png)
+{{< figure src="/past-projects/pond_jumper/undyne_fight.png" 
+    caption="The Undyne Fight in Undertale. Image source: DualShockers">}}
 
-*The Undyne Fight in Undertale. Image source: [DualShockers](https://www.dualshockers.com/undertale-hardest-boss-fights/)*
+<div style="margin: 2rem 0;"></div>
 
-![Muffet Fight](/past-projects/pond_jumper/muffet_fight.png)
-
-*The Muffet Fight in Undertale. Image source: [Very Vennie](https://images.app.goo.gl/u9M4df3RGqbQuyYHA)*
+{{< figure src="/past-projects/pond_jumper/muffet_fight.png" 
+    caption="The Muffet Fight in Undertale. Image source: Very Vennie">}}
 
 While many bullet-hell styled games did exist, these takes on the genre rarely seemed to have been expanded upon.
 
@@ -57,9 +56,8 @@ assignment, and I think I got a 98% if I recall correctly. The teacher took off 
 in the instructions that by WASD I was referring to the keys on the keyboard to move the character (she was an art teacher
 and not well-versed in technology).
 
-![5x5 Bullet Avoid Game](/past-projects/pond_jumper/scratch_game.png)
-
-*My first game on Scratch.*
+{{< figure src="/past-projects/pond_jumper/scratch_game.png" 
+    caption="My first game on Scratch.">}}
 
 ## Pond Jumper
 Back to the start of my senior year in high school and I knew I wanted to make a game in Unity. I understood that C# was close
@@ -80,9 +78,8 @@ I decided to use prebuilt assets from the Unity Asset Store. I had made clear th
 and not for the artistic side, so this was fine to do. There was also no sound, but the prebuilt assets did have animations for when 
 the player died at least.
 
-![Screen capture while playing Pond Jumper](/past-projects/pond_jumper/pond_jumper_game.png)
-
-*A screenshot of Pond Jumper mid-game.*
+{{< figure src="/past-projects/pond_jumper/pond_jumper_game.png" 
+    caption="A screenshot of Pond Jumper mid-game.">}}
 
 The programming for the game honestly was not bad in comparison to all of the work I needed to do for AP Computer Science A, and despite 
 having an incredible senior project for the school it felt like the coding was easy for what I was doing. It heavily relied on 
