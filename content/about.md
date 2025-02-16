@@ -25,13 +25,13 @@ Here is a list of all of the posts I have planned:
 - [ ] SJSU MS AI Education
 - [ ] SNHU Comp Sci Education
 - [x] 3tene AHK
-- [ ] Eventified
+- [ ] **Eventified**
 - [x] FlightSure
 - [ ] **ChordLlama**
 - [ ] **Multi-Repo Coding Assistant**
 - [x] Pond Jumper
 - [ ] RoundHouse
-- [ ] Yabi
+- [ ] **Yabi**
 - [x] Flutter M BLE
 - [ ] **Google Mediapipe Pose Detection**
 - [ ] **Arity Android Engineer Intern**

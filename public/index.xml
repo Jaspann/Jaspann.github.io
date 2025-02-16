@@ -36,13 +36,13 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS AI Education&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Comp Sci Education&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene AHK&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Eventified&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Eventified&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FlightSure&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;ChordLlama&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Multi-Repo Coding Assistant&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Pond Jumper&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; RoundHouse&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Yabi&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Yabi&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Flutter M BLE&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Google Mediapipe Pose Detection&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Arity Android Engineer Intern&lt;/strong&gt;&lt;/li&gt;
@@ -315,6 +315,166 @@ If you want to look at the code though, it is available at:&lt;/p&gt;
 BLE peripheral specification was an interesting and fun challenge. From this, I learned a lot about how Flutter&amp;rsquo;s libraries
 work, Bluetooth, and backward compatibility with existing solutions. This immediately preceded my work on my next Flutter
 library, google_mediapipe_pose_detection, where I further expanded my abilities in this area.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Eventified</title>
+      <link>http://localhost:1313/post/mobile-projects/eventified/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/mobile-projects/eventified/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;An Android calendar app for university clubs.&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
+    
+  
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
+  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34;
+    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/mobile-projects/eventified/androidStack.jpg&#39;);&#34;&gt;
+        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/mobile-projects/eventified/androidStack.jpg&#34; /&gt;
+      &lt;/div&gt;
+      &lt;a href=&#34;http://localhost:1313/mobile-projects/eventified/androidStack.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+
+  
+  
+  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34;
+    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/mobile-projects/eventified/homescreen.png&#39;);&#34;&gt;
+        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/mobile-projects/eventified/homescreen.png&#34; /&gt;
+      &lt;/div&gt;
+      &lt;a href=&#34;http://localhost:1313/mobile-projects/eventified/homescreen.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;h2 id=&#34;arriving-at-snhu&#34;&gt;Arriving at SNHU&lt;/h2&gt;
+&lt;p&gt;It was my first semester on campus at Southern New Hampshire University (SNHU).
+Covid was the year prior, so my class along with the cohort below me was new to the campus.
+I had experience with Java in my high school and even &lt;a href=&#34;http://localhost:1313/post/community-work/ap-comp-sci-a-ta/&#34;&gt;taught the AP course on it&lt;/a&gt;.
+They also taught Java in the first coding class of SNHU,
+so going into my second year I figured I would want to use it in team-based projects.&lt;/p&gt;
+&lt;p&gt;SNHU is unique in that, even though the degree says I have a computer science degree,
+it is taught much more like how I would imagine a software engineering degree to be taught.
+Each semester (or year) you are put with a group to build a single project. It is a great exercise in
+working as a software development team, developing using agile, using issue tracking boards,
+and the teacher acts similarly to a project manager.&lt;/p&gt;
+&lt;p&gt;I quickly realized, that, because of my extra AP credits moving me ahead in the graduation schedule,
+I was placed in an extremely small class with all the students that either were like me and got
+ahead somehow or fell behind over the pandemic.&lt;/p&gt;
+&lt;h2 id=&#34;creating-the-idea&#34;&gt;Creating the Idea&lt;/h2&gt;
+&lt;p&gt;My favorite part of the software engineering series of classes had to be the
+start of the semester when we pitched our ideas. Students can choose almost anything they want
+as long as it is with the teacher&amp;rsquo;s permission. It can be any problem, using any language or
+framework, and as long as you pitch well and can prove that the goal is achievable within the year,
+it is likely that you will get a team to work on the project with you.&lt;/p&gt;
+&lt;p&gt;As a new student on campus, I had been extremely confused about how to engage in the community.
+Club events often felt like they were not communicated well, and I felt like I missed out on a lot
+after I did not get all the contacts I wanted after the school club fair. I wanted this to be my
+problem statement for the class. I knew the class knew Java and Android apps are written in Java, so
+it would be inclusive to the other members, and it was relatively simple in theory. We would need to have
+some external server to sync all the data, but there are upperclassmen who offered help in that area
+and we were learning about databases in another class.&lt;/p&gt;
+&lt;p&gt;The teacher decided that partners were decided via how we chose to sit ourselves on the first day, and my
+partner did not have any ideas from what I remember. The teacher begrudgingly accepted my idea. I found out
+later many students made calender apps to the point he was going to ban the idea after my semester. The other
+team decided to take the teacher&amp;rsquo;s pet idea, which created a clear favorite from the teacher.&lt;/p&gt;
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+&lt;p&gt;This was probably the semester I worked the hardest in school because of this class. Even knowing the language,
+I found that knowing the framework was often the larger hurdle. My only experience was with the raw languages and
+Unity, so working within the Android ecosystem was a lot all at once. I needed to make sure the work I was doing
+matched the teacher&amp;rsquo;s expectations: my partner found the topic extremely difficult, the teacher was constantly
+unimpressed with the project, and I needed to not only learn Android but also get it working with AWS.&lt;/p&gt;
+&lt;h3 id=&#34;frontend&#34;&gt;Frontend&lt;/h3&gt;
+&lt;p&gt;Any type of UI solution that Android offered was going to be new to me. For &lt;a href=&#34;http://localhost:1313/post/mobile-projects/pond-jumper/&#34;&gt;Pond Jumper&lt;/a&gt;
+I only needed a few buttons for a game while Eventified a end user application that had much more intricate design over several
+pages that needed to get content from an external source. In 2021, &lt;a href=&#34;https://developer.android.com/compose&#34;&gt;Android Jetpack Compose&lt;/a&gt;
+was very recently released, and not many tutorials explained it well. Instead, we used the more stable XML UI solution.&lt;/p&gt;
+&lt;p&gt;Android uses custom XML elements to define each of its components that are in the framework by default in addition to your own custom
+components. All the attributes are defined by XML, then if you need to override them you do so in the code, like grabbing a logo for
+our club information. This is very clear to understand in my opinion, but it is easy to see why Google moved away from this solution as
+XML limits the options and splits the development into two languages, whereas Jetpack Compose allows developers to write everything in Kotlin.&lt;/p&gt;
+&lt;p&gt;One of the largest issues I remember facing in the front end was that RecyclerView, responsible for scrolling items past the screen, was not
+working for my requirements. If I recall correctly, this was because RecyclerView only handles one class type, while I needed it to handle
+two for both the student&amp;rsquo;s personal events as well as the club events. Handling this is surprisingly challenging. I needed to extend RecyclerView.Adapter
+&lt;a href=&#34;https://github1s.com/Jaspann/Eventified/blob/HEAD/app/src/main/java/com/example/eventified/HomeAdapter.java&#34;&gt;creating a new class&lt;/a&gt;
+that overrode &lt;code&gt;onBindViewHolder&lt;/code&gt;, forcing it to figure out which type of event it was and correctly applied to the data. I was able to get away with
+two classes that &lt;code&gt;extends RecyclerView.ViewHolder&lt;/code&gt;, and did not need to do anything to PersonalEvent and ClubEvent, which in retrospect may
+have been the cleaner solution.&lt;/p&gt;
+&lt;p&gt;While that was the most notable issue I had, as I think it was the last roadblock we had in the project, I am surprised about how much I was able to do.
+I very much agree with anyone saying that the UI does not look great. And it didn&amp;rsquo;t need to be for a group of two computer science students. But the code
+is actually much more than I would have expected of myself in 2021. My commits back then were even larger than they are today, which I guess is some progress,
+but I impressed myself with how much code there is for the semester.&lt;/p&gt;
+&lt;p&gt;Reading through the code, there are also some interesting choices I made back then. I think most interestingly, I remember I really didn&amp;rsquo;t want the long URLs to
+be in the middle of code blocks. This has some merit, as long URLs take up screen space making the code less readable. My solution was to
+&lt;a href=&#34;https://github.com/Jaspann/Eventified/blob/master/app/src/main/java/com/example/eventified/MainActivity.java#L101&#34;&gt;add all of the URLs into the save data for the user on startup&lt;/a&gt;.
+The idea of what to do is there, but there almost certainly was a better way to manage this.
+Another thing was that, for a small amount of time, I thought that
+AWS Amplify was the correct direction to go in instead. I only thought about this for a few days,
+but at the end of the project, I still had references to Amplify in the code base.
+Some level of cleaning up the code and making sure that everything looks nice goes a long way.
+Another thing that goes a long way is comments. I had virtually no comments,
+which was a serious problem of mine back then. Today I at least try to add doc
+comments to the code I edited at the end of a commit or branch, often requiring it in the linter,
+and comment whenever standard convention is broken.&lt;/p&gt;
+&lt;h3 id=&#34;backend&#34;&gt;Backend&lt;/h3&gt;
+&lt;p&gt;The only real requirement that the teacher imposed on our projects were that we needed to connect to an external SQL database to store data.
+This was fine for our project, and it was there so that we couldn&amp;rsquo;t cheat him and say that we are storing all the data locally.&lt;/p&gt;
+&lt;p&gt;While the other group went to an upperclassman for help with the server, I was of the opinion that their solution was too much,
+work for the small amount of processing that needed to be done for the problem we were tackling,
+and looked into a serverless solution instead. I didn&amp;rsquo;t know much at the time, but all I knew I needed was a few functions
+that needed to be activated on the backend which looked exactly like what &lt;a href=&#34;https://aws.amazon.com/lambda/&#34;&gt;AWS Lambda&lt;/a&gt; was offering.
+It required Python, but it allowed me to access the backend database from my app which was enough for the project.&lt;/p&gt;
+&lt;p&gt;I set up endpoints via &lt;a href=&#34;https://aws.amazon.com/api-gateway/&#34;&gt;Amazon API Gateway&lt;/a&gt; for the app to activate the lambda functions.
+API Gateway was just a simple UI for creating random URLs for the project and hooking them up to your Lambda functions easily.
+The API Gateway would pass the JSON payload to the AWS lambda function, which did some simple checking that the account doing the action is valid, and
+then doing simple CRUD operations on the SQL database before sending the data back. As everything was very simple,
+I was able to get away with using Python without any libraries, which was a decent introduction to Python for me.&lt;/p&gt;
+&lt;p&gt;Frontend then needed to pass the data to the backend using a library called &lt;a href=&#34;https://google.github.io/volley/&#34;&gt;Android Volley&lt;/a&gt;.
+Volley is a simple HTTP library, which was all we needed for this application. Volley handles requests in kind of a unique way, where
+instead of &lt;code&gt;async&lt;/code&gt; and &lt;code&gt;await&lt;/code&gt;, you create a request queue that is processed through. In practice this means we never &lt;code&gt;await&lt;/code&gt;,
+so we need to heavily use live updating instead, which was fine for our use case.&lt;/p&gt;
+&lt;p&gt;Here is the final visualization we made for the class to explain the tech stack.&lt;/p&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/mobile-projects/eventified/androidStack.jpg&#34; alt=&#34;A visualization of the stack used. On Front end, we made the app for Android using Android Studio and Java, passed through API calls via the Android Volley library which went to AWS&amp;#39;s API Gateway, which activated a Lambda function written in Python to finally preform an operation on the SQL database, and send the information back up the chain.&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/mobile-projects/eventified/androidStack.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;A visualization of the stack used. On Front end, we made the app for Android using Android Studio and Java, passed through API calls via the Android Volley library which went to AWS&amp;#39;s API Gateway, which activated a Lambda function written in Python to finally preform an operation on the SQL database, and send the information back up the chain.&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In addition, we needed to present our work in front of the CS department.
+For this, we made a small YouTube video to see the flow of the app and
+a slideshow showing what we did for the class.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/53W1g1DNmHY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;div style=&#34;margin: 2rem 0;&#34;&gt;&lt;/div&gt;
+&lt;iframe src=&#34;https://1drv.ms/p/c/78ac3e9c395f4290/IQT4glrVFTcxR6_8_9ZO6__jAQPDLy0OEk9MHgNe8nHEhRI?em=2&amp;amp;wdAr=1.7777777777777777&#34; width=&#34;100%&#34; height=&#34;400px&#34; frameborder=&#34;0&#34;&gt;This is an embedded &lt;a target=&#34;_blank&#34; href=&#34;https://office.com&#34;&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=&#34;_blank&#34; href=&#34;https://office.com/webapps&#34;&gt;Office&lt;/a&gt;.&lt;/iframe&gt;
+&lt;div style=&#34;margin: 2rem 0;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;At the end of the semester, we were happy with where the app was. We understood how to develop
+a consumer-facing social application in Android, and wanted to move on to something else. The project
+is still available on GitHub for anyone interested:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Jaspann/Eventified&#34;&gt;https://github.com/Jaspann/Eventified&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>

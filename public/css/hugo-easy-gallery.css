@@ -8,30 +8,29 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 .gallery {
     overflow: hidden;
     margin: 10px;
-    max-width: 768px;
+    max-width: 100%; /* Changed from 768px to 100% */
+    width: 100%; /* Added this line */
 }
 
+/* Adjust the box padding to accommodate different aspect ratios */
 .gallery .box {
     float: left;
     position: relative;
-    /* Default: 1 tile wide */
     width: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 75%; /* Adjust this value based on your typical image aspect ratio */
 }
 
 @media only screen and (min-width: 365px) {
-    /* Tablet view: 2 tiles */
     .gallery .box {
         width: 50%;
-        padding-bottom: 50%;
+        padding-bottom: 35%; /* Adjusted for larger display */
     }
 }
 
 @media only screen and (min-width: 480px) {
-    /* Small desktop / ipad view: 3 tiles */
     .gallery .box {
-        width: 33.3%;
-        padding-bottom: 33.3%;
+        width: 50%; /* Changed from 33.3% to 50% to show two larger images */
+        padding-bottom: 35%; /* Adjusted for larger display */
     }
 }
 
@@ -90,13 +89,14 @@ figure {
 
 /* img / a styles */
 
+/* Change the .gallery .img style */
 .gallery .img {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background-size: cover;
+    background-size: contain; /* Change from 'cover' to 'contain' */
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
