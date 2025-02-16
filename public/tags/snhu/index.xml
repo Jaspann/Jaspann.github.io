@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SNHU on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/tags/snhu/</link>
+    <description>Recent content in SNHU on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/snhu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eventified</title>
+      <link>http://localhost:1313/post/mobile-projects/eventified/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/mobile-projects/eventified/</guid>
+      <description>&lt;p&gt;&lt;em&gt;An Android calendar app for school clubs.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;It was my first semester on campus at Southern New Hampshire University (SNHU).&#xA;Covid was the year prior, so my class along with the cohort below me was new to the campus.&#xA;I had experience with Java in my high school and even &lt;a href=&#34;http://localhost:1313/post/community-work/ap-comp-sci-a-ta/&#34;&gt;taught the AP course on it&lt;/a&gt;.&#xA;They also taught Java in the first coding class of SNHU&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

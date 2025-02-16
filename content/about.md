@@ -32,7 +32,7 @@ Here is a list of all of the posts I have planned:
 - [x] Pond Jumper
 - [ ] RoundHouse
 - [ ] Yabi
-- [ ] **Flutter M BLE**
+- [x] Flutter M BLE
 - [ ] **Google Mediapipe Pose Detection**
 - [ ] **Arity Android Engineer Intern**
 
