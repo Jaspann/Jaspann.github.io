@@ -187,6 +187,139 @@ I have the work I did here in the back of my mind as reference for how to solve 
     </item>
     
     <item>
+      <title>Peripheral BLE Library for Flutter</title>
+      <link>http://localhost:1313/post/software-libraries/m-ble-peripheral/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/m-ble-peripheral/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;Developing a Flutter library with full BLE peripheral capabilities for iOS and Android&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bluetooth-for-freemovevr&#34;&gt;Bluetooth For FreeMoveVR&lt;/h2&gt;
+&lt;p&gt;Early on in the creation of FreeMoveVR, I knew I wanted the primary communication
+method between the smartphone and computer to be over Bluetooth. I believed that
+Bluetooth was the perfect solution for our use case because:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Everyone has Bluetooth on their phone, and it is a stable option for developers.&lt;/li&gt;
+&lt;li&gt;FreeMoveVR needs to transfer a relatively small amount of data compared to something like streaming music to AirPods.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s wireless, so there is less hassle setting up the program for the end user.&lt;/li&gt;
+&lt;li&gt;It does not rely on Wi-Fi at all, which is good in cases like colleges where the protocols are very complex and locked down for students.&lt;/li&gt;
+&lt;li&gt;BLE stands for Bluetooth Low Energy, so the implication is that the phone can do the main task of pose detection and spend minimal resources on data transfer.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The most notable arguments against the other methods were that a wired connection would be hard to use given how the app works,
+and that a Wi-Fi connection would be impossible to develop while on campus at SNHU.&lt;/p&gt;
+&lt;p&gt;Working on FreeMoveVR was the first time I ever looked into Bluetooth as a developer.
+When learning about the technology, there seemed to be a lot of missing information in discussions, so I will
+briefly discuss some core background to understand the problem I was facing.&lt;/p&gt;
+&lt;h2 id=&#34;bluetooth&#34;&gt;Bluetooth&lt;/h2&gt;
+&lt;p&gt;When first learning about Bluetooth, there are two main types developers may be talking about:
+&lt;a href=&#34;https://developer.android.com/develop/connectivity/bluetooth/ble/ble-overview&#34;&gt;Bluetooth Low Energy&lt;/a&gt;
+(BLE) and Classic Bluetooth, often associated with Bluetooth versions like Bluetooth 5.
+Classic Bluetooth is what something like AirPods or your car uses to transfer large amounts
+of data and something that needs to be manually set up on your phone.
+Advanced applications with heavy data transfer likely need Classic Bluetooth.
+If your application has lower data streaming needs, you can likely use BLE.
+BLE allows for easier and even automatic connections.
+BLE facilitates easier and even automatic connections. An app with BLE functionality
+can scan for known UUIDs, allowing it to connect to devices and read static or streaming data.
+This is the basic concept behind Bluetooth mesh networks, which is sometimes brought up in smart homes or offices.
+There are also many more libraries for BLE than Bluetooth 5. A very good library that I use for desktop applications is
+&lt;a href=&#34;https://www.simpleble.org/&#34;&gt;SimpleBLE&lt;/a&gt;, and for Python &lt;a href=&#34;https://github.com/hbldh/bleak&#34;&gt;Bleak&lt;/a&gt; is very popular.
+Overall, BLE is the correct choice for most small to medium projects for the ease of use for developers and users.&lt;/p&gt;
+&lt;p&gt;BLE works on a central &amp;amp; peripheral system. This is loosely similar to the concept of a client and server.
+The peripheral &amp;ldquo;advertises&amp;rdquo; the BLE connections that centrals can connect to. Each connection has two UUIDs
+one for the service (normally one per application) and one for the characteristic, which an application
+can have as many as needed. When a central sees UUIDs it recognizes, it can connect and start reading and
+writing data from the peripheral.&lt;/p&gt;
+&lt;p&gt;The main issue that I faced in development was that BLE libraries and developers almost always focus
+on the central and rarely implement the peripheral side of the technology. &lt;a href=&#34;https://github.com/kevincar/bless&#34;&gt;Bless&lt;/a&gt;
+is another Python library for BLE that implements the peripheral side of BLE,
+but only has 127 stars on GitHub and is hardly maintained compared to Bleak
+with 1.9k stars and a much more active commit history. SimpleBLE only supports central
+and the peripheral side has been in development for &lt;a href=&#34;https://github.com/simpleble/simpleble/issues/99&#34;&gt;2.5 years&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ble-and-flutter&#34;&gt;BLE and Flutter&lt;/h2&gt;
+&lt;p&gt;Flutter has one of the best &lt;a href=&#34;https://pub.dev/&#34;&gt;communities for libraries&lt;/a&gt;.
+It is much smaller than that of Python or NPM, but you can still find almost anything you need for mobile development.&lt;/p&gt;
+&lt;p&gt;When I was initially building FreeMoveVR in 2022, I only focused on building for Android,
+and I would retrofit iOS compatibility later. I was not too worried about trying to make
+sure what I did would instantly work on iOS, but I chose Flutter for the platform and
+tried to make decisions to make iOS compatibility easier later on.&lt;/p&gt;
+&lt;p&gt;When going over the requirements at the time I had found something interesting.
+Multiple libraries existed for the central side of BLE, and some even existed for
+implementing the peripheral side on
+&lt;a href=&#34;https://github.com/keysking/k_ble_peripheral&#34;&gt;Android devices&lt;/a&gt;, but none existed for iOS.
+It was even more interesting, as the libraries at the time said that iOS was not planned or
+possible, even though it was clearly possible on
+&lt;a href=&#34;https://developer.apple.com/documentation/corebluetooth/cbperipheral&#34;&gt;Apple&amp;rsquo;s documentation&lt;/a&gt;
+There were a lot of different parts of FreeMoveVR I needed to work on and I did not have any
+Apple hardware available to me at the time, so I used an Android-exclusive peripheral library
+and even &lt;a href=&#34;https://github.com/keysking/k_ble_peripheral/pull/5&#34;&gt;fixed a small&lt;/a&gt; issue I had
+noticed when using it.&lt;/p&gt;
+&lt;p&gt;By September 2023, it had been a year since I was aware of the issue in my app, and I
+was not seeing any progress in the Flutter space for enabling BLE support.
+I decided it was time that I started working on modifying the library I was using to add iOS support.
+As the owner seemed to have abandoned the project, I forked it for my use case.&lt;/p&gt;
+&lt;p&gt;I was not aware, but at the same time, a package simply called
+&lt;a href=&#34;https://pub.dev/packages/bluetooth_low_energy&#34;&gt;bluetooth_low_energy&lt;/a&gt; was about to be published to
+pub.dev which today does exactly what I needed at the time.&lt;/p&gt;
+&lt;h2 id=&#34;m_ble_peripheral&#34;&gt;m_ble_peripheral&lt;/h2&gt;
+&lt;p&gt;The project I forked was called &lt;a href=&#34;https://github.com/keysking/k_ble_peripheral&#34;&gt;k_ble_peripheral&lt;/a&gt;.
+I&amp;rsquo;m not sure why &amp;lsquo;k&amp;rsquo; was in the name, but I decided my fork would replace the &amp;lsquo;k&amp;rsquo; with a &amp;rsquo;m&amp;rsquo; to
+signify I modified it, making it &lt;a href=&#34;https://github.com/Jaspann/m_ble_peripheral&#34;&gt;m_ble_peripheral&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This was my first time working on a Flutter library for iOS, or really at all.
+I was only making the project for FreeMoveVR, so I had a very clear idea of the
+features I needed to add and what I didn&amp;rsquo;t need to think about.
+This was also the main reason I didn&amp;rsquo;t publish the library on pub.dev,
+as I didn&amp;rsquo;t really mind if the library did not implement all the features available to
+Apple phones or meet feature parity with the Android side.
+I only needed enough iOS code for FreeMoveVR to communicate with the desktop, and then I
+could consider this complete.&lt;/p&gt;
+&lt;p&gt;As someone that never used Apple products before developing for FreeMoveVR, I was surprised
+by the limitations they impose on developers and superusers. I was trying to download
+Flutter library example apps to understand the process, and quickly hit the three-app limit
+with code I was actively using to build the library for the platform. The way that Flutter needs
+to handle itself inside Xcode is also unorthodox, according to the
+&lt;a href=&#34;https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2c-add-ios-platform-code-swift-hplus-m&#34;&gt;Flutter doc&lt;/a&gt;
+to start development on a package, you need to locate your files Xcode at:
+&lt;code&gt;Pods/Development Pods/examplePlugin/../../example/ios/.symlinks/plugins/examplePlugin/ios/Classes&lt;/code&gt;
+This is beyond strange to have required &lt;code&gt;..&lt;/code&gt; in the file path, as that means that you would land
+yourself back at &lt;code&gt;Pods&lt;/code&gt;, but this whole path is required to get to &lt;code&gt;example&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;As someone who learned software development primarily through the Android ecosystem, it was a
+breath of fresh air looking at Apple&amp;rsquo;s documentation for BLE. I sometimes think that the documentation
+in Android feels so ambiguous that it was automatically generated using only the name of the function as
+a reference. Apple, on the other hand, not only has descriptions for classes and details about functions
+that I found useful, but they even had an example project for Macs! As someone who never had written in Swift
+before this, I felt like I was able to perfectly understand the library and how I needed to implement it.&lt;/p&gt;
+&lt;p&gt;The main unique thing I noticed when coding in Swift is its extra keyword called &lt;code&gt;guard&lt;/code&gt;. This is used for
+negative conditions, where we need to check if the values are valid before we run a method. This is great, as
+it allows you to check your inputs like you would in an &lt;code&gt;if&lt;/code&gt; statement but in a more streamlined way.&lt;/p&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+&lt;p&gt;I knew that the structure for k_ble on Android worked and saw many similarities between the two platforms
+BLE libraries, so I thought it would be best to go in with a general structure mirroring the Android side in
+addition to the example provided by Apple. I needed the Flutter code to be as platform-agnostic as possible,
+so taking hints from the Android side would help with that goal.&lt;/p&gt;
+&lt;p&gt;Almost all my code ended up in &lt;code&gt;CharacteristicDelegate.swift&lt;/code&gt; and &lt;code&gt;PeripheralManagerHandler.swift&lt;/code&gt;. The other files,
+like in Android, were for class structures and not much else. In the library, the main thing I needed to be aware of
+was managing the active connections, as we abstracted that away in the Flutter layer,
+but it is handled by the program at least on the Apple side. That meant managing objects that the app found and
+connected to in a way that would be standard for libraries.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This was a small project I did 2 years ago, and I didn&amp;rsquo;t end up leaving comments.
+So, like most of these posts, I am piecing back together what happened as I write the post.
+While I am happy I made the project, I genuinely don&amp;rsquo;t remember much about the problems I encountered,
+and I don&amp;rsquo;t think it is a good use of time to study my code to figure out what I thought I did back then.
+I would have liked to make the development section much larger, and I may in the future, but understanding
+at a macro level is becoming more important as time progresses, so I am fine leaving the post as is for now.
+If you want to look at the code though, it is available at:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Jaspann/m_ble_peripheral&#34;&gt;https://github.com/Jaspann/m_ble_peripheral&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Balancing the backward compatibility with k_ble and the differences between iOS and Android&amp;rsquo;s implementation on the
+BLE peripheral specification was an interesting and fun challenge. From this, I learned a lot about how Flutter&amp;rsquo;s libraries
+work, Bluetooth, and backward compatibility with existing solutions. This immediately preceded my work on my next Flutter
+library, google_mediapipe_pose_detection, where I further expanded my abilities in this area.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>3tene AutoHotKey</title>
       <link>http://localhost:1313/post/ai-projects/3tene-autohotkey/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
@@ -209,6 +342,9 @@ I noticed that the facial expressions sometimes changed with what they were sayi
 something like that in 3tene. While the feature existed in the app, I was disappointed that as soon as I
 clicked on another window I could no longer use the shortcut to change my emotion. As a relatively new programmer,
 I wanted to see if I could solve this problem.&lt;/p&gt;
+&lt;p&gt;Side note: this is not really and AI project. With my post grouping structure,
+this is the only post that did not fall cleanly into a category, so I put it under AI
+as the script extends the abilities of an AI facial tracking app.&lt;/p&gt;
 &lt;h2 id=&#34;solving-with-autohotkey&#34;&gt;Solving With AutoHotKey&lt;/h2&gt;
 &lt;p&gt;The first thought I would expect most people to have comes down to: &amp;ldquo;Windows says &amp;lsquo;No&amp;rsquo; and 3tene says &amp;lsquo;No&amp;rsquo; so you
 can&amp;rsquo;t program your way out of it.&amp;rdquo; That is a pretty fair response, as I can&amp;rsquo;t edit either of these pieces of software
@@ -599,17 +735,6 @@ a historical group and museum dedicated to preserving the history of the canal s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/mobile-projects/yabi/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/software-libraries/flutter-m-ble/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/software-libraries/flutter-m-ble/</guid>
       
         <description></description>
       

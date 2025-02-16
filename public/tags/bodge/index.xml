@@ -13,9 +13,9 @@
     <atom:link href="http://localhost:1313/tags/bodge/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3tene AutoHotKey</title>
-      <link>http://localhost:1313/post/past-projects/3tene-autohotkey/</link>
+      <link>http://localhost:1313/post/ai-projects/3tene-autohotkey/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/3tene-autohotkey/</guid>
+      <guid>http://localhost:1313/post/ai-projects/3tene-autohotkey/</guid>
       <description>&lt;p&gt;&lt;em&gt;Allowing VTubers to express themselves through global hotkeys.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;finding-vtubing-and-3tene&#34;&gt;Finding VTubing and 3tene&lt;/h2&gt;&#xA;&lt;p&gt;Once the coronavirus pandemic hit and society was in lockdown, I started watching more Twitch.&#xA;Around this time, VTubing was taking off, as people could remain semi-anonymous online while&#xA;attempting to grow a following on video-based platforms. The concept was in good fun and not too serious&#xA;as you would expect from a mildly popular casual entertainment genre. This was my first look at human&#xA;positional tracking systems, and I was impressed with the underlying technology. The problem often was in&#xA;the feature set of the applications used for this growing genre of entertainment, where key features I&#xA;would expect to find in popularly recommended apps seemed to be missing for the technology to&#xA;be used more seriously.&lt;/p&gt;</description>
     </item>
   </channel>

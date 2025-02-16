@@ -13,9 +13,9 @@
     <atom:link href="http://localhost:1313/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pond Jumper</title>
-      <link>http://localhost:1313/post/past-projects/pond-jumper/</link>
+      <link>http://localhost:1313/post/mobile-projects/pond-jumper/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/pond-jumper/</guid>
+      <guid>http://localhost:1313/post/mobile-projects/pond-jumper/</guid>
       <description>&lt;p&gt;&lt;em&gt;My First Large Project: an Arcade Game for Smart Phones.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Looking back at how I first learned software development, I feel very fortunate to have taken the path I did.&#xA;In my junior year of high school I took &lt;a href=&#34;https://apstudents.collegeboard.org/courses/ap-computer-science-a&#34;&gt;AP Computer Science A&lt;/a&gt;,&#xA;which was taught extremely thoroughly on &lt;a href=&#34;https://vlacs.org/&#34;&gt;VLACS&lt;/a&gt; and&#xA;is probably the best course I took in high school despite it being online. My senior year I needed to do a senior&#xA;project, and for this, I decided to re-implement an idea I had made previously, reimagining it using &lt;a href=&#34;https://unity.com/&#34;&gt;Unity&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

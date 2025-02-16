@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BLE on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/tags/ble/</link>
+    <description>Recent content in BLE on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ble/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Peripheral BLE Library for Flutter</title>
+      <link>http://localhost:1313/post/software-libraries/m-ble-peripheral/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/m-ble-peripheral/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Developing a Flutter library with full BLE peripheral capabilities for iOS and Android&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;bluetooth-for-freemovevr&#34;&gt;Bluetooth For FreeMoveVR&lt;/h2&gt;&#xA;&lt;p&gt;Early on in the creation of FreeMoveVR, I knew I wanted the primary communication&#xA;method between the smart phone and computer to be over Bluetooth. I believed that&#xA;Bluetooth was the perfect solution for our use case because:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Everyone has Bluetooth on their phone, and it is a stable option for developers.&lt;/li&gt;&#xA;&lt;li&gt;FreeMoveVR needs to transfer a relatively small amount of data compared to something like streaming music to AirPods.&lt;/li&gt;&#xA;&lt;li&gt;It&amp;rsquo;s wireless, so there is less hassle setting up the program for the end user.&lt;/li&gt;&#xA;&lt;li&gt;It does not rely on Wi-Fi at all, which is good in cases like colleges where the protocols are very complex and locked down for students.&lt;/li&gt;&#xA;&lt;li&gt;BLE stands for Bluetooth Low Energy, so the implication is that the phone can do the main task of pose detection and spend minimal resources on data transfer.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The most notable arguments against the other methods were that a wired connection would be hard to use given how the app works,&#xA;and that a Wi-Fi connection would be imposable to develop while on campus at SNHU.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

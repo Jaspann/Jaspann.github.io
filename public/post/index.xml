@@ -9,7 +9,7 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FlightSure</title>
@@ -17,6 +17,13 @@
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/ai-projects/flight-sure/</guid>
       <description>&lt;p&gt;&lt;em&gt;Using Machine Learning to Find the Chance a Flight is on Time.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I had recently returned to San Jose after visiting my family across the country.&#xA;While waiting at Logan Airport in Boston, I was watching the snowfall and wondered&#xA;if it would delay my flight. It had just started and light snow is a normal occurrence for&#xA;the area, so it was unlikely but possible. I then considered San Jose&amp;rsquo;s Airport. While they have&#xA;different weather they need to account for, there is no infrastructure in place for even&#xA;light snow. In addition, many drivers would not know how to handle slippery roads, which&#xA;would probably cause significant problems across the city.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Peripheral BLE Library for Flutter</title>
+      <link>http://localhost:1313/post/software-libraries/m-ble-peripheral/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/m-ble-peripheral/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Developing a Flutter library with full BLE peripheral capabilities for iOS and Android&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;bluetooth-for-freemovevr&#34;&gt;Bluetooth For FreeMoveVR&lt;/h2&gt;&#xA;&lt;p&gt;Early on in the creation of FreeMoveVR, I knew I wanted the primary communication&#xA;method between the smart phone and computer to be over Bluetooth. I believed that&#xA;Bluetooth was the perfect solution for our use case because:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Everyone has Bluetooth on their phone, and it is a stable option for developers.&lt;/li&gt;&#xA;&lt;li&gt;FreeMoveVR needs to transfer a relatively small amount of data compared to something like streaming music to AirPods.&lt;/li&gt;&#xA;&lt;li&gt;It&amp;rsquo;s wireless, so there is less hassle setting up the program for the end user.&lt;/li&gt;&#xA;&lt;li&gt;It does not rely on Wi-Fi at all, which is good in cases like colleges where the protocols are very complex and locked down for students.&lt;/li&gt;&#xA;&lt;li&gt;BLE stands for Bluetooth Low Energy, so the implication is that the phone can do the main task of pose detection and spend minimal resources on data transfer.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The most notable arguments against the other methods were that a wired connection would be hard to use given how the app works,&#xA;and that a Wi-Fi connection would be imposable to develop while on campus at SNHU.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3tene AutoHotKey</title>
@@ -86,13 +93,6 @@
       <link>http://localhost:1313/post/mobile-projects/yabi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/mobile-projects/yabi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/software-libraries/flutter-m-ble/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/software-libraries/flutter-m-ble/</guid>
       <description></description>
     </item>
     <item>

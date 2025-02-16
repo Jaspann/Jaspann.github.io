@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage" data-theme="light">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    
+    Peripheral BLE Library for Flutter - William Parker&#39;s Personal Site
+    </title>
+  
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+
+
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta name="color-scheme" content="light dark" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+
+<meta name="generator" content="Hugo 0.143.1" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/software-libraries/m-ble-peripheral/" />
+
+
+
+
+<meta name="author" content="William Parker" /><meta name="description" content="Developing a Flutter library with full BLE peripheral capabilities for iOS and Android" />
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta name="keywords" content="Java, Swift, iOS, Android, Flutter, Mobile, Library, BLE, Bluetooth" />
+
+
+<meta property="og:url" content="http://localhost:1313/post/software-libraries/m-ble-peripheral/">
+  <meta property="og:site_name" content="William Parker&#39;s Personal Site">
+  <meta property="og:title" content="Peripheral BLE Library for Flutter">
+  <meta property="og:description" content="Developing a Flutter library with full BLE peripheral capabilities for iOS and Android">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-10-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-13T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="IOS">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Flutter">
+    <meta property="article:tag" content="Mobile">
+
+  <meta itemprop="name" content="Peripheral BLE Library for Flutter">
+  <meta itemprop="description" content="Developing a Flutter library with full BLE peripheral capabilities for iOS and Android">
+  <meta itemprop="datePublished" content="2023-10-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-02-13T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1675">
+  <meta itemprop="keywords" content="Java,Swift,IOS,Android,Flutter,Mobile,Library,BLE,Bluetooth">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Peripheral BLE Library for Flutter">
+  <meta name="twitter:description" content="Developing a Flutter library with full BLE peripheral capabilities for iOS and Android">
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.min.efc57c788c2e17f2049ed15c233ee485d769f803158dbc40eb60149174d84dc0.css" integrity="sha256-78V8eIwuF/IEntFcIz7khddp&#43;AMVjbxA62AUkXTYTcA=" media="screen"
+  crossorigin="anonymous">
+
+
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+<script>
+  (function () {
+    var savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
+
+<link rel="stylesheet" href="/css/image.css">
+
+</head>
+
+<body>
+  <div id="back-to-top"></div>
+
+  <header class="site-header">
+    
+<div class="desktop-header">
+  <div class="desktop-header-logo">
+    <a href="/" class="logo">
+      
+      William Parker&#39;s Personal Site
+      
+    </a>
+  </div>
+
+  <nav class="desktop-navbar">
+    <ul id="menu" class="menu">
+      
+      
+      <li class="menu-item">
+        
+        
+        
+        <a class="menu-item-link" href="http://localhost:1313/about/">About</a>
+        
+
+        
+
+      </li>
+      
+
+      
+      
+
+      
+
+      <li class="menu-item">
+        <a class="theme-toggle menu-item-link" href="javascript:void(0);">
+
+          
+<svg aria-hidden="true" class="lucide lucide-sun hi-svg-inline theme-icon-light" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+
+          
+<svg aria-hidden="true" class="lucide lucide-moon hi-svg-inline theme-icon-dark" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+
+        </a>
+      </li>
+
+      <li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/Jaspann" rel="noopener alternate"
+          title="GitHub" target="_blank">
+          
+<svg aria-hidden="true" class="icon hi-svg-inline icon--rss" fill="currentColor" height="1em" version="1.1" viewBox="0 0 1024 1024" width="1em" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+        </a>
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    
+
+<div class="mobile-header">
+  <div id="mobile-navbar" class="mobile-navbar">
+    <div id="mobile-navbar-icon" class="mobile-navbar-icon">
+      
+<svg aria-hidden="true" class="lucide lucide-menu hi-svg-inline icon--menu" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </div>
+    <div class="mobile-navbar-logo">
+      <a href="/" class="logo">William Parker&#39;s Personal Site</a>
+    </div>
+  </div>
+
+  <div id="mobile-menu-close-modal" class="mobile-menu-close-modal"></div>
+  <nav id="mobile-menu" class="mobile-menu">
+    <ul class="mobile-menu-list">
+      <li class="mobile-menu-item">
+        
+        
+        
+        <a class="menu-item-link" href="http://localhost:1313/about/">About</a>
+        
+        
+      </li>
+      
+
+      
+
+      <li class="mobile-menu-item">
+        <a class="theme-toggle menu-item-link" href="javascript:void(0);">
+
+          
+<svg aria-hidden="true" class="lucide lucide-sun hi-svg-inline theme-icon-light" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+
+          
+<svg aria-hidden="true" class="lucide lucide-moon hi-svg-inline theme-icon-dark" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+
+        </a>
+      </li>
+
+      <li class="mobile-menu-item">
+        <a class="menu-item-link" href="https://github.com/Jaspann" rel="noopener alternate"
+          title="GitHub" target="_blank">
+          
+<svg aria-hidden="true" class="icon hi-svg-inline icon--rss" fill="currentColor" height="1em" version="1.1" viewBox="0 0 1024 1024" width="1em" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+        </a>
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  </header>
+
+  
+
+  
+
+
+
+  <main id="main" class="main pico container">
+    <div class="content-wrapper">
+  <aside class="sidebar">
+  </aside>
+  <div id="content" class="content">
+    <article class="post">
+      
+      <header class="post-header">
+        <h1 class="post-title">Peripheral BLE Library for Flutter</h1>
+        
+
+
+
+        <div class="post-meta-list">
+  <div class="post-meta-item post-meta-author">
+    
+<svg aria-hidden="true" class="lucide lucide-user-round-pen hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 21a8 8 0 0 1 10.821-7.487"/><path d="M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/><circle cx="10" cy="8" r="5"/></svg>
+    <a href="/about">
+      <span class="post-meta-author-name">
+        William Parker
+      </span>
+    </a>
+    
+  </div>
+
+  <div class="post-meta-item post-meta-time">
+    
+<svg aria-hidden="true" class="lucide lucide-calendar-days hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+    <time datetime=" 2023-10-01">
+      Oct 1 2023
+    </time>
+
+
+    
+    <span class="post-meta-item post-meta-lastmod">
+      (Modified:
+      Feb 13 2025)
+    </span>
+    
+
+  </div>
+
+
+  <div class="post-meta__right">
+    
+
+    <div class="post-meta-item post-meta-category">
+      
+        
+          
+        <a href="http://localhost:1313/categories/software-libraries/">software-libraries</a>
+    </div>
+
+
+    
+    
+
+
+    
+    
+  </div>
+</div>
+
+      </header>
+
+      
+      <div class="post-content">
+        <p><em>Developing a Flutter library with full BLE peripheral capabilities for iOS and Android</em></p>
+<h2 id="bluetooth-for-freemovevr">Bluetooth For FreeMoveVR</h2>
+<p>Early on in the creation of FreeMoveVR, I knew I wanted the primary communication
+method between the smartphone and computer to be over Bluetooth. I believed that
+Bluetooth was the perfect solution for our use case because:</p>
+<ol>
+<li>Everyone has Bluetooth on their phone, and it is a stable option for developers.</li>
+<li>FreeMoveVR needs to transfer a relatively small amount of data compared to something like streaming music to AirPods.</li>
+<li>It&rsquo;s wireless, so there is less hassle setting up the program for the end user.</li>
+<li>It does not rely on Wi-Fi at all, which is good in cases like colleges where the protocols are very complex and locked down for students.</li>
+<li>BLE stands for Bluetooth Low Energy, so the implication is that the phone can do the main task of pose detection and spend minimal resources on data transfer.</li>
+</ol>
+<p>The most notable arguments against the other methods were that a wired connection would be hard to use given how the app works,
+and that a Wi-Fi connection would be impossible to develop while on campus at SNHU.</p>
+<p>Working on FreeMoveVR was the first time I ever looked into Bluetooth as a developer.
+When learning about the technology, there seemed to be a lot of missing information in discussions, so I will
+briefly discuss some core background to understand the problem I was facing.</p>
+<h2 id="bluetooth">Bluetooth</h2>
+<p>When first learning about Bluetooth, there are two main types developers may be talking about:
+<a href="https://developer.android.com/develop/connectivity/bluetooth/ble/ble-overview">Bluetooth Low Energy</a>
+(BLE) and Classic Bluetooth, often associated with Bluetooth versions like Bluetooth 5.
+Classic Bluetooth is what something like AirPods or your car uses to transfer large amounts
+of data and something that needs to be manually set up on your phone.
+Advanced applications with heavy data transfer likely need Classic Bluetooth.
+If your application has lower data streaming needs, you can likely use BLE.
+BLE allows for easier and even automatic connections.
+BLE facilitates easier and even automatic connections. An app with BLE functionality
+can scan for known UUIDs, allowing it to connect to devices and read static or streaming data.
+This is the basic concept behind Bluetooth mesh networks, which is sometimes brought up in smart homes or offices.
+There are also many more libraries for BLE than Bluetooth 5. A very good library that I use for desktop applications is
+<a href="https://www.simpleble.org/">SimpleBLE</a>, and for Python <a href="https://github.com/hbldh/bleak">Bleak</a> is very popular.
+Overall, BLE is the correct choice for most small to medium projects for the ease of use for developers and users.</p>
+<p>BLE works on a central &amp; peripheral system. This is loosely similar to the concept of a client and server.
+The peripheral &ldquo;advertises&rdquo; the BLE connections that centrals can connect to. Each connection has two UUIDs
+one for the service (normally one per application) and one for the characteristic, which an application
+can have as many as needed. When a central sees UUIDs it recognizes, it can connect and start reading and
+writing data from the peripheral.</p>
+<p>The main issue that I faced in development was that BLE libraries and developers almost always focus
+on the central and rarely implement the peripheral side of the technology. <a href="https://github.com/kevincar/bless">Bless</a>
+is another Python library for BLE that implements the peripheral side of BLE,
+but only has 127 stars on GitHub and is hardly maintained compared to Bleak
+with 1.9k stars and a much more active commit history. SimpleBLE only supports central
+and the peripheral side has been in development for <a href="https://github.com/simpleble/simpleble/issues/99">2.5 years</a></p>
+<h2 id="ble-and-flutter">BLE and Flutter</h2>
+<p>Flutter has one of the best <a href="https://pub.dev/">communities for libraries</a>.
+It is much smaller than that of Python or NPM, but you can still find almost anything you need for mobile development.</p>
+<p>When I was initially building FreeMoveVR in 2022, I only focused on building for Android,
+and I would retrofit iOS compatibility later. I was not too worried about trying to make
+sure what I did would instantly work on iOS, but I chose Flutter for the platform and
+tried to make decisions to make iOS compatibility easier later on.</p>
+<p>When going over the requirements at the time I had found something interesting.
+Multiple libraries existed for the central side of BLE, and some even existed for
+implementing the peripheral side on
+<a href="https://github.com/keysking/k_ble_peripheral">Android devices</a>, but none existed for iOS.
+It was even more interesting, as the libraries at the time said that iOS was not planned or
+possible, even though it was clearly possible on
+<a href="https://developer.apple.com/documentation/corebluetooth/cbperipheral">Apple&rsquo;s documentation</a>
+There were a lot of different parts of FreeMoveVR I needed to work on and I did not have any
+Apple hardware available to me at the time, so I used an Android-exclusive peripheral library
+and even <a href="https://github.com/keysking/k_ble_peripheral/pull/5">fixed a small</a> issue I had
+noticed when using it.</p>
+<p>By September 2023, it had been a year since I was aware of the issue in my app, and I
+was not seeing any progress in the Flutter space for enabling BLE support.
+I decided it was time that I started working on modifying the library I was using to add iOS support.
+As the owner seemed to have abandoned the project, I forked it for my use case.</p>
+<p>I was not aware, but at the same time, a package simply called
+<a href="https://pub.dev/packages/bluetooth_low_energy">bluetooth_low_energy</a> was about to be published to
+pub.dev which today does exactly what I needed at the time.</p>
+<h2 id="m_ble_peripheral">m_ble_peripheral</h2>
+<p>The project I forked was called <a href="https://github.com/keysking/k_ble_peripheral">k_ble_peripheral</a>.
+I&rsquo;m not sure why &lsquo;k&rsquo; was in the name, but I decided my fork would replace the &lsquo;k&rsquo; with a &rsquo;m&rsquo; to
+signify I modified it, making it <a href="https://github.com/Jaspann/m_ble_peripheral">m_ble_peripheral</a>.</p>
+<p>This was my first time working on a Flutter library for iOS, or really at all.
+I was only making the project for FreeMoveVR, so I had a very clear idea of the
+features I needed to add and what I didn&rsquo;t need to think about.
+This was also the main reason I didn&rsquo;t publish the library on pub.dev,
+as I didn&rsquo;t really mind if the library did not implement all the features available to
+Apple phones or meet feature parity with the Android side.
+I only needed enough iOS code for FreeMoveVR to communicate with the desktop, and then I
+could consider this complete.</p>
+<p>As someone that never used Apple products before developing for FreeMoveVR, I was surprised
+by the limitations they impose on developers and superusers. I was trying to download
+Flutter library example apps to understand the process, and quickly hit the three-app limit
+with code I was actively using to build the library for the platform. The way that Flutter needs
+to handle itself inside Xcode is also unorthodox, according to the
+<a href="https://docs.flutter.dev/packages-and-plugins/developing-packages#step-2c-add-ios-platform-code-swift-hplus-m">Flutter doc</a>
+to start development on a package, you need to locate your files Xcode at:
+<code>Pods/Development Pods/examplePlugin/../../example/ios/.symlinks/plugins/examplePlugin/ios/Classes</code>
+This is beyond strange to have required <code>..</code> in the file path, as that means that you would land
+yourself back at <code>Pods</code>, but this whole path is required to get to <code>example</code>.</p>
+<p>As someone who learned software development primarily through the Android ecosystem, it was a
+breath of fresh air looking at Apple&rsquo;s documentation for BLE. I sometimes think that the documentation
+in Android feels so ambiguous that it was automatically generated using only the name of the function as
+a reference. Apple, on the other hand, not only has descriptions for classes and details about functions
+that I found useful, but they even had an example project for Macs! As someone who never had written in Swift
+before this, I felt like I was able to perfectly understand the library and how I needed to implement it.</p>
+<p>The main unique thing I noticed when coding in Swift is its extra keyword called <code>guard</code>. This is used for
+negative conditions, where we need to check if the values are valid before we run a method. This is great, as
+it allows you to check your inputs like you would in an <code>if</code> statement but in a more streamlined way.</p>
+<h2 id="development">Development</h2>
+<p>I knew that the structure for k_ble on Android worked and saw many similarities between the two platforms
+BLE libraries, so I thought it would be best to go in with a general structure mirroring the Android side in
+addition to the example provided by Apple. I needed the Flutter code to be as platform-agnostic as possible,
+so taking hints from the Android side would help with that goal.</p>
+<p>Almost all my code ended up in <code>CharacteristicDelegate.swift</code> and <code>PeripheralManagerHandler.swift</code>. The other files,
+like in Android, were for class structures and not much else. In the library, the main thing I needed to be aware of
+was managing the active connections, as we abstracted that away in the Flutter layer,
+but it is handled by the program at least on the Apple side. That meant managing objects that the app found and
+connected to in a way that would be standard for libraries.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This was a small project I did 2 years ago, and I didn&rsquo;t end up leaving comments.
+So, like most of these posts, I am piecing back together what happened as I write the post.
+While I am happy I made the project, I genuinely don&rsquo;t remember much about the problems I encountered,
+and I don&rsquo;t think it is a good use of time to study my code to figure out what I thought I did back then.
+I would have liked to make the development section much larger, and I may in the future, but understanding
+at a macro level is becoming more important as time progresses, so I am fine leaving the post as is for now.
+If you want to look at the code though, it is available at:</p>
+<p><a href="https://github.com/Jaspann/m_ble_peripheral">https://github.com/Jaspann/m_ble_peripheral</a></p>
+<p>Balancing the backward compatibility with k_ble and the differences between iOS and Android&rsquo;s implementation on the
+BLE peripheral specification was an interesting and fun challenge. From this, I learned a lot about how Flutter&rsquo;s libraries
+work, Bluetooth, and backward compatibility with existing solutions. This immediately preceded my work on my next Flutter
+library, google_mediapipe_pose_detection, where I further expanded my abilities in this area.</p>
+
+      </div>
+
+      
+      
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">William Parker</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">Modified</span>
+    <span class="item-content">
+      Feb 13 2025
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></span>
+  </p>
+</div>
+
+
+
+      
+      
+
+
+      <footer class="post-footer">
+        <div class="post-tags">
+          <a href="http://localhost:1313/tags/java/">Java</a>
+          <a href="http://localhost:1313/tags/swift/">Swift</a>
+          <a href="http://localhost:1313/tags/ios/">iOS</a>
+          <a href="http://localhost:1313/tags/android/">Android</a>
+          <a href="http://localhost:1313/tags/flutter/">Flutter</a>
+          <a href="http://localhost:1313/tags/mobile/">Mobile</a>
+          <a href="http://localhost:1313/tags/library/">Library</a>
+          <a href="http://localhost:1313/tags/ble/">BLE</a>
+          <a href="http://localhost:1313/tags/bluetooth/">Bluetooth</a>
+          
+        </div>
+
+
+        
+        <nav class="post-nav">
+          
+          <a class="prev" href="/post/ai-projects/flight-sure/">
+            
+            <i class="iconfont">
+              
+<svg aria-hidden="true" class="lucide lucide-chevron-left hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m15 18-6-6 6-6"/></svg>
+            </i>
+            <span class="prev-text nav-default">FlightSure</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+          
+          <a class="next" href="/post/ai-projects/3tene-autohotkey/">
+            <span class="next-text nav-default">3tene AutoHotKey</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              
+<svg aria-hidden="true" class="lucide lucide-chevron-right hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"/></svg>
+            </i>
+          </a>
+        </nav>
+      </footer>
+    </article>
+
+    
+    
+
+
+    
+    
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+    
+
+  
+
+  
+
+
+  </div>
+
+  
+  <nav class="toc" id="toc">
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-content custom-scrollbar">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#bluetooth-for-freemovevr">Bluetooth For FreeMoveVR</a></li>
+    <li><a href="#bluetooth">Bluetooth</a></li>
+    <li><a href="#ble-and-flutter">BLE and Flutter</a></li>
+    <li><a href="#m_ble_peripheral">m_ble_peripheral</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+  </nav>
+
+
+</div>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="social-icon-links">
+  
+
+
+<a href="mailto:wiparker2020@gmail.com" rel="me noopener" class="social-icon-link" title="email" >
+  
+<svg aria-hidden="true" class="icon hi-svg-inline" fill="currentColor" height="1em" version="1.1" viewBox="0 0 1451 1024" width="1em" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+</a>
+<a href="https://www.linkedin.com/in/william-parker-7b43a221b/" rel="me noopener" class="social-icon-link" title="linkedin"  target="_blank" >
+  
+<svg aria-hidden="true" class="icon hi-svg-inline" fill="currentColor" height="1em" version="1.1" viewBox="0 0 1024 1024" width="1em" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+</a>
+<a href="https://github.com/Jaspann" rel="me noopener" class="social-icon-link" title="github"  target="_blank" >
+  
+<svg aria-hidden="true" class="icon hi-svg-inline" fill="currentColor" height="1em" version="1.1" viewBox="0 0 1024 1024" width="1em" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+</a>
+<a href="https://www.instagram.com/williampar20/" rel="me noopener" class="social-icon-link" title="instagram"  target="_blank" >
+  
+<svg aria-hidden="true" class="icon hi-svg-inline" fill="currentColor" height="1em" version="1.1" viewBox="0 0 1024 1024" width="1em" xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <path d="M853.333333 277.333333C853.333333 289.28 843.946667 298.666667 832 298.666667L746.666667 298.666667C734.72 298.666667 725.333333 289.28 725.333333 277.333333L725.333333 192C725.333333 180.053333 734.72 170.666667 746.666667 170.666667L832 170.666667C843.946667 170.666667 853.333333 180.053333 853.333333 192M192 853.333333C180.053333 853.333333 170.666667 843.946667 170.666667 832L170.666667 469.333333 259.84 469.333333C257.28 482.986667 256 497.493333 256 512 256 653.226667 370.773333 768 512 768 653.226667 768 768 653.226667 768 512 768 497.493333 766.293333 482.986667 764.16 469.333333L853.333333 469.333333 853.333333 832C853.333333 843.946667 843.946667 853.333333 832 853.333333M512 341.333333C606.293333 341.333333 682.666667 417.706667 682.666667 512 682.666667 606.293333 606.293333 682.666667 512 682.666667 417.706667 682.666667 341.333333 606.293333 341.333333 512 341.333333 417.706667 417.706667 341.333333 512 341.333333M853.333333 85.333333 170.666667 85.333333C123.306667 85.333333 85.333333 123.306667 85.333333 170.666667L85.333333 853.333333C85.333333 900.266667 123.733333 938.666667 170.666667 938.666667L853.333333 938.666667C900.266667 938.666667 938.666667 900.266667 938.666667 853.333333L938.666667 170.666667C938.666667 123.306667 900.266667 85.333333 853.333333 85.333333Z"></path>
+</svg>
+
+</a>
+
+
+<a href="http://localhost:1313/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="social-icon-link" title="rss"
+  target="_blank">
+  
+<svg aria-hidden="true" class="lucide lucide-rss hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+</a>
+
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+     -
+    2025
+    <span class="heart">
+      
+      <i class="iconfont">
+        
+<svg aria-hidden="true" class="lucide lucide-heart hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      </i>
+    </span><span class="author">
+      William Parker
+      
+    </span></span>
+
+  
+  
+
+  
+</div>
+
+  </footer>
+
+  
+
+
+
+
+<script type="text/javascript" src="/js/main.14843c4230d06d0e8f4cffc9b270677bbc589ee2cf46e46396be5bde89a5cf3a.js" integrity="sha256-FIQ8QjDQbQ6PTP/JsnBne7xYnuLPRuRjlr5b3omlzzo=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

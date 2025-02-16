@@ -1,7 +1,7 @@
 ---
 title: "3tene AutoHotKey"
 description: ""
-tags: ["AutoHotKey", "Windows", "Pose Estimation", "Bodge"]
+tags: ["AutoHotKey", "Windows", "Pose Estimation"]
 publishdate: 2020-09-01
 lastmod: 2025-02-09
 categories: [
@@ -27,6 +27,10 @@ I noticed that the facial expressions sometimes changed with what they were sayi
 something like that in 3tene. While the feature existed in the app, I was disappointed that as soon as I 
 clicked on another window I could no longer use the shortcut to change my emotion. As a relatively new programmer, 
 I wanted to see if I could solve this problem.
+
+Side note: this is not really and AI project. With my post grouping structure, 
+this is the only post that did not fall cleanly into a category, so I put it under AI 
+as the script extends the abilities of an AI facial tracking app.
 
 ## Solving With AutoHotKey
 

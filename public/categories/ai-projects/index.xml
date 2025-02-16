@@ -13,10 +13,17 @@
     <atom:link href="http://localhost:1313/categories/ai-projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FlightSure</title>
-      <link>http://localhost:1313/post/past-projects/flight-sure/</link>
+      <link>http://localhost:1313/post/ai-projects/flight-sure/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/past-projects/flight-sure/</guid>
+      <guid>http://localhost:1313/post/ai-projects/flight-sure/</guid>
       <description>&lt;p&gt;&lt;em&gt;Using Machine Learning to Find the Chance a Flight is on Time.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I had recently returned to San Jose after visiting my family across the country.&#xA;While waiting at Logan Airport in Boston, I was watching the snowfall and wondered&#xA;if it would delay my flight. It had just started and light snow is a normal occurrence for&#xA;the area, so it was unlikely but possible. I then considered San Jose&amp;rsquo;s Airport. While they have&#xA;different weather they need to account for, there is no infrastructure in place for even&#xA;light snow. In addition, many drivers would not know how to handle slippery roads, which&#xA;would probably cause significant problems across the city.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3tene AutoHotKey</title>
+      <link>http://localhost:1313/post/ai-projects/3tene-autohotkey/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/3tene-autohotkey/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Allowing VTubers to express themselves through global hotkeys.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;finding-vtubing-and-3tene&#34;&gt;Finding VTubing and 3tene&lt;/h2&gt;&#xA;&lt;p&gt;Once the coronavirus pandemic hit and society was in lockdown, I started watching more Twitch.&#xA;Around this time, VTubing was taking off, as people could remain semi-anonymous online while&#xA;attempting to grow a following on video-based platforms. The concept was in good fun and not too serious&#xA;as you would expect from a mildly popular casual entertainment genre. This was my first look at human&#xA;positional tracking systems, and I was impressed with the underlying technology. The problem often was in&#xA;the feature set of the applications used for this growing genre of entertainment, where key features I&#xA;would expect to find in popularly recommended apps seemed to be missing for the technology to&#xA;be used more seriously.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

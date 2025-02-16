@@ -9,13 +9,20 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Past-Projects</title>
-      <link>http://localhost:1313/categories/past-projects/</link>
+      <title>Ai-Projects</title>
+      <link>http://localhost:1313/categories/ai-projects/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/categories/past-projects/</guid>
+      <guid>http://localhost:1313/categories/ai-projects/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software-Libraries</title>
+      <link>http://localhost:1313/categories/software-libraries/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/categories/software-libraries/</guid>
       <description></description>
     </item>
     <item>
@@ -23,6 +30,13 @@
       <link>http://localhost:1313/categories/community-work/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/categories/community-work/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mobile-Projects</title>
+      <link>http://localhost:1313/categories/mobile-projects/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/categories/mobile-projects/</guid>
       <description></description>
     </item>
   </channel>
