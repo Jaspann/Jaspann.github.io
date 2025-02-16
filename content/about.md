@@ -25,7 +25,7 @@ Here is a list of all of the posts I have planned:
 - [ ] SJSU MS AI Education
 - [ ] SNHU Comp Sci Education
 - [x] 3tene AHK
-- [ ] **Eventified**
+- [x] Eventified
 - [x] FlightSure
 - [ ] **ChordLlama**
 - [ ] **Multi-Repo Coding Assistant**

@@ -36,7 +36,7 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS AI Education&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Comp Sci Education&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene AHK&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Eventified&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Eventified&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FlightSure&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;ChordLlama&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Multi-Repo Coding Assistant&lt;/strong&gt;&lt;/li&gt;
@@ -333,7 +333,7 @@ library, google_mediapipe_pose_detection, where I further expanded my abilities 
 &lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
     
   
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
+  
   &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
   &lt;figure  itemprop=&#34;associatedMedia&#34;
     itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
