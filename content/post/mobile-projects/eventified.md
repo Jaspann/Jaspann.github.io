@@ -120,6 +120,7 @@ Volley is a simple HTTP library, which was all we needed for this application. V
 instead of `async` and `await`, you create a request queue that is processed through. In practice this means we never `await`, 
 so we need to heavily use live updating instead, which was fine for our use case.
 
+## Final Product
 Here is the final visualization we made for the class to explain the tech stack. 
 
 {{< figure src="/mobile-projects/eventified/androidStack.jpg"

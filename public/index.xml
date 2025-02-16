@@ -333,7 +333,7 @@ library, google_mediapipe_pose_detection, where I further expanded my abilities 
 &lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
     
   
-  
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
   &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
   &lt;figure  itemprop=&#34;associatedMedia&#34;
     itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
@@ -445,6 +445,7 @@ I was able to get away with using Python without any libraries, which was a dece
 Volley is a simple HTTP library, which was all we needed for this application. Volley handles requests in kind of a unique way, where
 instead of &lt;code&gt;async&lt;/code&gt; and &lt;code&gt;await&lt;/code&gt;, you create a request queue that is processed through. In practice this means we never &lt;code&gt;await&lt;/code&gt;,
 so we need to heavily use live updating instead, which was fine for our use case.&lt;/p&gt;
+&lt;h2 id=&#34;final-product&#34;&gt;Final Product&lt;/h2&gt;
 &lt;p&gt;Here is the final visualization we made for the class to explain the tech stack.&lt;/p&gt;
 
 
