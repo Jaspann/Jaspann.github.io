@@ -38,10 +38,10 @@ postWidget:
     title: Mobile Projects
     category: mobile-projects
     count: 3
-  - type: category
-    title: Web Projects
-    category: web-projects
-    count: 2
+  # - type: category
+  #   title: Web Projects
+  #   category: web-projects
+  #   count: 2
   - type: category
     title: Community Work
     category: community-work

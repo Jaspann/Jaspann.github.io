@@ -9,8 +9,22 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LLMs</title>
+      <link>http://localhost:1313/tags/llms/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/llms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>APIs</title>
       <link>http://localhost:1313/tags/apis/</link>
@@ -30,13 +44,6 @@
       <link>http://localhost:1313/tags/machine-learning/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
@@ -103,6 +110,34 @@
       <description></description>
     </item>
     <item>
+      <title>API</title>
+      <link>http://localhost:1313/tags/api/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>http://localhost:1313/tags/aws/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SNHU</title>
+      <link>http://localhost:1313/tags/snhu/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/snhu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XML</title>
+      <link>http://localhost:1313/tags/xml/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/xml/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>AutoHotKey</title>
       <link>http://localhost:1313/tags/autohotkey/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
@@ -114,41 +149,6 @@
       <link>http://localhost:1313/tags/pose-estimation/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/pose-estimation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>http://localhost:1313/tags/windows/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Best Practices</title>
-      <link>http://localhost:1313/tags/best-practices/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/best-practices/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>C Sharp</title>
-      <link>http://localhost:1313/tags/c-sharp/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/c-sharp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Google Play</title>
-      <link>http://localhost:1313/tags/google-play/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/google-play/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Leadership</title>
-      <link>http://localhost:1313/tags/leadership/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/leadership/</guid>
       <description></description>
     </item>
   </channel>

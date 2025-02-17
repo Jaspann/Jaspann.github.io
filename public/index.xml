@@ -52,6 +52,37 @@ worked on from a technical perspective and show off the design process behind th
     </item>
     
     <item>
+      <title>Multi Repo Coding Assistant</title>
+      <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;Applying LLM routing for a single chat across multiple repositories.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Many of the projects Iv&amp;rsquo;e worked on combine multiple repositories to create a single experience
+for the user. There are many common examples of this, like a full-stack developer working on
+front and back-end. It gets much more complex as the scope of the application grows. Companies
+may want development teams for Android and iOS, and this requires teams to understand where each
+other team is at to maintain feature parity. There are many questions that a developer of one team
+could have, and discussion on every technical intricacy can take time from development.&lt;/p&gt;
+&lt;p&gt;Coding virtual assistants have become increasingly common over the last few years.
+Virtual assistants can help to better understand whatever question you ask it on the topic it is
+made for. In my free time, I had been working on a suite of products that spanned across different
+platforms and coding languages. While most assistants only respond to questions about a single
+repository, my project would not work with most existing off-the-shelf solutions as I need to
+constantly be thinking about how all three repositories interact at all times.&lt;/p&gt;
+&lt;p&gt;Creating a RAG system that most tools can generate automatically in this case would be difficult
+for multiple reasons. Firstly, a naïve implementation of throwing all of my code into a single system
+will create a situation where it may find the most relevant files to be from the wrong project. Secondly,
+I would likely need to parse the files to extract the doc comments and function headers,
+as much of the code would likely be trash data that would confuse the model, and the doc comments and
+header should be all I need if I have been doing my job correctly.&lt;/p&gt;
+&lt;iframe src=&#34;https://1drv.ms/p/c/78ac3e9c395f4290/IQTeSdxR92W3QY7pA3mtUBsAAaSRcWdEMoDNXt72TIjfmxM?em=2&amp;amp;wdAr=1.7777777777777777&#34; width=&#34;100%&#34; height=&#34;400px&#34; frameborder=&#34;0&#34;&gt;This is an embedded &lt;a target=&#34;_blank&#34; href=&#34;https://office.com&#34;&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=&#34;_blank&#34; href=&#34;https://office.com/webapps&#34;&gt;Office&lt;/a&gt;.&lt;/iframe&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>FlightSure</title>
       <link>http://localhost:1313/post/ai-projects/flight-sure/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
@@ -84,7 +115,7 @@ Looking into National Aviation System Delays further, weather makes up almost ha
 While there are clearly several other factors that can cause flights to be delayed, predicting based on weather
 seemed like the best predictor we could realistically use without insider knowledge of internal systems.&lt;/p&gt;
 
-
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
 &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
 &lt;figure  class=&#34;bordered-image&#34;  itemprop=&#34;associatedMedia&#34;
   itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
@@ -666,7 +697,7 @@ which was taught extremely thoroughly on &lt;a href=&#34;https://vlacs.org/&#34;
 is probably the best course I took in high school despite it being online. My senior year I needed to do a senior
 project, and for this, I decided to re-implement an idea I had made previously, reimagining it using &lt;a href=&#34;https://unity.com/&#34;&gt;Unity&lt;/a&gt;.&lt;/p&gt;
 
-
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
 &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
 &lt;figure  itemprop=&#34;associatedMedia&#34;
   itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
@@ -841,17 +872,6 @@ a historical group and museum dedicated to preserving the history of the canal s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/ai-projects/chord-llama/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</guid>
       
         <description></description>
       

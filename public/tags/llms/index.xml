@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLMs on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/tags/llms/</link>
+    <description>Recent content in LLMs on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/llms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multi Repo Coding Assistant</title>
+      <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Applying LLM routing for a single chat across multiple repositories.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Many of the projects Iv&amp;rsquo;e worked on combine multiple repositories to create a single experience&#xA;for the user. There are many common examples of this, like a full-stack developer working on&#xA;front and back-end. It gets much more complex as the scope of the application grows. Companies&#xA;may want development teams for Android and iOS, and this requires teams to understand where each&#xA;other team is at to maintain feature parity. There are many questions that a developer of one team&#xA;could have, and discussion on every technical intricacy can take time from development.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

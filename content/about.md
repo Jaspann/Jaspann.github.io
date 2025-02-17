@@ -31,7 +31,7 @@ Here is a list of all of the posts I have planned:
 - [ ] **Multi-Repo Coding Assistant**
 - [x] Pond Jumper
 - [ ] RoundHouse
-- [ ] **Yabi**
+- [ ] Yabi
 - [x] Flutter M BLE
 - [ ] **Google Mediapipe Pose Detection**
 - [ ] **Arity Android Engineer Intern**

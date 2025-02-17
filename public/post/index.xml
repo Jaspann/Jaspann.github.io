@@ -9,8 +9,15 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multi Repo Coding Assistant</title>
+      <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Applying LLM routing for a single chat across multiple repositories.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Many of the projects Iv&amp;rsquo;e worked on combine multiple repositories to create a single experience&#xA;for the user. There are many common examples of this, like a full-stack developer working on&#xA;front and back-end. It gets much more complex as the scope of the application grows. Companies&#xA;may want development teams for Android and iOS, and this requires teams to understand where each&#xA;other team is at to maintain feature parity. There are many questions that a developer of one team&#xA;could have, and discussion on every technical intricacy can take time from development.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>FlightSure</title>
       <link>http://localhost:1313/post/ai-projects/flight-sure/</link>
@@ -24,6 +31,13 @@
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/software-libraries/m-ble-peripheral/</guid>
       <description>&lt;p&gt;&lt;em&gt;Developing a Flutter library with full BLE peripheral capabilities for iOS and Android&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;bluetooth-for-freemovevr&#34;&gt;Bluetooth For FreeMoveVR&lt;/h2&gt;&#xA;&lt;p&gt;Early on in the creation of FreeMoveVR, I knew I wanted the primary communication&#xA;method between the smartphone and computer to be over Bluetooth. I believed that&#xA;Bluetooth was the perfect solution for our use case because:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Everyone has Bluetooth on their phone, and it is a stable option for developers.&lt;/li&gt;&#xA;&lt;li&gt;FreeMoveVR needs to transfer a relatively small amount of data compared to something like streaming music to AirPods.&lt;/li&gt;&#xA;&lt;li&gt;It&amp;rsquo;s wireless, so there is less hassle setting up the program for the end user.&lt;/li&gt;&#xA;&lt;li&gt;It does not rely on Wi-Fi at all, which is good in cases like colleges where the protocols are very complex and locked down for students.&lt;/li&gt;&#xA;&lt;li&gt;BLE stands for Bluetooth Low Energy, so the implication is that the phone can do the main task of pose detection and spend minimal resources on data transfer.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The most notable arguments against the other methods were that a wired connection would be hard to use given how the app works,&#xA;and that a Wi-Fi connection would be impossible to develop while on campus at SNHU.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Eventified</title>
+      <link>http://localhost:1313/post/mobile-projects/eventified/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/mobile-projects/eventified/</guid>
+      <description>&lt;p&gt;&lt;em&gt;An Android calendar app for university clubs.&lt;/em&gt;&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;&#xD;&#xA;    &#xD;&#xA;  &#xD;&#xA;  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;&#xD;&#xA;  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;&#xD;&#xA;  &lt;figure  itemprop=&#34;associatedMedia&#34;&#xD;&#xA;    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;&#xD;&#xA;      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/mobile-projects/eventified/androidStack.jpg&#39;);&#34;&gt;&#xD;&#xA;        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/mobile-projects/eventified/androidStack.jpg&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;      &lt;a href=&#34;http://localhost:1313/mobile-projects/eventified/androidStack.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;    &lt;/figure&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;  &#xD;&#xA;  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;&#xD;&#xA;  &lt;figure  itemprop=&#34;associatedMedia&#34;&#xD;&#xA;    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;&#xD;&#xA;      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/mobile-projects/eventified/homescreen.png&#39;);&#34;&gt;&#xD;&#xA;        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/mobile-projects/eventified/homescreen.png&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;      &lt;a href=&#34;http://localhost:1313/mobile-projects/eventified/homescreen.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;    &lt;/figure&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;arriving-at-snhu&#34;&gt;Arriving at SNHU&lt;/h2&gt;&#xA;&lt;p&gt;It was my first semester on campus at Southern New Hampshire University (SNHU).&#xA;Covid was the year prior, so my class along with the cohort below me was new to the campus.&#xA;I had experience with Java in my high school and even &lt;a href=&#34;http://localhost:1313/post/community-work/ap-comp-sci-a-ta/&#34;&gt;taught the AP course on it&lt;/a&gt;.&#xA;They also taught Java in the first coding class of SNHU,&#xA;so going into my second year I figured I would want to use it in team-based projects.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3tene AutoHotKey</title>
@@ -58,13 +72,6 @@
       <link>http://localhost:1313/post/ai-projects/chord-llama/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/ai-projects/chord-llama/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</guid>
       <description></description>
     </item>
     <item>

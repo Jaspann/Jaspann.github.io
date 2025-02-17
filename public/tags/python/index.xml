@@ -9,14 +9,28 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multi Repo Coding Assistant</title>
+      <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Applying LLM routing for a single chat across multiple repositories.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Many of the projects Iv&amp;rsquo;e worked on combine multiple repositories to create a single experience&#xA;for the user. There are many common examples of this, like a full-stack developer working on&#xA;front and back-end. It gets much more complex as the scope of the application grows. Companies&#xA;may want development teams for Android and iOS, and this requires teams to understand where each&#xA;other team is at to maintain feature parity. There are many questions that a developer of one team&#xA;could have, and discussion on every technical intricacy can take time from development.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>FlightSure</title>
       <link>http://localhost:1313/post/ai-projects/flight-sure/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/ai-projects/flight-sure/</guid>
       <description>&lt;p&gt;&lt;em&gt;Using Machine Learning to Find the Chance a Flight is on Time.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I had recently returned to San Jose after visiting my family across the country.&#xA;While waiting at Logan Airport in Boston, I was watching the snowfall and wondered&#xA;if it would delay my flight. It had just started and light snow is a normal occurrence for&#xA;the area, so it was unlikely but possible. I then considered San Jose&amp;rsquo;s Airport. While they have&#xA;different weather they need to account for, there is no infrastructure in place for even&#xA;light snow. In addition, many drivers would not know how to handle slippery roads, which&#xA;would probably cause significant problems across the city.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Eventified</title>
+      <link>http://localhost:1313/post/mobile-projects/eventified/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/mobile-projects/eventified/</guid>
+      <description>&lt;p&gt;&lt;em&gt;An Android calendar app for university clubs.&lt;/em&gt;&lt;/p&gt;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;&#xD;&#xA;    &#xD;&#xA;  &#xD;&#xA;  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;&#xD;&#xA;  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;&#xD;&#xA;  &lt;figure  itemprop=&#34;associatedMedia&#34;&#xD;&#xA;    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;&#xD;&#xA;      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/mobile-projects/eventified/androidStack.jpg&#39;);&#34;&gt;&#xD;&#xA;        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/mobile-projects/eventified/androidStack.jpg&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;      &lt;a href=&#34;http://localhost:1313/mobile-projects/eventified/androidStack.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;    &lt;/figure&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;  &#xD;&#xA;  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;&#xD;&#xA;  &lt;figure  itemprop=&#34;associatedMedia&#34;&#xD;&#xA;    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;&#xD;&#xA;      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/mobile-projects/eventified/homescreen.png&#39;);&#34;&gt;&#xD;&#xA;        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/mobile-projects/eventified/homescreen.png&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;      &lt;a href=&#34;http://localhost:1313/mobile-projects/eventified/homescreen.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;&#xD;&#xA;    &lt;/figure&gt;&#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;arriving-at-snhu&#34;&gt;Arriving at SNHU&lt;/h2&gt;&#xA;&lt;p&gt;It was my first semester on campus at Southern New Hampshire University (SNHU).&#xA;Covid was the year prior, so my class along with the cohort below me was new to the campus.&#xA;I had experience with Java in my high school and even &lt;a href=&#34;http://localhost:1313/post/community-work/ap-comp-sci-a-ta/&#34;&gt;taught the AP course on it&lt;/a&gt;.&#xA;They also taught Java in the first coding class of SNHU,&#xA;so going into my second year I figured I would want to use it in team-based projects.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
