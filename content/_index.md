@@ -9,7 +9,7 @@ introductionWidget:
     
     Publish Date is the date of the completed project, not the date of writing.
 
-    The site is a work in progress. There are currently **11** pages in draft and **8** complete.
+    The site is a work in progress. There are currently **10** pages in draft and **9** complete.
   avatar: /william_parker.png
   showSocial: true
 
@@ -23,6 +23,10 @@ postWidget:
   #   category: current-projects
   #   count: 3
   - type: category
+    title: AI Projects
+    category: ai-projects
+    count: 4
+  - type: category
     title: Software Libraries
     category: software-libraries
     count: 3
@@ -30,10 +34,6 @@ postWidget:
   #   title: Education
   #   category: education
   #   count: 2
-  - type: category
-    title: AI Projects
-    category: ai-projects
-    count: 4
   - type: category
     title: Mobile Projects
     category: mobile-projects

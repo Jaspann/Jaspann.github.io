@@ -19,10 +19,24 @@
       <description></description>
     </item>
     <item>
+      <title>Ollama</title>
+      <link>http://localhost:1313/tags/ollama/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/ollama/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Python</title>
       <link>http://localhost:1313/tags/python/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>http://localhost:1313/tags/rag/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/rag/</guid>
       <description></description>
     </item>
     <item>
@@ -33,6 +47,20 @@
       <description></description>
     </item>
     <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flask</title>
+      <link>http://localhost:1313/tags/flask/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/flask/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Gradio</title>
       <link>http://localhost:1313/tags/gradio/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
@@ -40,10 +68,38 @@
       <description></description>
     </item>
     <item>
+      <title>HuggingFace</title>
+      <link>http://localhost:1313/tags/huggingface/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/huggingface/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Machine Learning</title>
       <link>http://localhost:1313/tags/machine-learning/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/tags/react/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unsloth</title>
+      <link>http://localhost:1313/tags/unsloth/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/unsloth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XML</title>
+      <link>http://localhost:1313/tags/xml/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/xml/</guid>
       <description></description>
     </item>
     <item>
@@ -93,62 +149,6 @@
       <link>http://localhost:1313/tags/library/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/library/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mobile</title>
-      <link>http://localhost:1313/tags/mobile/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/mobile/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Swift</title>
-      <link>http://localhost:1313/tags/swift/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/swift/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>API</title>
-      <link>http://localhost:1313/tags/api/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/api/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AWS</title>
-      <link>http://localhost:1313/tags/aws/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/aws/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SNHU</title>
-      <link>http://localhost:1313/tags/snhu/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/snhu/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>XML</title>
-      <link>http://localhost:1313/tags/xml/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/xml/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AutoHotKey</title>
-      <link>http://localhost:1313/tags/autohotkey/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/autohotkey/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pose Estimation</title>
-      <link>http://localhost:1313/tags/pose-estimation/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/pose-estimation/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/ai-projects/chord-llama/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-02-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -44,6 +51,13 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tags/ollama/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -52,6 +66,13 @@
   
   <url>
     <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/rag/</loc>
     <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -72,6 +93,20 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tags/docker/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/flask/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/ai-projects/flight-sure/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -86,8 +121,36 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/tags/huggingface/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/tags/machine-learning/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/react/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/unsloth/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/xml/</loc>
+    <lastmod>2025-02-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -205,13 +268,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/xml/</loc>
-    <lastmod>2025-02-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/post/ai-projects/3tene-autohotkey/</loc>
     <lastmod>2025-02-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -298,12 +354,6 @@
   <url>
     <loc>http://localhost:1313/post/community-work/moores-falls/</loc>
     <lastmod>2025-02-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/post/ai-projects/chord-llama/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

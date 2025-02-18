@@ -27,7 +27,7 @@ Here is a list of all of the posts I have planned:
 - [x] 3tene AHK
 - [x] Eventified
 - [x] FlightSure
-- [ ] **ChordLlama**
+- [x] ChordLlama
 - [x] Multi-Repo Coding Assistant
 - [x] Pond Jumper
 - [ ] **RoundHouse**

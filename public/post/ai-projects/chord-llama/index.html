@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>
     
-     - William Parker&#39;s Personal Site
+    Chord Llama - William Parker&#39;s Personal Site
     </title>
   
 
@@ -36,27 +36,47 @@
 
 
 
-<meta name="author" content="William Parker" />
-<meta name="description" content="" />
+<meta name="author" content="William Parker" /><meta name="description" content="Fine-tuning Llama for sheet music generation." />
+
+
+
+
+
+  
 
 
 
 
 
 
-
+<meta name="keywords" content="Python, LLMs, Unsloth, HuggingFace, XML, Flask, React, Docker, Ollama" />
 
 
 <meta property="og:url" content="http://localhost:1313/post/ai-projects/chord-llama/">
   <meta property="og:site_name" content="William Parker&#39;s Personal Site">
-  <meta property="og:title" content="William Parker&#39;s Personal Site">
+  <meta property="og:title" content="Chord Llama">
+  <meta property="og:description" content="Fine-tuning Llama for sheet music generation.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-05-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-17T00:00:00+00:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="LLMs">
+    <meta property="article:tag" content="Unsloth">
+    <meta property="article:tag" content="HuggingFace">
+    <meta property="article:tag" content="XML">
+    <meta property="article:tag" content="Flask">
 
-  <meta itemprop="name" content="William Parker&#39;s Personal Site">
+  <meta itemprop="name" content="Chord Llama">
+  <meta itemprop="description" content="Fine-tuning Llama for sheet music generation.">
+  <meta itemprop="datePublished" content="2024-05-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-02-17T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1444">
+  <meta itemprop="keywords" content="Python,LLMs,Unsloth,HuggingFace,XML,Flask,React,Docker,Ollama">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="William Parker&#39;s Personal Site">
+  <meta name="twitter:title" content="Chord Llama">
+  <meta name="twitter:description" content="Fine-tuning Llama for sheet music generation.">
 
 <link rel="icon" href="/favicon.ico" />
 
@@ -235,7 +255,7 @@
     <article class="post">
       
       <header class="post-header">
-        <h1 class="post-title"></h1>
+        <h1 class="post-title">Chord Llama</h1>
         
 
 
@@ -255,11 +275,16 @@
   <div class="post-meta-item post-meta-time">
     
 <svg aria-hidden="true" class="lucide lucide-calendar-days hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-    <time datetime=" 0001-01-01">
-      Jan 1 0001
+    <time datetime=" 2024-05-01">
+      May 1 2024
     </time>
 
 
+    
+    <span class="post-meta-item post-meta-lastmod">
+      (Modified:
+      Feb 17 2025)
+    </span>
     
 
   </div>
@@ -268,7 +293,12 @@
   <div class="post-meta__right">
     
 
-    
+    <div class="post-meta-item post-meta-category">
+      
+        
+          
+        <a href="http://localhost:1313/categories/ai-projects/">ai-projects</a>
+    </div>
 
 
     
@@ -284,7 +314,163 @@
 
       
       <div class="post-content">
-        
+        <p><em>Fine-tuning Llama for sheet music generation.</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>Large Language Models (LLMs) have recently reached a critical mass in the public eye,
+where everyone is trying to apply the technology to any problem they can think of.
+They have been further trained, or fine-tuned, for a variety of use cases, be it for
+business, software development, or speaking languages outside their original training
+data. At the time, I had recently learned about <a href="https://www.w3.org/2021/06/musicxml40/">MusicXML</a>
+which is the format used for sheet music. An application like <a href="https://musescore.org/en">MuseScore</a>
+is used to write music sheets for musicians and saves the work to a <code>.MXL</code> file so it can be
+redistributed and edited without the pains of using a proprietary file type or making
+the sheets by hand and scanning them with a printer. MusicXML has been a standard since 2004
+and managed by W3C by 2015. As it is a pretty widely accepted standard, we looked into
+understanding how an LLM like Llama could be fine-tuned on this data to continue existing music
+or generate its own.</p>
+<p>Music generation in the AI world is actually <a href="https://arxiv.org/abs/2210.13944">not a new concept</a>.
+<a href="https://arxiv.org/pdf/2210.10349">MuseFormer</a> was released by Microsoft in 2022 and applies
+the transformer architecture to music. In their work, each concept like tempo, beat,
+pitch, and duration is a separate token. The attention mechanism has two stages the fine-grained
+attention only attends to the elements in the same bar, while the coarse-grained attention
+only attends to the summary of other bars. This allows it to be aware of the entire song without
+saving all of it in the context length.</p>
+<p>An issue we saw with models like MuseFormer is that the model required a significant amount of
+technical knowledge to set up. This creates a barrier for entry that is non-existent with the
+flurry of open-source tools anyone can use to run LLMs on their machine. By instead fine-tuning
+Llama as a base of our project, while we would not have the tokenizer or architecture built for
+this use case, it would be able to run on any machine, easing the availability to end users
+greatly.</p>
+<h2 id="data-collection">Data Collection</h2>
+<p>One of the more prevalent issues in AI training has been training on copyrighted material.
+We wanted to make sure that we did not fall into a legal grey area with the existence of this model,
+and to solve this we were able to get our sources from classical works in the public domain. Our first source was
+<a href="http://mscorelib.com/">MScoreLib</a> which was a project that scanned classical works into MusicXML
+using automated tooling. The second source was
+<a href="http://www.synthzone.com/forum/ubbthreads.php/topics/384909">Wikifonia</a> which was an
+online encyclopedia for public domain sheet music.</p>
+<h2 id="data-cleaning--preparation">Data Cleaning &amp; Preparation</h2>
+<p>Cleaning the data to get it into a usable form for Llama is what took up the majority of
+my time in this project.</p>
+<p>The first thing I saw as a problem was the context size of Llama 3. Unlike 3.1&rsquo;s 128k context size,
+Llama 3 had only 4k tokens to use. Many special characters that XML uses take up their own token.
+XML, and MusicXML especially, are very verbose standards, making it hard to fit much within the context
+size. The first thing I wanted to do was remove the lyrics and all the unnecessary tags in the file
+that did not affect the end appearance of the sheet music or were too rare to be learned by the model.
+This required going over the full MusicXML specification and creating lists for all of the elements and
+attributes that should either be removed or kept in the file. MusicXML allows to adjust the size and
+color of text, making pixel-level adjustments on the location of the note, and many more attributes
+that do not affect the appearance or sound of the file when played.</p>
+<p>Removing all unnecessary elements was still not enough for most songs to fit within the 4k context length.
+To further condense the music, we decided to convert the XML to YAML format. We decided on YAML as it
+has been shown to be <a href="https://medium.com/better-programming/yaml-vs-json-which-is-more-efficient-for-language-models-5bc11dd0f6df">more token efficient and boost the performance of models</a>
+Doing this required us to index each musical part with <code>a00_</code> where a was necessary because the program
+could not handle YAML starting with a number and <code>00</code> was the number of the musical part. YAML is
+commonly used for config files and is not intended for this use case at all. In practice though, this was
+exactly what we needed to get the format small enough to pass in multiple staves to train the model on.</p>
+<p>To visualize how much we condensed the format, on the left is an example of three notes of MusicXML,
+and on the right are the same three notes after our cleaning that we would send to the model.</p>
+
+
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+    
+  
+  <link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+  <div class="box" style="display: flex; justify-content: center; align-items: center;">
+  <figure  itemprop="associatedMedia"
+    itemscope itemtype="http://schema.org/ImageObject" >
+      <div class="img" style="background-image: url('/ai-projects/chord-llama/musicXML.png');">
+        <img itemprop="thumbnail" src="/ai-projects/chord-llama/musicXML.png" />
+      </div>
+      <a href="/ai-projects/chord-llama/musicXML.png" itemprop="contentUrl"></a>
+    </figure>
+  </div>
+
+  
+  
+  <div class="box" style="display: flex; justify-content: center; align-items: center;">
+  <figure  itemprop="associatedMedia"
+    itemscope itemtype="http://schema.org/ImageObject" >
+      <div class="img" style="background-image: url('/ai-projects/chord-llama/yaml.png');">
+        <img itemprop="thumbnail" src="/ai-projects/chord-llama/yaml.png" />
+      </div>
+      <a href="/ai-projects/chord-llama/yaml.png" itemprop="contentUrl"></a>
+    </figure>
+  </div>
+
+
+</div>
+
+<p>Additionally, we needed to be able to undo the YAML conversion so that we can verify that our steps worked
+and once the model is outputting new data in this format we can turn it into MusicXML to be viewed and listened to.</p>
+<p>Finally, we needed to split the songs to fit inside the 4k token limit. We split each song into even chunks
+of up to 3500 tokens and put half of each in the input and output columns. We put the data in
+<a href="https://jsonlines.org/">JSON Lines</a> to be used for training and uploaded to HuggingFace.</p>
+<p>The cleaned data in our format is available on HuggingFace along with the notebook used to create it:
+<a href="https://huggingface.co/datasets/Chord-Llama/chord_llama_dataset">https://huggingface.co/datasets/Chord-Llama/chord_llama_dataset</a></p>
+<h2 id="fine-tuning">Fine-Tuning</h2>
+<p>To train, the technical process we used was Low-Rank Adaptation (LoRA). LoRA works by adding
+small, adjustable components to each layer of the model, leaving the original model unchanged.
+Instead of using a single delta matrix, LoRA employs two matrices to reduce the dimensionality.
+Because there are fewer calculations and memory needed, the fine-tuning process is much faster.
+Additionally, this method also typically produces higher-quality results than normal fine-tuning.</p>
+<p>We used <a href="https://unsloth.ai/">Unsloth</a> to help us fine-tune with LoRA. Unsloth allowed us to easily
+configure many parameters in training, as well as connect with <a href="https://wandb.ai/site/">Weights &amp; Biases</a>
+to record all of our tests. We were able to optimize scheduling, learning rate, weight decay, batch size, and
+gradient accumulation steps.</p>
+<p>Our final dataset had almost 100k rows of training data, which we knew was more than enough for our purposes.
+To start, we trained on 10k samples but quickly found that this much training overfit the model, and it
+would be better to pick out a smaller sample size. The model did not improve after 1k samples, so we ended
+up training with 1.6k samples.</p>
+<h2 id="optimization-and-publishing">Optimization and Publishing</h2>
+<p>Just because a model is fine-tuned it does not mean that it is able to be used. After training, the model
+is split across multiple <code>.safetensor</code> files. While this is useful for further development, for creating an
+end-user application, it needs to be in a format that optimizes for inference. This often means converting
+the checkpoint into <a href="https://github.com/ggml-org/ggml/tree/master">GGUF</a>, which is a standard .bin file that is
+optimized for quick loading and saving and is standard for locally hosted inference applications. This was done
+using <a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a>. Quantizing the model to four-bit precision allowed it to
+be run on the laptop for presenting the work, so we did that as well. I was able to publish this model on
+<a href="https://ollama.com/jaspann/llama-3-chord-llama-2">Ollama</a> for anyone to use.</p>
+<p>The final component of the project was creating a small web application to show the model working. I decided
+that I wanted to use Flask for the backend and React for the front end, both new to me. While it was not the prettiest,
+it showed that from the data I put in, it was able to generate the music in real-time for the audience to see.
+It was unfortunately limited to the YAML, rather than converting back into MusicXML, but the result was more than enough
+to prove the functionality of the project.</p>
+
+
+<div class="box" style="display: flex; justify-content: center; align-items: center;">
+<figure  class="bordered-image"  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/ai-projects/chord-llama/chord_llama_website.png" alt="The Chord Llama website."/>
+    </div>
+    <a href="/ai-projects/chord-llama/chord_llama_website.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>The Chord Llama website.</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>I loved the idea and our work in Chord Llama. I feel that with some more work and modern LLM technology, we could have
+had an LLM capable of generating good music that solved the goals we set for this project. Working with the unique problem
+of fitting MusicXML within a limited token context is exactly the fun and creative type of solution I love working on in software development.</p>
+<p>Here are the links to the project. In addition, this project was part of my time at San Jose State University, and my partner
+and I wrote up a report at the end of the semester that you can read below for more information.</p>
+<ul>
+<li>Web Project on GitHub: <a href="https://github.com/Chord-Llama/Chord-Llama">https://github.com/Chord-Llama/Chord-Llama</a></li>
+<li>HuggingFace: <a href="https://huggingface.co/Chord-Llama">https://huggingface.co/Chord-Llama</a></li>
+</ul>
+
+
+
+<object
+    data="/ai-projects/chord-llama/Chord_Llama_Final.pdf" width="100%" height="800px"type="application/pdf"
+>
+    <p>Unable to display PDF file. <a href="/ai-projects/chord-llama/Chord_Llama_Final.pdf">Download</a> instead.</p>
+</object>
+
       </div>
 
       
@@ -297,7 +483,7 @@
   <p class="copyright-item">
     <span class="item-title">Modified</span>
     <span class="item-content">
-      Jan 1 0001
+      Feb 17 2025
       
     </span>
   </p>
@@ -315,24 +501,26 @@
 
 
       <footer class="post-footer">
-        
+        <div class="post-tags">
+          <a href="http://localhost:1313/tags/python/">Python</a>
+          <a href="http://localhost:1313/tags/llms/">LLMs</a>
+          <a href="http://localhost:1313/tags/unsloth/">Unsloth</a>
+          <a href="http://localhost:1313/tags/huggingface/">HuggingFace</a>
+          <a href="http://localhost:1313/tags/xml/">XML</a>
+          <a href="http://localhost:1313/tags/flask/">Flask</a>
+          <a href="http://localhost:1313/tags/react/">React</a>
+          <a href="http://localhost:1313/tags/docker/">Docker</a>
+          <a href="http://localhost:1313/tags/ollama/">Ollama</a>
+          
+        </div>
 
 
         
         <nav class="post-nav">
           
-          <a class="prev" href="/post/community-work/moores-falls/">
-            
-            <i class="iconfont">
-              
-<svg aria-hidden="true" class="lucide lucide-chevron-left hi-svg-inline" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m15 18-6-6 6-6"/></svg>
-            </i>
-            <span class="prev-text nav-default">Moore&#39;s Falls Historical Plaques Eagle Scout Project</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
           
-          <a class="next" href="/post/current-projects/thesis-selective-pose-detection/">
-            <span class="next-text nav-default"></span>
+          <a class="next" href="/post/ai-projects/multi-repo-coding-assistant/">
+            <span class="next-text nav-default">Multi Repo Coding Assistant</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">
@@ -373,7 +561,21 @@
   </div>
 
   
-  
+  <nav class="toc" id="toc">
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-content custom-scrollbar">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#data-collection">Data Collection</a></li>
+    <li><a href="#data-cleaning--preparation">Data Cleaning &amp; Preparation</a></li>
+    <li><a href="#fine-tuning">Fine-Tuning</a></li>
+    <li><a href="#optimization-and-publishing">Optimization and Publishing</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+  </nav>
 
 
 </div>

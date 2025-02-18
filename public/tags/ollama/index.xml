@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ollama on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/tags/ollama/</link>
+    <description>Recent content in Ollama on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ollama/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chord Llama</title>
+      <link>http://localhost:1313/post/ai-projects/chord-llama/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/chord-llama/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Fine-tuning Llama for sheet music generation.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Large Language Models (LLMs) have recently reached a critical mass in the public eye,&#xA;where everyone is trying to apply the technology to any problem they can think of.&#xA;They have been further trained, or fine-tuned, for a variety of use cases, be it for&#xA;business, software development, or speaking languages outside their original training&#xA;data. At the time, I had recently learned about &lt;a href=&#34;https://www.w3.org/2021/06/musicxml40/&#34;&gt;MusicXML&lt;/a&gt;&#xA;which is the format used for sheet music. An application like &lt;a href=&#34;https://musescore.org/en&#34;&gt;MuseScore&lt;/a&gt;&#xA;is used to write music sheets for musicians and saves the work to a &lt;code&gt;.MXL&lt;/code&gt; file so it can be&#xA;redistributed and edited without the pains of using a proprietary file type or making&#xA;the sheets by hand and scanning them with a printer. MusicXML has been a standard since 2004&#xA;and managed by W3C by 2015. As it is a pretty widely accepted standard, we looked into&#xA;understanding how an LLM like Llama could be fine-tuned on this data to continue existing music&#xA;or generate its own.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Multi Repo Coding Assistant</title>
+      <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Applying LLM routing for a single chat across multiple repositories.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Many of the projects I&amp;rsquo;ve worked on combine multiple repositories to create a single experience&#xA;for the user. There are many common examples of this, like a full-stack developer working on&#xA;the front and back end. It gets much more complex though as the scope of the application grows. Companies&#xA;may want development teams for Android and iOS, and this requires teams to understand where each&#xA;other team is at to maintain feature parity. There are many questions that a developer of one team&#xA;could have, and discussion on every technical intricacy can take time from development.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -12,6 +12,13 @@
     <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Chord Llama</title>
+      <link>http://localhost:1313/post/ai-projects/chord-llama/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/chord-llama/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Fine-tuning Llama for sheet music generation.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Large Language Models (LLMs) have recently reached a critical mass in the public eye,&#xA;where everyone is trying to apply the technology to any problem they can think of.&#xA;They have been further trained, or fine-tuned, for a variety of use cases, be it for&#xA;business, software development, or speaking languages outside their original training&#xA;data. At the time, I had recently learned about &lt;a href=&#34;https://www.w3.org/2021/06/musicxml40/&#34;&gt;MusicXML&lt;/a&gt;&#xA;which is the format used for sheet music. An application like &lt;a href=&#34;https://musescore.org/en&#34;&gt;MuseScore&lt;/a&gt;&#xA;is used to write music sheets for musicians and saves the work to a &lt;code&gt;.MXL&lt;/code&gt; file so it can be&#xA;redistributed and edited without the pains of using a proprietary file type or making&#xA;the sheets by hand and scanning them with a printer. MusicXML has been a standard since 2004&#xA;and managed by W3C by 2015. As it is a pretty widely accepted standard, we looked into&#xA;understanding how an LLM like Llama could be fine-tuned on this data to continue existing music&#xA;or generate its own.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Multi Repo Coding Assistant</title>
       <link>http://localhost:1313/post/ai-projects/multi-repo-coding-assistant/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
@@ -66,13 +73,6 @@
       <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/community-work/moores-falls/</guid>
       <description>&lt;p&gt;Every town has their stories of how they were created and developed over the years.&#xA;In my hometown of Litchfield, New Hampshire, I had the opportunity to re-discover that history and&#xA;create historical plaques about it for visitors to see.&lt;/p&gt;&#xA;&lt;p&gt;The project consisted of five pages, or plaques, spread through the trail loop slowly explaining the&#xA;historical significance of the &lt;a href=&#34;https://www.google.com/maps/place/Moore%27s&amp;#43;Falls&amp;#43;Conservation&amp;#43;Area/@42.889804,-71.4576986,802m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89e24cbf7350056d:0xed373f3adc07f897!8m2!3d42.8898001!4d-71.4551237!16s%2Fg%2F11c528d249?entry=ttu&amp;amp;g_ep=EgoyMDI1MDIwNC4wIKXMDSoASAFQAw%3D%3D&#34;&gt;Moore&amp;rsquo;s Falls Trail&lt;/a&gt;&#xA;over the course of the hike.&lt;/p&gt;&#xA;&lt;p&gt;This project consisted of several factors. Funding for the project needed to be secured via work with local businesses and the local newspaper.&#xA;Stakeholders needed updates on the project and proof of work to approve the necessary steps. The most notable stakeholder was&#xA;&lt;a href=&#34;https://www.facebook.com/litchfieldnhconservationcommission/&#34;&gt;The Litchfield Conservation Commission&lt;/a&gt;, a governmental board of the town&#xA;responsible for the trails and the group that originally requested the project. Finally, it required organizing and leading a team of&#xA;scouts in building and setting the plaques across the trail.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/ai-projects/chord-llama/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/ai-projects/chord-llama/</guid>
-      <description></description>
     </item>
     <item>
       <title></title>

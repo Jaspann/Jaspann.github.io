@@ -1,7 +1,7 @@
 ---
 title: "Multi Repo Coding Assistant"
 description: "Applying LLM routing for a single chat across multiple repositories"
-tags: [Python, LLMs]
+tags: [Python, LLMs, RAG, Ollama]
 publishdate: 2024-12-01
 lastmod: 2025-02-17
 categories: [
