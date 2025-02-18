@@ -21,16 +21,16 @@ Here is a list of all of the posts I have planned:
 - [ ] SNHU Computer Science Club VP
 - [ ] FreeMoveVR
 - [ ] SJSU MS Thesis
-- [ ] Unified Live Chat
+- [ ] **Unified Live Chat**
 - [ ] SJSU MS AI Education
 - [ ] SNHU Comp Sci Education
 - [x] 3tene AHK
 - [x] Eventified
 - [x] FlightSure
 - [ ] **ChordLlama**
-- [ ] **Multi-Repo Coding Assistant**
+- [x] Multi-Repo Coding Assistant
 - [x] Pond Jumper
-- [ ] RoundHouse
+- [ ] **RoundHouse**
 - [ ] Yabi
 - [x] Flutter M BLE
 - [ ] **Google Mediapipe Pose Detection**
