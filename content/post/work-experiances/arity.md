@@ -1,5 +1,5 @@
 ---
-title: "Arity: Android Engineer Intern "
+title: "Arity: Android Engineer Intern"
 description: ""
 tags: []
 date: "2024-01-20"
@@ -8,3 +8,4 @@ categories: [
 ]
 draft: true
 ---
+

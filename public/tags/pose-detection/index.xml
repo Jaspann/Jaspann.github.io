@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pose Detection on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/tags/pose-detection/</link>
+    <description>Recent content in Pose Detection on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pose-detection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mediapipe Pose Detection: Flutter Library</title>
+      <link>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

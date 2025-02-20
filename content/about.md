@@ -19,9 +19,9 @@ Here is a list of all of the posts I have planned:
 - [x] Moore's Falls Eagle Scout Project
 - [x] APCSA TA
 - [ ] SNHU Computer Science Club VP
-- [ ] FreeMoveVR
+- [ ] **FreeMoveVR**
 - [ ] SJSU MS Thesis
-- [ ] **Unified Live Chat**
+- [ ] Unified Live Chat
 - [ ] SJSU MS AI Education
 - [ ] SNHU Comp Sci Education
 - [x] 3tene AHK
@@ -30,7 +30,7 @@ Here is a list of all of the posts I have planned:
 - [x] ChordLlama
 - [x] Multi-Repo Coding Assistant
 - [x] Pond Jumper
-- [ ] **RoundHouse**
+- [ ] RoundHouse
 - [ ] Yabi
 - [x] Flutter M BLE
 - [ ] **Google Mediapipe Pose Detection**
