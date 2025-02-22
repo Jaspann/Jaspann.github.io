@@ -14,10 +14,10 @@ introductionWidget:
   showSocial: true
 
 postWidget:
-  - type: category
-    title: Work Experiences
-    category: work-experiences
-    count: 2
+  # - type: category
+  #   title: Work Experiences
+  #   category: work-experiences
+  #   count: 2
   # - type: category
   #   title: Current Projects
   #   category: current-projects
