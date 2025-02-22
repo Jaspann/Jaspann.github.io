@@ -33,6 +33,6 @@ Here is a list of all of the posts I have planned:
 - [ ] RoundHouse
 - [ ] Yabi
 - [x] Flutter M BLE
-- [ ] **Google Mediapipe Pose Detection**
+- [x] Google Mediapipe Pose Detection
 - [ ] **Arity Android Engineer Intern**
 
