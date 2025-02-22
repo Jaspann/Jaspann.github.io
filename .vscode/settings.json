@@ -1,4 +1,5 @@
 {
+    "editor.inlineSuggest.enabled": false,
     "cSpell.words": [
         "APCSA",
         "ASOS",
@@ -20,6 +21,7 @@
         "mathjax",
         "Middlesex",
         "Moores",
+        "Moto",
         "Muffet",
         "NOAA",
         "Ollama",

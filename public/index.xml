@@ -83,7 +83,7 @@ and on the right are the same three notes after our cleaning that we would send 
 &lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
     
   
-  
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
   &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
   &lt;figure  itemprop=&#34;associatedMedia&#34;
     itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
@@ -363,7 +363,7 @@ Looking into National Aviation System Delays further, weather makes up almost ha
 While there are clearly several other factors that can cause flights to be delayed, predicting based on weather
 seemed like the best predictor we could realistically use without insider knowledge of internal systems.&lt;/p&gt;
 
-
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
 &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
 &lt;figure  class=&#34;bordered-image&#34;  itemprop=&#34;associatedMedia&#34;
   itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
@@ -461,6 +461,234 @@ I have the work I did here in the back of my mind as reference for how to solve 
 &lt;div style=&#34;margin: 2rem 0;&#34;&gt;&lt;/div&gt;
 &lt;p&gt;The app is available on HuggingFace at: &lt;a href=&#34;https://huggingface.co/spaces/Jaspann/FlightSure&#34;&gt;https://huggingface.co/spaces/Jaspann/FlightSure&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The dataset I used it on Kaggle at: &lt;a href=&#34;https://www.kaggle.com/datasets/williamparker20/flight-ontime-reporting-with-weather/data&#34;&gt;https://www.kaggle.com/datasets/williamparker20/flight-ontime-reporting-with-weather/data&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Mediapipe Pose Detection: Flutter Library</title>
+      <link>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;A Flutter library for pose detection using Google&amp;rsquo;s Mediapipe.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Before 2023, Google&amp;rsquo;s solution for machine learning (ML) on mobile was
+&lt;a href=&#34;https://developers.google.com/ml-kit/&#34;&gt;ML Kit&lt;/a&gt;. The library was for Android and iOS
+and had a variety of small models to perform common tasks that developers could use for
+their apps. This was before LLMs took over the public mind, so the platform heavily focused
+on computer vision for tasks like facial detection and image labeling.
+The library was well received by many developers and the developer community was even
+interested enough in the library that it was ported to Flutter for
+iOS and Android as &lt;a href=&#34;https://pub.dev/packages/google_ml_kit&#34;&gt;google_ml_kit&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In 2023, Google re-introduced their on-device ML models under the upgraded
+&lt;a href=&#34;https://developers.googleblog.com/en/introducing-mediapipe-solutions-for-on-device-machine-learning/&#34;&gt;Mediapipe Solutions&lt;/a&gt;
+branding. They made this change as the library supported mobile as well as web and Python,
+and they overhauled several models and took them out of beta. It appeared that Google
+updated &lt;a href=&#34;https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker&#34;&gt;pose detection&lt;/a&gt;
+as well, which was the model I used for FreeMoveVR. I tested out their
+&lt;a href=&#34;https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/pose_landmarker/android&#34;&gt;Android app example&lt;/a&gt;,
+and it felt much smoother than what I was able to achieve in my Flutter application.
+The points looked less jittery and it was running at 30 fps, rather than my Flutter
+app at 24 fps. I decided I wanted to re-implement google_ml_kit using Mediapipe
+instead to try to improve my app.&lt;/p&gt;
+&lt;h2 id=&#34;data-pipeline&#34;&gt;Data Pipeline&lt;/h2&gt;
+&lt;p&gt;As Flutter is an abstracted layer on top of the native platform, we need a special way to
+pass data between these, which is normally done through platform (aka method) channels.
+Anytime a developer needs to interact with native APIs, it needs to take multiple steps: Flutter →
+methodChannel → platform host → app delegate → Flutter controller → native API, and
+back to return the data. The data is always passed asynchronously.&lt;/p&gt;
+&lt;p&gt;Here is the image used to explain how this is done from
+&lt;a href=&#34;https://docs.flutter.dev/platform-integration/platform-channels&#34;&gt;Flutter&amp;rsquo;s website&lt;/a&gt;:&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  class=&#34;bordered-image&#34;  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/software-libraries/google-mediapipe-pose-detection/PlatformChannels.png&#34; alt=&#34;Architectural overview: platform channels&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/software-libraries/google-mediapipe-pose-detection/PlatformChannels.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Architectural overview: platform channels&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;data-throughput-in-m_ble_peripheral&#34;&gt;Data Throughput in m_ble_peripheral&lt;/h3&gt;
+&lt;p&gt;I had previous experience with making a Flutter library in
+&lt;a href=&#34;http://localhost:1313/post/software-libraries/m-ble-peripheral/&#34;&gt;m_ble_peripheral&lt;/a&gt;, but this library
+was significantly different due to the quantity of data that needed to constantly
+be transferred between the main application and the native code through the library.&lt;/p&gt;
+&lt;p&gt;In Bluetooth Low Energy (BLE), the size of the data transferred are measured in bytes.
+The messages sent to and from the app are only 20 bytes at max. The actual messages
+are a bit more, but that is BLE headers handled by the operating system and not viewable
+to the end application. There can be hundreds of messages sent a second, but that is
+still almost nothing.&lt;/p&gt;
+&lt;p&gt;The platform channels also have a limited number of supported data types. It&amp;rsquo;s mostly just
+your standard data types in addition to &lt;code&gt;null&lt;/code&gt;, some &lt;code&gt;List&lt;/code&gt;s and &lt;code&gt;Map&lt;/code&gt;. This is really easy to
+work with for m_ble_peripheral because one of the types is a &lt;code&gt;Uint8List&lt;/code&gt; that can easily
+represent notification data and UUIDs can be &lt;code&gt;String&lt;/code&gt;s.&lt;/p&gt;
+&lt;p&gt;Unlike m_ble_peripheral, this library would be pushing the limits on what Flutter
+and Mediapipe could handle real time. This was because of two factors: multiple
+platform jumps with complex data type augmentation and Mediapipe&amp;rsquo;s model execution time.&lt;/p&gt;
+&lt;h3 id=&#34;data-throughput-for-mediapipe&#34;&gt;Data Throughput for Mediapipe&lt;/h3&gt;
+&lt;p&gt;As we just discussed, there is a pipeline every time we need to transfer data,
+and there is a limited number of data types we can pass through. This creates
+a problem for video streams. Video streams contain lots of data, and need high
+throughput. If we are operating at 30 fps, we have less than 0.033 seconds to
+process data and get a result before the next frame is expected to come in. I
+say less than because frames may not be captured at exactly the same rate,
+especially if the phone is doing a lot of processing like it would be when
+running the pose detection model.&lt;/p&gt;
+&lt;h4 id=&#34;framerate-on-android&#34;&gt;Framerate on Android&lt;/h4&gt;
+&lt;p&gt;While debugging, I found an even greater disconnect with this intuition.
+While iOS can run 30 fps, I could not find any phone model on Android that
+ran 30 fps. Back when I was starting the app in the fall of 2022, I took a
+survey and ran FreeMoveVR on several of my friend&amp;rsquo;s phones:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Phone&lt;/th&gt;
+          &lt;th&gt;Year&lt;/th&gt;
+          &lt;th&gt;Avg. FPS&lt;/th&gt;
+          &lt;th&gt;Version&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Moto g6&lt;/td&gt;
+          &lt;td&gt;2018&lt;/td&gt;
+          &lt;td&gt;9.0&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Pixel XL&lt;/td&gt;
+          &lt;td&gt;2018&lt;/td&gt;
+          &lt;td&gt;7.4&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;OnePlus 7T Pro 5G&lt;/td&gt;
+          &lt;td&gt;2019&lt;/td&gt;
+          &lt;td&gt;17.0&lt;/td&gt;
+          &lt;td&gt;11&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Samsung Gal S21 Ultra&lt;/td&gt;
+          &lt;td&gt;2021&lt;/td&gt;
+          &lt;td&gt;22.8&lt;/td&gt;
+          &lt;td&gt;?&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Samsung Gal 10&lt;/td&gt;
+          &lt;td&gt;2019&lt;/td&gt;
+          &lt;td&gt;16.4&lt;/td&gt;
+          &lt;td&gt;?&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Samsung Gal 10+&lt;/td&gt;
+          &lt;td&gt;2019&lt;/td&gt;
+          &lt;td&gt;15.3&lt;/td&gt;
+          &lt;td&gt;?&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Samsung Gal S21&lt;/td&gt;
+          &lt;td&gt;2021&lt;/td&gt;
+          &lt;td&gt;23.9&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Google Pixel 4a 5G&lt;/td&gt;
+          &lt;td&gt;2020&lt;/td&gt;
+          &lt;td&gt;23.5&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As you can see, no model was capable of running at over 24 frames per second.
+While the average phone has increased in capabilities, any phone is able to
+normally record a 30 fps video. This led me to the internal code of Flutter&amp;rsquo;s
+&lt;a href=&#34;https://pub.dev/packages/camera&#34;&gt;camera plugin&lt;/a&gt;. This is the standard camera
+plugin for Flutter, made by the Flutter development team. During my time
+developing, the camera plugin in the backend used the outdated
+&lt;a href=&#34;https://pub.dev/packages/camera_android&#34;&gt;Camera 2 library&lt;/a&gt; for Android.
+With their solution, the frames that are meant to be viewed and the data as
+it exists to be sent for further processing are not equivalent. While the
+real framerate of the camera might be a full 30 fps, and the user sees 30 fps
+when doing a visual test, some frames are dropped when sending to the callback
+function I use to process the image. Because of this, I was never able to see
+above 24 fps in testing on Android. While this made my goal of 30 fps in this
+library impossible without significantly changing Flutter&amp;rsquo;s code, I decided to
+continue to work on this library to use the improved model and framework.&lt;/p&gt;
+&lt;h4 id=&#34;processing-images&#34;&gt;Processing Images&lt;/h4&gt;
+&lt;p&gt;Let&amp;rsquo;s now return to thinking about platform channels. When my Flutter app needs
+to process the camera image, it needs to take many steps before it is sent to
+Mediapipe. The camera library runs Android&amp;rsquo;s native Camera library, Camera 2,
+Camera 2 returns the camera as a viewable image and a version that is made for
+processing, Both of these formats then need to be converted into a valid data
+type to be transferred over the platform channel, the Flutter Camera library
+then needs to re-create those images, One copy is displayed on the screen and
+the other is sent to my callback. The callback now needs to perform that process
+again in reverse to go from the Flutter side of my library to the respective
+platform&amp;rsquo;s native side. Then, Mediapipe does not natively support the image type
+that Android produces when streaming in preview mode, so we need to convert
+the YUV image to Bitmap. It is actually really hard to go from YUV directly to
+Bitmap, so actually we need to first convert from YUV to JPEG, then JPEG to
+Bitmap. Once it is in the correct image format, then we can finally send the
+image through Mediapipe to get our pose data.&lt;/p&gt;
+&lt;p&gt;While this is a complex process, it is no ware near deal breaking for our
+solution. From what I remember, once the image was captured by Camera 2,
+all of this could be done in less then 2 milliseconds, or 0.002 seconds
+at 240p. The main bottleneck was due to converting between image formats at the end.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Side note: 240p sounds low, but low qualities like this are actually normal input for
+pose detection models as higher qualities take longer for the model to process.
+All of Google&amp;rsquo;s pose detection models have 224 x 224-pixel input.
+Additionally, for pose recognition, the person normally takes up a large
+portion of the image and is in an unambitious position, so the model
+would likely only improve slightly but take exponentially longer for larger
+inputs.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;running-the-mediapipe-model&#34;&gt;Running the Mediapipe Model&lt;/h2&gt;
+&lt;p&gt;After all this research and work, interacting with Mediapipe was relatively easy.
+I added a builder to set up the &lt;code&gt;PoseLandmarker&lt;/code&gt; object, which only needs a few
+enum values. We can then pass through our image data, and the model runs
+asynchronously. When the model is done, we can send the result to
+&lt;code&gt;EventChannel.EventSink&lt;/code&gt;, where my library and app are listening for updates.
+Mediapipe simply has a &lt;code&gt;setResultListener&lt;/code&gt;, and from there we format the
+data in the same way as &lt;code&gt;google_ml_kit&lt;/code&gt; to maintain compatibility for users.&lt;/p&gt;
+&lt;p&gt;This is the first time I had a memory leak in my software, so I needed to learn how
+to debug that. Xcode has a tool to find memory leaks that I was able to pretty quickly
+understand and use. I ended up finding the cause of it in my register function. I had it end
+by kicking off a &lt;code&gt;DispatchQueue&lt;/code&gt; that would infinity run so it could detect the image as soon
+as possible. While this does not look good, in my defense, I was still new to Swift so I
+based the code on my Android implementation, where running the function in a separate
+thread is a valid solution. Instead, I had the detect function run via &lt;code&gt;DispatchQueue&lt;/code&gt;
+only after we had a result. From what I remember, I tried to mirror this on the Android
+side but it would not work, and doing it as I described in a thread was the best solution.&lt;/p&gt;
+&lt;p&gt;Now we could ask the question of which model should be used when for Mediapipe Pose
+detection. Mediapipe has three models, Lite, Full, and Heavy. For my Flutter library,
+all three are available of course, as it is as simple as downloading the model and
+changing an enum in the builder. From my personal experience, the Lite
+model is almost unusable. It is a surefire way to hit max framerate, but it was
+struggling to accurately detect my legs and arms even in optimal conditions when
+I was standing still. I&amp;rsquo;m honestly not sure what the use case even is with this quality.
+Heavy is quite good, but the issue is that it would never come
+close to a usable framerate for my application. I am sure it is very useful for images
+and apps that do not require a real-time response, but I could use it for FreeMoveVR.
+The Full model is perfect for any live feed application.
+It balances quality and speed very well for modern phones, often getting near full
+fps on 2020 and newer.&lt;/p&gt;
+&lt;h2 id=&#34;retrospective&#34;&gt;Retrospective&lt;/h2&gt;
+&lt;p&gt;I am pretty happy with how the library turned out. The only improvement I think I would
+make looking back was setting up &lt;a href=&#34;https://github.com/dependabot/dependabot-core&#34;&gt;Dependabot&lt;/a&gt;
+so my library could update automatically. Other then that, I happily use the library for
+my own projects. I felt like this was a significancy more serious library for Flutter
+then when I built &lt;code&gt;m_ble_peripheral&lt;/code&gt;. Even if it is not that complex, deigning and
+implementing a need I had in this way significantly helped my understanding of Flutter
+and library development as a whole.&lt;/p&gt;
+&lt;p&gt;The code is available at: &lt;a href=&#34;https://github.com/FreeMove-VR/google_mediapipe_pose_detection/tree/main&#34;&gt;https://github.com/FreeMove-VR/google_mediapipe_pose_detection/tree/main&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -612,7 +840,7 @@ library, google_mediapipe_pose_detection, where I further expanded my abilities 
 &lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
     
   
-  
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
   &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
   &lt;figure  itemprop=&#34;associatedMedia&#34;
     itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
@@ -945,7 +1173,7 @@ which was taught extremely thoroughly on &lt;a href=&#34;https://vlacs.org/&#34;
 is probably the best course I took in high school despite it being online. My senior year I needed to do a senior
 project, and for this, I decided to re-implement an idea I had made previously, reimagining it using &lt;a href=&#34;https://unity.com/&#34;&gt;Unity&lt;/a&gt;.&lt;/p&gt;
 
-
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
 &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
 &lt;figure  itemprop=&#34;associatedMedia&#34;
   itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;

@@ -9,7 +9,7 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LLMs</title>
@@ -105,50 +105,50 @@
     <item>
       <title>Android</title>
       <link>http://localhost:1313/tags/android/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/android/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>BLE</title>
-      <link>http://localhost:1313/tags/ble/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/ble/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Bluetooth</title>
-      <link>http://localhost:1313/tags/bluetooth/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/bluetooth/</guid>
       <description></description>
     </item>
     <item>
       <title>Flutter</title>
       <link>http://localhost:1313/tags/flutter/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/flutter/</guid>
       <description></description>
     </item>
     <item>
       <title>IOS</title>
       <link>http://localhost:1313/tags/ios/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/ios/</guid>
       <description></description>
     </item>
     <item>
-      <title>Java</title>
-      <link>http://localhost:1313/tags/java/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/tags/java/</guid>
+      <title>Kotlin</title>
+      <link>http://localhost:1313/tags/kotlin/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/kotlin/</guid>
       <description></description>
     </item>
     <item>
       <title>Library</title>
       <link>http://localhost:1313/tags/library/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/tags/library/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mediapipe</title>
+      <link>http://localhost:1313/tags/mediapipe/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/mediapipe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mobile</title>
+      <link>http://localhost:1313/tags/mobile/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/tags/mobile/</guid>
       <description></description>
     </item>
   </channel>

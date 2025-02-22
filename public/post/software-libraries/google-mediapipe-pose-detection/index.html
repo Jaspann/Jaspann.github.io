@@ -72,7 +72,7 @@
   <meta itemprop="description" content="A Flutter library for pose detection using Google&#39;s Mediapipe.">
   <meta itemprop="datePublished" content="2024-03-10T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-02-19T00:00:00+00:00">
-  <meta itemprop="wordCount" content="9">
+  <meta itemprop="wordCount" content="1794">
   <meta itemprop="keywords" content="Kotlin,Swift,IOS,Android,Flutter,Mobile,Library,Pose Detection,Mediapipe">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Mediapipe Pose Detection: Flutter Library">
@@ -315,6 +315,222 @@
       
       <div class="post-content">
         <p><em>A Flutter library for pose detection using Google&rsquo;s Mediapipe.</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>Before 2023, Google&rsquo;s solution for machine learning (ML) on mobile was
+<a href="https://developers.google.com/ml-kit/">ML Kit</a>. The library was for Android and iOS
+and had a variety of small models to perform common tasks that developers could use for
+their apps. This was before LLMs took over the public mind, so the platform heavily focused
+on computer vision for tasks like facial detection and image labeling.
+The library was well received by many developers and the developer community was even
+interested enough in the library that it was ported to Flutter for
+iOS and Android as <a href="https://pub.dev/packages/google_ml_kit">google_ml_kit</a>.</p>
+<p>In 2023, Google re-introduced their on-device ML models under the upgraded
+<a href="https://developers.googleblog.com/en/introducing-mediapipe-solutions-for-on-device-machine-learning/">Mediapipe Solutions</a>
+branding. They made this change as the library supported mobile as well as web and Python,
+and they overhauled several models and took them out of beta. It appeared that Google
+updated <a href="https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker">pose detection</a>
+as well, which was the model I used for FreeMoveVR. I tested out their
+<a href="https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/pose_landmarker/android">Android app example</a>,
+and it felt much smoother than what I was able to achieve in my Flutter application.
+The points looked less jittery and it was running at 30 fps, rather than my Flutter
+app at 24 fps. I decided I wanted to re-implement google_ml_kit using Mediapipe
+instead to try to improve my app.</p>
+<h2 id="data-pipeline">Data Pipeline</h2>
+<p>As Flutter is an abstracted layer on top of the native platform, we need a special way to
+pass data between these, which is normally done through platform (aka method) channels.
+Anytime a developer needs to interact with native APIs, it needs to take multiple steps: Flutter →
+methodChannel → platform host → app delegate → Flutter controller → native API, and
+back to return the data. The data is always passed asynchronously.</p>
+<p>Here is the image used to explain how this is done from
+<a href="https://docs.flutter.dev/platform-integration/platform-channels">Flutter&rsquo;s website</a>:</p>
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" style="display: flex; justify-content: center; align-items: center;">
+<figure  class="bordered-image"  itemprop="associatedMedia"
+  itemscope itemtype="http://schema.org/ImageObject" >
+    <div class="img">
+      <img itemprop="thumbnail" src="/software-libraries/google-mediapipe-pose-detection/PlatformChannels.png" alt="Architectural overview: platform channels"/>
+    </div>
+    <a href="/software-libraries/google-mediapipe-pose-detection/PlatformChannels.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Architectural overview: platform channels</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h3 id="data-throughput-in-m_ble_peripheral">Data Throughput in m_ble_peripheral</h3>
+<p>I had previous experience with making a Flutter library in
+<a href="/post/software-libraries/m-ble-peripheral/">m_ble_peripheral</a>, but this library
+was significantly different due to the quantity of data that needed to constantly
+be transferred between the main application and the native code through the library.</p>
+<p>In Bluetooth Low Energy (BLE), the size of the data transferred are measured in bytes.
+The messages sent to and from the app are only 20 bytes at max. The actual messages
+are a bit more, but that is BLE headers handled by the operating system and not viewable
+to the end application. There can be hundreds of messages sent a second, but that is
+still almost nothing.</p>
+<p>The platform channels also have a limited number of supported data types. It&rsquo;s mostly just
+your standard data types in addition to <code>null</code>, some <code>List</code>s and <code>Map</code>. This is really easy to
+work with for m_ble_peripheral because one of the types is a <code>Uint8List</code> that can easily
+represent notification data and UUIDs can be <code>String</code>s.</p>
+<p>Unlike m_ble_peripheral, this library would be pushing the limits on what Flutter
+and Mediapipe could handle real time. This was because of two factors: multiple
+platform jumps with complex data type augmentation and Mediapipe&rsquo;s model execution time.</p>
+<h3 id="data-throughput-for-mediapipe">Data Throughput for Mediapipe</h3>
+<p>As we just discussed, there is a pipeline every time we need to transfer data,
+and there is a limited number of data types we can pass through. This creates
+a problem for video streams. Video streams contain lots of data, and need high
+throughput. If we are operating at 30 fps, we have less than 0.033 seconds to
+process data and get a result before the next frame is expected to come in. I
+say less than because frames may not be captured at exactly the same rate,
+especially if the phone is doing a lot of processing like it would be when
+running the pose detection model.</p>
+<h4 id="framerate-on-android">Framerate on Android</h4>
+<p>While debugging, I found an even greater disconnect with this intuition.
+While iOS can run 30 fps, I could not find any phone model on Android that
+ran 30 fps. Back when I was starting the app in the fall of 2022, I took a
+survey and ran FreeMoveVR on several of my friend&rsquo;s phones:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Phone</th>
+          <th>Year</th>
+          <th>Avg. FPS</th>
+          <th>Version</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Moto g6</td>
+          <td>2018</td>
+          <td>9.0</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>Pixel XL</td>
+          <td>2018</td>
+          <td>7.4</td>
+          <td>10</td>
+      </tr>
+      <tr>
+          <td>OnePlus 7T Pro 5G</td>
+          <td>2019</td>
+          <td>17.0</td>
+          <td>11</td>
+      </tr>
+      <tr>
+          <td>Samsung Gal S21 Ultra</td>
+          <td>2021</td>
+          <td>22.8</td>
+          <td>?</td>
+      </tr>
+      <tr>
+          <td>Samsung Gal 10</td>
+          <td>2019</td>
+          <td>16.4</td>
+          <td>?</td>
+      </tr>
+      <tr>
+          <td>Samsung Gal 10+</td>
+          <td>2019</td>
+          <td>15.3</td>
+          <td>?</td>
+      </tr>
+      <tr>
+          <td>Samsung Gal S21</td>
+          <td>2021</td>
+          <td>23.9</td>
+          <td>12</td>
+      </tr>
+      <tr>
+          <td>Google Pixel 4a 5G</td>
+          <td>2020</td>
+          <td>23.5</td>
+          <td>12</td>
+      </tr>
+  </tbody>
+</table>
+<p>As you can see, no model was capable of running at over 24 frames per second.
+While the average phone has increased in capabilities, any phone is able to
+normally record a 30 fps video. This led me to the internal code of Flutter&rsquo;s
+<a href="https://pub.dev/packages/camera">camera plugin</a>. This is the standard camera
+plugin for Flutter, made by the Flutter development team. During my time
+developing, the camera plugin in the backend used the outdated
+<a href="https://pub.dev/packages/camera_android">Camera 2 library</a> for Android.
+With their solution, the frames that are meant to be viewed and the data as
+it exists to be sent for further processing are not equivalent. While the
+real framerate of the camera might be a full 30 fps, and the user sees 30 fps
+when doing a visual test, some frames are dropped when sending to the callback
+function I use to process the image. Because of this, I was never able to see
+above 24 fps in testing on Android. While this made my goal of 30 fps in this
+library impossible without significantly changing Flutter&rsquo;s code, I decided to
+continue to work on this library to use the improved model and framework.</p>
+<h4 id="processing-images">Processing Images</h4>
+<p>Let&rsquo;s now return to thinking about platform channels. When my Flutter app needs
+to process the camera image, it needs to take many steps before it is sent to
+Mediapipe. The camera library runs Android&rsquo;s native Camera library, Camera 2,
+Camera 2 returns the camera as a viewable image and a version that is made for
+processing, Both of these formats then need to be converted into a valid data
+type to be transferred over the platform channel, the Flutter Camera library
+then needs to re-create those images, One copy is displayed on the screen and
+the other is sent to my callback. The callback now needs to perform that process
+again in reverse to go from the Flutter side of my library to the respective
+platform&rsquo;s native side. Then, Mediapipe does not natively support the image type
+that Android produces when streaming in preview mode, so we need to convert
+the YUV image to Bitmap. It is actually really hard to go from YUV directly to
+Bitmap, so actually we need to first convert from YUV to JPEG, then JPEG to
+Bitmap. Once it is in the correct image format, then we can finally send the
+image through Mediapipe to get our pose data.</p>
+<p>While this is a complex process, it is no ware near deal breaking for our
+solution. From what I remember, once the image was captured by Camera 2,
+all of this could be done in less then 2 milliseconds, or 0.002 seconds
+at 240p. The main bottleneck was due to converting between image formats at the end.</p>
+<blockquote>
+<p>Side note: 240p sounds low, but low qualities like this are actually normal input for
+pose detection models as higher qualities take longer for the model to process.
+All of Google&rsquo;s pose detection models have 224 x 224-pixel input.
+Additionally, for pose recognition, the person normally takes up a large
+portion of the image and is in an unambitious position, so the model
+would likely only improve slightly but take exponentially longer for larger
+inputs.</p></blockquote>
+<h2 id="running-the-mediapipe-model">Running the Mediapipe Model</h2>
+<p>After all this research and work, interacting with Mediapipe was relatively easy.
+I added a builder to set up the <code>PoseLandmarker</code> object, which only needs a few
+enum values. We can then pass through our image data, and the model runs
+asynchronously. When the model is done, we can send the result to
+<code>EventChannel.EventSink</code>, where my library and app are listening for updates.
+Mediapipe simply has a <code>setResultListener</code>, and from there we format the
+data in the same way as <code>google_ml_kit</code> to maintain compatibility for users.</p>
+<p>This is the first time I had a memory leak in my software, so I needed to learn how
+to debug that. Xcode has a tool to find memory leaks that I was able to pretty quickly
+understand and use. I ended up finding the cause of it in my register function. I had it end
+by kicking off a <code>DispatchQueue</code> that would infinity run so it could detect the image as soon
+as possible. While this does not look good, in my defense, I was still new to Swift so I
+based the code on my Android implementation, where running the function in a separate
+thread is a valid solution. Instead, I had the detect function run via <code>DispatchQueue</code>
+only after we had a result. From what I remember, I tried to mirror this on the Android
+side but it would not work, and doing it as I described in a thread was the best solution.</p>
+<p>Now we could ask the question of which model should be used when for Mediapipe Pose
+detection. Mediapipe has three models, Lite, Full, and Heavy. For my Flutter library,
+all three are available of course, as it is as simple as downloading the model and
+changing an enum in the builder. From my personal experience, the Lite
+model is almost unusable. It is a surefire way to hit max framerate, but it was
+struggling to accurately detect my legs and arms even in optimal conditions when
+I was standing still. I&rsquo;m honestly not sure what the use case even is with this quality.
+Heavy is quite good, but the issue is that it would never come
+close to a usable framerate for my application. I am sure it is very useful for images
+and apps that do not require a real-time response, but I could use it for FreeMoveVR.
+The Full model is perfect for any live feed application.
+It balances quality and speed very well for modern phones, often getting near full
+fps on 2020 and newer.</p>
+<h2 id="retrospective">Retrospective</h2>
+<p>I am pretty happy with how the library turned out. The only improvement I think I would
+make looking back was setting up <a href="https://github.com/dependabot/dependabot-core">Dependabot</a>
+so my library could update automatically. Other then that, I happily use the library for
+my own projects. I felt like this was a significancy more serious library for Flutter
+then when I built <code>m_ble_peripheral</code>. Even if it is not that complex, deigning and
+implementing a need I had in this way significantly helped my understanding of Flutter
+and library development as a whole.</p>
+<p>The code is available at: <a href="https://github.com/FreeMove-VR/google_mediapipe_pose_detection/tree/main">https://github.com/FreeMove-VR/google_mediapipe_pose_detection/tree/main</a></p>
 
       </div>
 
@@ -415,7 +631,24 @@
   </div>
 
   
-  
+  <nav class="toc" id="toc">
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-content custom-scrollbar">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#data-pipeline">Data Pipeline</a>
+      <ul>
+        <li><a href="#data-throughput-in-m_ble_peripheral">Data Throughput in m_ble_peripheral</a></li>
+        <li><a href="#data-throughput-for-mediapipe">Data Throughput for Mediapipe</a></li>
+      </ul>
+    </li>
+    <li><a href="#running-the-mediapipe-model">Running the Mediapipe Model</a></li>
+    <li><a href="#retrospective">Retrospective</a></li>
+  </ul>
+</nav>
+    </div>
+  </nav>
 
 
 </div>

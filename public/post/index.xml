@@ -9,7 +9,7 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chord Llama</title>
@@ -31,6 +31,13 @@
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/ai-projects/flight-sure/</guid>
       <description>&lt;p&gt;&lt;em&gt;Using Machine Learning to Find the Chance a Flight is on Time.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I had recently returned to San Jose after visiting my family across the country.&#xA;While waiting at Logan Airport in Boston, I was watching the snowfall and wondered&#xA;if it would delay my flight. It had just started and light snow is a normal occurrence for&#xA;the area, so it was unlikely but possible. I then considered San Jose&amp;rsquo;s Airport. While they have&#xA;different weather they need to account for, there is no infrastructure in place for even&#xA;light snow. In addition, many drivers would not know how to handle slippery roads, which&#xA;would probably cause significant problems across the city.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mediapipe Pose Detection: Flutter Library</title>
+      <link>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</guid>
+      <description>&lt;p&gt;&lt;em&gt;A Flutter library for pose detection using Google&amp;rsquo;s Mediapipe.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Before 2023, Google&amp;rsquo;s solution for machine learning (ML) on mobile was&#xA;&lt;a href=&#34;https://developers.google.com/ml-kit/&#34;&gt;ML Kit&lt;/a&gt;. The library was for Android and iOS&#xA;and had a variety of small models to perform common tasks that developers could use for&#xA;their apps. This was before LLMs took over the public mind, so the platform heavily focused&#xA;on computer vision for tasks like facial detection and image labeling.&#xA;The library was well received by many developers and the developer community was even&#xA;interested enough in the library that it was ported to Flutter for&#xA;iOS and Android as &lt;a href=&#34;https://pub.dev/packages/google_ml_kit&#34;&gt;google_ml_kit&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Peripheral BLE Library for Flutter</title>
@@ -93,13 +100,6 @@
       <link>http://localhost:1313/post/mobile-projects/yabi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
       <guid>http://localhost:1313/post/mobile-projects/yabi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</guid>
       <description></description>
     </item>
     <item>
