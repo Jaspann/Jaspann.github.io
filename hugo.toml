@@ -12,8 +12,11 @@ enableInlineShortcodes = true
 hasCJKLanguage = false     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 rssLimit = 20             # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
 disqusShortname = ""      # disqus_shortname
-# googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = "William Parker"            # default: params.author.name ↓ # 默认为下面配置的params.author.name ↓
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-GJ1PZJKLH6'
 
 [pagination]
   pagerSize = 5           # Number of articles displayed on the homepage  # 首页每页显示的文章数
