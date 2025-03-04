@@ -7,7 +7,7 @@ lastmod: 2025-02-17
 categories: [
     "ai-projects",
 ]
-weight: 1
+weight: 2
 ---
 
 *Fine-tuning Llama for sheet music generation.*

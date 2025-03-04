@@ -7,6 +7,7 @@ lastmod: 2025-02-17
 categories: [
     "ai-projects",
 ]
+weight: 1
 ---
 
 *Applying LLM routing for a single chat across multiple repositories.*

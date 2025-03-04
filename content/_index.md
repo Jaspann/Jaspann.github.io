@@ -9,7 +9,7 @@ introductionWidget:
     
     Publish Date is the date of the completed project, not the date of writing.
 
-    The site is a work in progress. There are currently **9** pages in draft and **10** complete.
+    The site is a work in progress. There are currently **9** pages in draft and **11** complete.
   avatar: /william_parker.png
   showSocial: true
 

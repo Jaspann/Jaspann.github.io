@@ -15,205 +15,104 @@
     
     
     <item>
-      <title>Chord Llama</title>
-      <link>http://localhost:1313/post/ai-projects/chord-llama/</link>
-      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <title>Optimizing Scheduler Search in TVM</title>
+      <link>http://localhost:1313/post/ai-projects/tvm-search/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/ai-projects/chord-llama/</guid>
+      <guid>http://localhost:1313/post/ai-projects/tvm-search/</guid>
       
-        <description>&lt;p&gt;&lt;em&gt;Fine-tuning Llama for sheet music generation.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Large Language Models (LLMs) have recently reached a critical mass in the public eye,
-where everyone is trying to apply the technology to any problem they can think of.
-They have been further trained, or fine-tuned, for a variety of use cases, be it for
-business, software development, or speaking languages outside their original training
-data. At the time, I had recently learned about &lt;a href=&#34;https://www.w3.org/2021/06/musicxml40/&#34;&gt;MusicXML&lt;/a&gt;
-which is the format used for sheet music. An application like &lt;a href=&#34;https://musescore.org/en&#34;&gt;MuseScore&lt;/a&gt;
-is used to write music sheets for musicians and saves the work to a &lt;code&gt;.MXL&lt;/code&gt; file so it can be
-redistributed and edited without the pains of using a proprietary file type or making
-the sheets by hand and scanning them with a printer. MusicXML has been a standard since 2004
-and managed by W3C by 2015. As it is a pretty widely accepted standard, we looked into
-understanding how an LLM like Llama could be fine-tuned on this data to continue existing music
-or generate its own.&lt;/p&gt;
-&lt;p&gt;Music generation in the AI world is actually &lt;a href=&#34;https://arxiv.org/abs/2210.13944&#34;&gt;not a new concept&lt;/a&gt;.
-&lt;a href=&#34;https://arxiv.org/pdf/2210.10349&#34;&gt;MuseFormer&lt;/a&gt; was released by Microsoft in 2022 and applies
-the transformer architecture to music. In their work, each concept like tempo, beat,
-pitch, and duration is a separate token. The attention mechanism has two stages the fine-grained
-attention only attends to the elements in the same bar, while the coarse-grained attention
-only attends to the summary of other bars. This allows it to be aware of the entire song without
-saving all of it in the context length.&lt;/p&gt;
-&lt;p&gt;An issue we saw with models like MuseFormer is that the model required a significant amount of
-technical knowledge to set up. This creates a barrier for entry that is non-existent with the
-flurry of open-source tools anyone can use to run LLMs on their machine. By instead fine-tuning
-Llama as a base of our project, while we would not have the tokenizer or architecture built for
-this use case, it would be able to run on any machine, easing the availability to end users
-greatly.&lt;/p&gt;
-&lt;h2 id=&#34;data-collection&#34;&gt;Data Collection&lt;/h2&gt;
-&lt;p&gt;One of the more prevalent issues in AI training has been training on copyrighted material.
-We wanted to make sure that we did not fall into a legal grey area with the existence of this model,
-and to solve this we were able to get our sources from classical works in the public domain. Our first source was
-&lt;a href=&#34;http://mscorelib.com/&#34;&gt;MScoreLib&lt;/a&gt; which was a project that scanned classical works into MusicXML
-using automated tooling. The second source was
-&lt;a href=&#34;http://www.synthzone.com/forum/ubbthreads.php/topics/384909&#34;&gt;Wikifonia&lt;/a&gt; which was an
-online encyclopedia for public domain sheet music.&lt;/p&gt;
-&lt;h2 id=&#34;data-cleaning--preparation&#34;&gt;Data Cleaning &amp;amp; Preparation&lt;/h2&gt;
-&lt;p&gt;Cleaning the data to get it into a usable form for Llama is what took up the majority of
-my time in this project.&lt;/p&gt;
-&lt;p&gt;The first thing I saw as a problem was the context size of Llama 3. Unlike 3.1&amp;rsquo;s 128k context size,
-Llama 3 had only 4k tokens to use. Many special characters that XML uses take up their own token.
-XML, and MusicXML especially, are very verbose standards, making it hard to fit much within the context
-size. The first thing I wanted to do was remove the lyrics and all the unnecessary tags in the file
-that did not affect the end appearance of the sheet music or were too rare to be learned by the model.
-This required going over the full MusicXML specification and creating lists for all of the elements and
-attributes that should either be removed or kept in the file. MusicXML allows to adjust the size and
-color of text, making pixel-level adjustments on the location of the note, and many more attributes
-that do not affect the appearance or sound of the file when played.&lt;/p&gt;
-&lt;p&gt;Removing all unnecessary elements was still not enough for most songs to fit within the 4k context length.
-To further condense the music, we decided to convert the XML to YAML format. We decided on YAML as it
-has been shown to be &lt;a href=&#34;https://medium.com/better-programming/yaml-vs-json-which-is-more-efficient-for-language-models-5bc11dd0f6df&#34;&gt;more token efficient and boost the performance of models&lt;/a&gt;
-Doing this required us to index each musical part with &lt;code&gt;a00_&lt;/code&gt; where a was necessary because the program
-could not handle YAML starting with a number and &lt;code&gt;00&lt;/code&gt; was the number of the musical part. YAML is
-commonly used for config files and is not intended for this use case at all. In practice though, this was
-exactly what we needed to get the format small enough to pass in multiple staves to train the model on.&lt;/p&gt;
-&lt;p&gt;To visualize how much we condensed the format, on the left is an example of three notes of MusicXML,
-and on the right are the same three notes after our cleaning that we would send to the model.&lt;/p&gt;
-
-
-
-&lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
-    
-  
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
-  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
-  &lt;figure  itemprop=&#34;associatedMedia&#34;
-    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
-      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/ai-projects/chord-llama/musicXML.png&#39;);&#34;&gt;
-        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/ai-projects/chord-llama/musicXML.png&#34; /&gt;
-      &lt;/div&gt;
-      &lt;a href=&#34;http://localhost:1313/ai-projects/chord-llama/musicXML.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-    &lt;/figure&gt;
-  &lt;/div&gt;
-
-  
-  
-  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
-  &lt;figure  itemprop=&#34;associatedMedia&#34;
-    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
-      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/ai-projects/chord-llama/yaml.png&#39;);&#34;&gt;
-        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/ai-projects/chord-llama/yaml.png&#34; /&gt;
-      &lt;/div&gt;
-      &lt;a href=&#34;http://localhost:1313/ai-projects/chord-llama/yaml.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-    &lt;/figure&gt;
-  &lt;/div&gt;
-
-
-&lt;/div&gt;
-
-&lt;p&gt;Additionally, we needed to be able to undo the YAML conversion so that we can verify that our steps worked
-and once the model is outputting new data in this format we can turn it into MusicXML to be viewed and listened to.&lt;/p&gt;
-&lt;p&gt;Finally, we needed to split the songs to fit inside the 4k token limit. We split each song into even chunks
-of up to 3500 tokens and put half of each in the input and output columns. We put the data in
-&lt;a href=&#34;https://jsonlines.org/&#34;&gt;JSON Lines&lt;/a&gt; to be used for training and uploaded to HuggingFace.&lt;/p&gt;
-&lt;p&gt;The cleaned data in our format is available on HuggingFace along with the notebook used to create it:
-&lt;a href=&#34;https://huggingface.co/datasets/Chord-Llama/chord_llama_dataset&#34;&gt;https://huggingface.co/datasets/Chord-Llama/chord_llama_dataset&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;fine-tuning&#34;&gt;Fine-Tuning&lt;/h2&gt;
-&lt;p&gt;To train, the technical process we used was Low-Rank Adaptation (LoRA). LoRA works by adding
-small, adjustable components to each layer of the model, leaving the original model unchanged.
-Instead of using a single delta matrix, LoRA employs two matrices to reduce the dimensionality.
-Because there are fewer calculations and memory needed, the fine-tuning process is much faster.
-Additionally, this method also typically produces higher-quality results than normal fine-tuning.&lt;/p&gt;
-&lt;p&gt;We used &lt;a href=&#34;https://unsloth.ai/&#34;&gt;Unsloth&lt;/a&gt; to help us fine-tune with LoRA. Unsloth allowed us to easily
-configure many parameters in training, as well as connect with &lt;a href=&#34;https://wandb.ai/site/&#34;&gt;Weights &amp;amp; Biases&lt;/a&gt;
-to record all of our tests. We were able to optimize scheduling, learning rate, weight decay, batch size, and
-gradient accumulation steps.&lt;/p&gt;
-&lt;p&gt;Our final dataset had almost 100k rows of training data, which we knew was more than enough for our purposes.
-To start, we trained on 10k samples but quickly found that this much training overfit the model, and it
-would be better to pick out a smaller sample size. The model did not improve after 1k samples, so we ended
-up training with 1.6k samples.&lt;/p&gt;
-&lt;h2 id=&#34;optimization-and-publishing&#34;&gt;Optimization and Publishing&lt;/h2&gt;
-&lt;p&gt;Just because a model is fine-tuned it does not mean that it is able to be used. After training, the model
-is split across multiple &lt;code&gt;.safetensor&lt;/code&gt; files. While this is useful for further development, for creating an
-end-user application, it needs to be in a format that optimizes for inference. This often means converting
-the checkpoint into &lt;a href=&#34;https://github.com/ggml-org/ggml/tree/master&#34;&gt;GGUF&lt;/a&gt;, which is a standard .bin file that is
-optimized for quick loading and saving and is standard for locally hosted inference applications. This was done
-using &lt;a href=&#34;https://github.com/ggml-org/llama.cpp&#34;&gt;llama.cpp&lt;/a&gt;. Quantizing the model to four-bit precision allowed it to
-be run on the laptop for presenting the work, so we did that as well. I was able to publish this model on
-&lt;a href=&#34;https://ollama.com/jaspann/llama-3-chord-llama-2&#34;&gt;Ollama&lt;/a&gt; for anyone to use.&lt;/p&gt;
-&lt;p&gt;The final component of the project was creating a small web application to show the model working. I decided
-that I wanted to use Flask for the backend and React for the front end, both new to me. While it was not the prettiest,
-it showed that from the data I put in, it was able to generate the music in real-time for the audience to see.
-It was unfortunately limited to the YAML, rather than converting back into MusicXML, but the result was more than enough
-to prove the functionality of the project.&lt;/p&gt;
-
-
-&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
-&lt;figure  class=&#34;bordered-image&#34;  itemprop=&#34;associatedMedia&#34;
-  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
-    &lt;div class=&#34;img&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/ai-projects/chord-llama/chord_llama_website.png&#34; alt=&#34;The Chord Llama website.&#34;/&gt;
-    &lt;/div&gt;
-    &lt;a href=&#34;http://localhost:1313/ai-projects/chord-llama/chord_llama_website.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-      &lt;figcaption&gt;
-          &lt;p&gt;The Chord Llama website.&lt;/p&gt;
-      &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;I loved the idea and our work in Chord Llama. I feel that with some more work and modern LLM technology, we could have
-had an LLM capable of generating good music that solved the goals we set for this project. Working with the unique problem
-of fitting MusicXML within a limited token context is exactly the fun and creative type of solution I love working on in software development.&lt;/p&gt;
-&lt;p&gt;Here are the links to the project. In addition, this project was part of my time at San Jose State University, and my partner
-and I wrote up a report at the end of the semester that you can read below for more information.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Web Project on GitHub: &lt;a href=&#34;https://github.com/Chord-Llama/Chord-Llama&#34;&gt;https://github.com/Chord-Llama/Chord-Llama&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;HuggingFace: &lt;a href=&#34;https://huggingface.co/Chord-Llama&#34;&gt;https://huggingface.co/Chord-Llama&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+        <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Machine Learning Compiler Frameworks like &lt;a href=&#34;https://tvm.apache.org/&#34;&gt;Apache TVM&amp;rsquo;s&lt;/a&gt;
+&lt;a href=&#34;https://tvm.apache.org/2021/03/03/intro-auto-scheduler&#34;&gt;Ansor&lt;/a&gt;&lt;br&gt;
+optimize schedulers for inference. The software runs a search algorithm, optimizing
+a model for the specific hardware configuration. Apache TVM integrates with all popular
+model frameworks, allowing for optimizations in inference latency, improved throughput,
+and memory usage optimization. For this project, we combine and evaluate the efficiency
+of two additional techniques used to improve Ansor:
+&lt;a href=&#34;https://github.com/gicLAB/transfer-tuning/tree/main&#34;&gt;transfer-tuning&lt;/a&gt; and
+&lt;a href=&#34;https://dl.acm.org/doi/10.1145/3650109&#34;&gt;droplet search&lt;/a&gt;.
+In our tests, we find that combining these two techniques can lead to an improvement of up
+to 10% faster inference than using transfer-tuning alone.&lt;/p&gt;
+&lt;h2 id=&#34;apache-tvm-and-ansor&#34;&gt;Apache TVM and Ansor&lt;/h2&gt;
+&lt;p&gt;Apache TVM is an actively maintained open-source deep learning compiler.
+It enables straightforward optimization for end-to-end training compatible with PyTorch TensorFlow, and many other frameworks.
+In the context of Deep Learning, graph optimization can boost performance by two means:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Layout rewriting, for example, rearranging CNN channels to best match specific GPU.&lt;/li&gt;
+&lt;li&gt;Operation fusion, which involves combining several operations such as convulsions
+and activations to reduce the function call overhead, or repeated memory access.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ansor is the algorithm that our work primarily uses to optimize the model.
+Ansor was introduced in March of 2021, and it preforms optimizations through
+adjusting the task scheduler. It was a large improvement over Apache TVM&amp;rsquo;s previous
+workflow, known as &lt;em&gt;AutoTVM Workflow&lt;/em&gt;, where writing an advanced template scheduler was
+no longer required, drastically lowering the barrier to entry for the library.&lt;/p&gt;
+&lt;p&gt;The basic idea of Ansor is that it performs an evolutionary search, which performs
+mutations on the current solution with the highest performance score to attempt
+to find a better solution. Ansor is run tens of thousands of times to find the
+best possible optimizations.&lt;/p&gt;
+&lt;h2 id=&#34;droplet-search&#34;&gt;Droplet Search&lt;/h2&gt;
+&lt;p&gt;Droplet search is a technique to optimize machine learning kernels, based on the
+coordinate descent algorithm. The idea in principle is kinda like gradient descent,
+but simplified so that only one axis is minimized at a time. Each variable that the
+search algorithm can adjust is mapped to a coordinate point in an n-dimensional space
+to be minimized. Once enough tests are run, the algorithm can understand how
+traversing on any axis will impact the objective function, allowing us to minimize.
+The original paper behind this technique also argues that from any starting configuration,
+the fastest possible solution that the algorithm can come up with within the constraints of
+the data is always achievable. Due to the speed of the algorithm, this makes it a very
+appealing choice for this type of problem. While droplet search was possible on AutoTVM Workflow,
+it was not fully implemented into Ansor, so the optimization was never tested in the original
+transfer-tuning paper.&lt;/p&gt;
+&lt;h2 id=&#34;transfer-tuning&#34;&gt;Transfer-Tuning&lt;/h2&gt;
+&lt;p&gt;While Ansor helps find the best schedules for a particular architecture-hardware configuration,
+what if we have several hardware configurations? Or similar software configurations?
+Re-running the optimization on each would be expensive,
+and we would likely find similar optimizations between optimal configurations.
+Transfer Tuning attempts to tackle this problem.
+It builds upon Ansor but extracts optimization for later reuse on new DNN architectures.
+By having several models share their optimizations over a small period of time, the models
+can combine the optimizations together to achieve a performance much greater
+than their individual components&amp;rsquo; search steps could do alone.
+The method shows up to 88% faster inference given the same search time with pure Ansor.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;For our tests, we ran ResNet50, GoogleNet, and AlexNet through five thousand trials in
+Ansor with and without droplet search, and then performed Transfer tuning across each
+pair of models. It is important to note that Transfer Tuning suggests running twenty
+thousand trials per model through Ansor, but we needed to cut Ansor short at 5000 due
+to time constraints. While most combinations between the models resulted in no
+significant difference between the two benchmark times, GoogleNet when using Droplet
+Search with Transfer Tuning against AlexNet, performed almost 10% faster than Transfer
+Tuning against AlexNet by itself, showing hints at promising results with more testing.
+This outcome is also not too surprising due to the nature of Transfer Tuning, where some
+model combinations are able to transfer their optimizations more efficiently than other
+models. Transfer Tuning may fully be able to optimize GoogleNet via ResNet50, but for using
+a model like AlexNet as the basis for Transfer Tuning, when applied to GoogleNet, it may not
+be able to fully optimize like ResNet50, allowing for Droplet Search to be beneficial in these
+scenarios.&lt;/p&gt;
+&lt;h2 id=&#34;future-work&#34;&gt;Future Work&lt;/h2&gt;
+&lt;p&gt;A clear direction for future work is testing at the recommended 20,000 Ansor trials for
+transfer-tuning and seeing the difference from what we have recorded so far. We also see
+potential in fewer trails to find how droplet search can optimally be applied.
+Additionally, testing additional hardware configurations is necessary due to the nature
+of Ansor and Transfer Tuning.&lt;/p&gt;
+&lt;p&gt;Another potential area for future work is to apply droplet search on a set of data points
+beyond the initial log files of the model. The idea is that if transfer-tuning is able to
+apply the data from other models, it should be possible to feed all of that data back into
+droplet search, potentially creating an even better data set then the current set up.&lt;/p&gt;
+&lt;p&gt;You can view the source code for the project at:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Jaspann/transfer-tuning&#34;&gt;https://github.com/Jaspann/transfer-tuning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For the project, we also created a slideshow as well as a report, available below:&lt;/p&gt;
+&lt;iframe src=&#34;https://1drv.ms/p/c/78ac3e9c395f4290/IQRWNHHXwyudS6COJxySn5nxATWeS_FmdKJg9VkjwDCvIiY?em=2&amp;amp;wdAr=1.7777777777777777&#34; width=&#34;100%&#34; height=&#34;400px&#34; frameborder=&#34;0&#34;&gt;This is an embedded &lt;a target=&#34;_blank&#34; href=&#34;https://office.com&#34;&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=&#34;_blank&#34; href=&#34;https://office.com/webapps&#34;&gt;Office&lt;/a&gt;.&lt;/iframe&gt;
+&lt;div style=&#34;margin: 2rem 0;&#34;&gt;&lt;/div&gt;
 
 
 
 &lt;object
-    data=&#34;/ai-projects/chord-llama/Chord_Llama_Final.pdf&#34; width=&#34;100%&#34; height=&#34;800px&#34;type=&#34;application/pdf&#34;
+    data=&#34;/ai-projects/tvm-search/tvm-search.pdf&#34; width=&#34;100%&#34; height=&#34;800px&#34;type=&#34;application/pdf&#34;
 &gt;
-    &lt;p&gt;Unable to display PDF file. &lt;a href=&#34;http://localhost:1313/ai-projects/chord-llama/Chord_Llama_Final.pdf&#34;&gt;Download&lt;/a&gt; instead.&lt;/p&gt;
+    &lt;p&gt;Unable to display PDF file. &lt;a href=&#34;http://localhost:1313/ai-projects/tvm-search/tvm-search.pdf&#34;&gt;Download&lt;/a&gt; instead.&lt;/p&gt;
 &lt;/object&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
-      <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/about/</guid>
-      
-        <description>&lt;p&gt;The intention of this site is to provide a place where I can record the past projects I worked on.
-It&amp;rsquo;s meant to be somewhere between a portfolio and a retrospective blog, where I discuss what I
-worked on from a technical perspective and show off the design process behind the features that were added.&lt;/p&gt;
-&lt;p&gt;The date of the post the approximate date I finished the project, not the date of writing.&lt;/p&gt;
-&lt;p&gt;Here is a list of all of the posts I have planned:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Moore&amp;rsquo;s Falls Eagle Scout Project&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; APCSA TA&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Computer Science Club VP&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;FreeMoveVR&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS Thesis&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unified Live Chat&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS AI Education&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Comp Sci Education&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene AHK&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Eventified&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FlightSure&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ChordLlama&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Multi-Repo Coding Assistant&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Pond Jumper&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; RoundHouse&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Yabi&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Flutter M BLE&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Google Mediapipe Pose Detection&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;Arity Android Engineer Intern&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
       
     </item>
@@ -461,6 +360,211 @@ I have the work I did here in the back of my mind as reference for how to solve 
 &lt;div style=&#34;margin: 2rem 0;&#34;&gt;&lt;/div&gt;
 &lt;p&gt;The app is available on HuggingFace at: &lt;a href=&#34;https://huggingface.co/spaces/Jaspann/FlightSure&#34;&gt;https://huggingface.co/spaces/Jaspann/FlightSure&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The dataset I used it on Kaggle at: &lt;a href=&#34;https://www.kaggle.com/datasets/williamparker20/flight-ontime-reporting-with-weather/data&#34;&gt;https://www.kaggle.com/datasets/williamparker20/flight-ontime-reporting-with-weather/data&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Chord Llama</title>
+      <link>http://localhost:1313/post/ai-projects/chord-llama/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/chord-llama/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;Fine-tuning Llama for sheet music generation.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Large Language Models (LLMs) have recently reached a critical mass in the public eye,
+where everyone is trying to apply the technology to any problem they can think of.
+They have been further trained, or fine-tuned, for a variety of use cases, be it for
+business, software development, or speaking languages outside their original training
+data. At the time, I had recently learned about &lt;a href=&#34;https://www.w3.org/2021/06/musicxml40/&#34;&gt;MusicXML&lt;/a&gt;
+which is the format used for sheet music. An application like &lt;a href=&#34;https://musescore.org/en&#34;&gt;MuseScore&lt;/a&gt;
+is used to write music sheets for musicians and saves the work to a &lt;code&gt;.MXL&lt;/code&gt; file so it can be
+redistributed and edited without the pains of using a proprietary file type or making
+the sheets by hand and scanning them with a printer. MusicXML has been a standard since 2004
+and managed by W3C by 2015. As it is a pretty widely accepted standard, we looked into
+understanding how an LLM like Llama could be fine-tuned on this data to continue existing music
+or generate its own.&lt;/p&gt;
+&lt;p&gt;Music generation in the AI world is actually &lt;a href=&#34;https://arxiv.org/abs/2210.13944&#34;&gt;not a new concept&lt;/a&gt;.
+&lt;a href=&#34;https://arxiv.org/pdf/2210.10349&#34;&gt;MuseFormer&lt;/a&gt; was released by Microsoft in 2022 and applies
+the transformer architecture to music. In their work, each concept like tempo, beat,
+pitch, and duration is a separate token. The attention mechanism has two stages the fine-grained
+attention only attends to the elements in the same bar, while the coarse-grained attention
+only attends to the summary of other bars. This allows it to be aware of the entire song without
+saving all of it in the context length.&lt;/p&gt;
+&lt;p&gt;An issue we saw with models like MuseFormer is that the model required a significant amount of
+technical knowledge to set up. This creates a barrier for entry that is non-existent with the
+flurry of open-source tools anyone can use to run LLMs on their machine. By instead fine-tuning
+Llama as a base of our project, while we would not have the tokenizer or architecture built for
+this use case, it would be able to run on any machine, easing the availability to end users
+greatly.&lt;/p&gt;
+&lt;h2 id=&#34;data-collection&#34;&gt;Data Collection&lt;/h2&gt;
+&lt;p&gt;One of the more prevalent issues in AI training has been training on copyrighted material.
+We wanted to make sure that we did not fall into a legal grey area with the existence of this model,
+and to solve this we were able to get our sources from classical works in the public domain. Our first source was
+&lt;a href=&#34;http://mscorelib.com/&#34;&gt;MScoreLib&lt;/a&gt; which was a project that scanned classical works into MusicXML
+using automated tooling. The second source was
+&lt;a href=&#34;http://www.synthzone.com/forum/ubbthreads.php/topics/384909&#34;&gt;Wikifonia&lt;/a&gt; which was an
+online encyclopedia for public domain sheet music.&lt;/p&gt;
+&lt;h2 id=&#34;data-cleaning--preparation&#34;&gt;Data Cleaning &amp;amp; Preparation&lt;/h2&gt;
+&lt;p&gt;Cleaning the data to get it into a usable form for Llama is what took up the majority of
+my time in this project.&lt;/p&gt;
+&lt;p&gt;The first thing I saw as a problem was the context size of Llama 3. Unlike 3.1&amp;rsquo;s 128k context size,
+Llama 3 had only 4k tokens to use. Many special characters that XML uses take up their own token.
+XML, and MusicXML especially, are very verbose standards, making it hard to fit much within the context
+size. The first thing I wanted to do was remove the lyrics and all the unnecessary tags in the file
+that did not affect the end appearance of the sheet music or were too rare to be learned by the model.
+This required going over the full MusicXML specification and creating lists for all of the elements and
+attributes that should either be removed or kept in the file. MusicXML allows to adjust the size and
+color of text, making pixel-level adjustments on the location of the note, and many more attributes
+that do not affect the appearance or sound of the file when played.&lt;/p&gt;
+&lt;p&gt;Removing all unnecessary elements was still not enough for most songs to fit within the 4k context length.
+To further condense the music, we decided to convert the XML to YAML format. We decided on YAML as it
+has been shown to be &lt;a href=&#34;https://medium.com/better-programming/yaml-vs-json-which-is-more-efficient-for-language-models-5bc11dd0f6df&#34;&gt;more token efficient and boost the performance of models&lt;/a&gt;
+Doing this required us to index each musical part with &lt;code&gt;a00_&lt;/code&gt; where a was necessary because the program
+could not handle YAML starting with a number and &lt;code&gt;00&lt;/code&gt; was the number of the musical part. YAML is
+commonly used for config files and is not intended for this use case at all. In practice though, this was
+exactly what we needed to get the format small enough to pass in multiple staves to train the model on.&lt;/p&gt;
+&lt;p&gt;To visualize how much we condensed the format, on the left is an example of three notes of MusicXML,
+and on the right are the same three notes after our cleaning that we would send to the model.&lt;/p&gt;
+
+
+
+&lt;div class=&#34;gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
+    
+  
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/hugo-easy-gallery.css&#34; /&gt;
+  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34;
+    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/ai-projects/chord-llama/musicXML.png&#39;);&#34;&gt;
+        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/ai-projects/chord-llama/musicXML.png&#34; /&gt;
+      &lt;/div&gt;
+      &lt;a href=&#34;http://localhost:1313/ai-projects/chord-llama/musicXML.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+
+  
+  
+  &lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34;
+    itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+      &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;/ai-projects/chord-llama/yaml.png&#39;);&#34;&gt;
+        &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/ai-projects/chord-llama/yaml.png&#34; /&gt;
+      &lt;/div&gt;
+      &lt;a href=&#34;http://localhost:1313/ai-projects/chord-llama/yaml.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;p&gt;Additionally, we needed to be able to undo the YAML conversion so that we can verify that our steps worked
+and once the model is outputting new data in this format we can turn it into MusicXML to be viewed and listened to.&lt;/p&gt;
+&lt;p&gt;Finally, we needed to split the songs to fit inside the 4k token limit. We split each song into even chunks
+of up to 3500 tokens and put half of each in the input and output columns. We put the data in
+&lt;a href=&#34;https://jsonlines.org/&#34;&gt;JSON Lines&lt;/a&gt; to be used for training and uploaded to HuggingFace.&lt;/p&gt;
+&lt;p&gt;The cleaned data in our format is available on HuggingFace along with the notebook used to create it:
+&lt;a href=&#34;https://huggingface.co/datasets/Chord-Llama/chord_llama_dataset&#34;&gt;https://huggingface.co/datasets/Chord-Llama/chord_llama_dataset&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;fine-tuning&#34;&gt;Fine-Tuning&lt;/h2&gt;
+&lt;p&gt;To train, the technical process we used was Low-Rank Adaptation (LoRA). LoRA works by adding
+small, adjustable components to each layer of the model, leaving the original model unchanged.
+Instead of using a single delta matrix, LoRA employs two matrices to reduce the dimensionality.
+Because there are fewer calculations and memory needed, the fine-tuning process is much faster.
+Additionally, this method also typically produces higher-quality results than normal fine-tuning.&lt;/p&gt;
+&lt;p&gt;We used &lt;a href=&#34;https://unsloth.ai/&#34;&gt;Unsloth&lt;/a&gt; to help us fine-tune with LoRA. Unsloth allowed us to easily
+configure many parameters in training, as well as connect with &lt;a href=&#34;https://wandb.ai/site/&#34;&gt;Weights &amp;amp; Biases&lt;/a&gt;
+to record all of our tests. We were able to optimize scheduling, learning rate, weight decay, batch size, and
+gradient accumulation steps.&lt;/p&gt;
+&lt;p&gt;Our final dataset had almost 100k rows of training data, which we knew was more than enough for our purposes.
+To start, we trained on 10k samples but quickly found that this much training overfit the model, and it
+would be better to pick out a smaller sample size. The model did not improve after 1k samples, so we ended
+up training with 1.6k samples.&lt;/p&gt;
+&lt;h2 id=&#34;optimization-and-publishing&#34;&gt;Optimization and Publishing&lt;/h2&gt;
+&lt;p&gt;Just because a model is fine-tuned it does not mean that it is able to be used. After training, the model
+is split across multiple &lt;code&gt;.safetensor&lt;/code&gt; files. While this is useful for further development, for creating an
+end-user application, it needs to be in a format that optimizes for inference. This often means converting
+the checkpoint into &lt;a href=&#34;https://github.com/ggml-org/ggml/tree/master&#34;&gt;GGUF&lt;/a&gt;, which is a standard .bin file that is
+optimized for quick loading and saving and is standard for locally hosted inference applications. This was done
+using &lt;a href=&#34;https://github.com/ggml-org/llama.cpp&#34;&gt;llama.cpp&lt;/a&gt;. Quantizing the model to four-bit precision allowed it to
+be run on the laptop for presenting the work, so we did that as well. I was able to publish this model on
+&lt;a href=&#34;https://ollama.com/jaspann/llama-3-chord-llama-2&#34;&gt;Ollama&lt;/a&gt; for anyone to use.&lt;/p&gt;
+&lt;p&gt;The final component of the project was creating a small web application to show the model working. I decided
+that I wanted to use Flask for the backend and React for the front end, both new to me. While it was not the prettiest,
+it showed that from the data I put in, it was able to generate the music in real-time for the audience to see.
+It was unfortunately limited to the YAML, rather than converting back into MusicXML, but the result was more than enough
+to prove the functionality of the project.&lt;/p&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;display: flex; justify-content: center; align-items: center;&#34;&gt;
+&lt;figure  class=&#34;bordered-image&#34;  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;http://localhost:1313/ai-projects/chord-llama/chord_llama_website.png&#34; alt=&#34;The Chord Llama website.&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;http://localhost:1313/ai-projects/chord-llama/chord_llama_website.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;The Chord Llama website.&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I loved the idea and our work in Chord Llama. I feel that with some more work and modern LLM technology, we could have
+had an LLM capable of generating good music that solved the goals we set for this project. Working with the unique problem
+of fitting MusicXML within a limited token context is exactly the fun and creative type of solution I love working on in software development.&lt;/p&gt;
+&lt;p&gt;Here are the links to the project. In addition, this project was part of my time at San Jose State University, and my partner
+and I wrote up a report at the end of the semester that you can read below for more information.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Web Project on GitHub: &lt;a href=&#34;https://github.com/Chord-Llama/Chord-Llama&#34;&gt;https://github.com/Chord-Llama/Chord-Llama&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HuggingFace: &lt;a href=&#34;https://huggingface.co/Chord-Llama&#34;&gt;https://huggingface.co/Chord-Llama&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;object
+    data=&#34;/ai-projects/chord-llama/Chord_Llama_Final.pdf&#34; width=&#34;100%&#34; height=&#34;800px&#34;type=&#34;application/pdf&#34;
+&gt;
+    &lt;p&gt;Unable to display PDF file. &lt;a href=&#34;http://localhost:1313/ai-projects/chord-llama/Chord_Llama_Final.pdf&#34;&gt;Download&lt;/a&gt; instead.&lt;/p&gt;
+&lt;/object&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/about/</guid>
+      
+        <description>&lt;p&gt;The intention of this site is to provide a place where I can record the past projects I worked on.
+It&amp;rsquo;s meant to be somewhere between a portfolio and a retrospective blog, where I discuss what I
+worked on from a technical perspective and show off the design process behind the features that were added.&lt;/p&gt;
+&lt;p&gt;The date of the post the approximate date I finished the project, not the date of writing.&lt;/p&gt;
+&lt;p&gt;Here is a list of all of the posts I have planned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Moore&amp;rsquo;s Falls Eagle Scout Project&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; APCSA TA&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Computer Science Club VP&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FreeMoveVR&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS Thesis&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Unified Live Chat&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SJSU MS AI Education&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNHU Comp Sci Education&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 3tene AHK&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Eventified&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; FlightSure&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ChordLlama&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Multi-Repo Coding Assistant&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Pond Jumper&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; RoundHouse&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Yabi&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Flutter M BLE&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Google Mediapipe Pose Detection&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Arity Android Engineer Intern&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; TVM Search&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>

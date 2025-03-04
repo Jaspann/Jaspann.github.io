@@ -7,6 +7,7 @@ lastmod: 2025-02-09
 categories: [
     "ai-projects",
 ]
+weight: 0
 ---
 
 *Allowing VTubers to express themselves through global hotkeys.*

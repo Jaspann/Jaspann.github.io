@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache TVM on William Parker&#39;s Personal Site</title>
+    <link>http://localhost:1313/tags/apache-tvm/</link>
+    <description>Recent content in Apache TVM on William Parker&#39;s Personal Site</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
+    <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
+    <copyright>William Parker</copyright>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/apache-tvm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing Scheduler Search in TVM</title>
+      <link>http://localhost:1313/post/ai-projects/tvm-search/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/ai-projects/tvm-search/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Machine Learning Compiler Frameworks like &lt;a href=&#34;https://tvm.apache.org/&#34;&gt;Apache TVM&amp;rsquo;s&lt;/a&gt;&#xA;&lt;a href=&#34;https://tvm.apache.org/2021/03/03/intro-auto-scheduler&#34;&gt;Ansor&lt;/a&gt;&lt;br&gt;&#xA;optimize schedulers for inference. The software runs a search algorithm, optimizing&#xA;a model for the specific hardware configuration. Apache TVM integrates with all popular&#xA;model frameworks, allowing for optimizations in inference latency, improved throughput,&#xA;and memory usage optimization. For this project, we combine and evaluate the efficiency&#xA;of two additional techniques used to improve Ansor:&#xA;&lt;a href=&#34;https://github.com/gicLAB/transfer-tuning/tree/main&#34;&gt;transfer-tuning&lt;/a&gt; and&#xA;&lt;a href=&#34;https://dl.acm.org/doi/10.1145/3650109&#34;&gt;droplet search&lt;/a&gt;.&#xA;In our tests, we find that combining these two techniques can lead to an improvement of up&#xA;to 10% faster inference than using transfer-tuning alone.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -19,7 +19,7 @@ Here is a list of all of the posts I have planned:
 - [x] Moore's Falls Eagle Scout Project
 - [x] APCSA TA
 - [ ] SNHU Computer Science Club VP
-- [ ] **FreeMoveVR**
+- [ ] FreeMoveVR
 - [ ] SJSU MS Thesis
 - [ ] Unified Live Chat
 - [ ] SJSU MS AI Education
@@ -34,5 +34,6 @@ Here is a list of all of the posts I have planned:
 - [ ] Yabi
 - [x] Flutter M BLE
 - [x] Google Mediapipe Pose Detection
-- [ ] **Arity Android Engineer Intern**
+- [ ] Arity Android Engineer Intern
+- [x] TVM Search
 
