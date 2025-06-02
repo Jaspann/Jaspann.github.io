@@ -21,11 +21,12 @@ Soon:
 - Personal Site
 - PocketLLM
 - RoundHouse
-- Unified Live Chat
 - Yabi
+- Inclusive World Volunteer
 
 Future:
 - FreeMoveVR
+- Unified Live Chat
 - SJSU MS AI Education
 - SNHU Comp Sci Education
 

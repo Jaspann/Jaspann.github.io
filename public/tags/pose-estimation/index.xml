@@ -9,8 +9,15 @@
     <managingEditor>wiparker2020@gmail.com (William Parker)</managingEditor>
     <webMaster>wiparker2020@gmail.com (William Parker)</webMaster>
     <copyright>William Parker</copyright>
-    <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/pose-estimation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mediapipe Pose Detection: Flutter Library</title>
+      <link>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate><author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/software-libraries/google-mediapipe-pose-detection/</guid>
+      <description>&lt;p&gt;&lt;em&gt;A Flutter library for pose detection using Google&amp;rsquo;s Mediapipe.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Before 2023, Google&amp;rsquo;s solution for machine learning (ML) on mobile was&#xA;&lt;a href=&#34;https://developers.google.com/ml-kit/&#34;&gt;ML Kit&lt;/a&gt;. The library was for Android and iOS&#xA;and had a variety of small models to perform common tasks that developers could use for&#xA;their apps. This was before LLMs took over the public mind, so the platform heavily focused&#xA;on computer vision for tasks like facial detection and image labeling.&#xA;The library was well received by many developers and the developer community was even&#xA;interested enough in the library that it was ported to Flutter for&#xA;iOS and Android as &lt;a href=&#34;https://pub.dev/packages/google_ml_kit&#34;&gt;google_ml_kit&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>3tene AutoHotKey</title>
       <link>http://localhost:1313/post/ai-projects/3tene-autohotkey/</link>

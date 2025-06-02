@@ -548,12 +548,13 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;Personal Site&lt;/li&gt;
 &lt;li&gt;PocketLLM&lt;/li&gt;
 &lt;li&gt;RoundHouse&lt;/li&gt;
-&lt;li&gt;Unified Live Chat&lt;/li&gt;
 &lt;li&gt;Yabi&lt;/li&gt;
+&lt;li&gt;Inclusive World Volunteer&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Future:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;FreeMoveVR&lt;/li&gt;
+&lt;li&gt;Unified Live Chat&lt;/li&gt;
 &lt;li&gt;SJSU MS AI Education&lt;/li&gt;
 &lt;li&gt;SNHU Comp Sci Education&lt;/li&gt;
 &lt;/ul&gt;
@@ -572,6 +573,17 @@ worked on from a technical perspective and show off the design process behind th
 &lt;li&gt;TVM Search&lt;/li&gt;
 &lt;/ul&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>Personal Site</title>
+      <link>http://localhost:1313/post/web-projects/personal-site/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/web-projects/personal-site/</guid>
+      
+        <description></description>
       
     </item>
     
@@ -933,6 +945,17 @@ BLE peripheral specification was an interesting and fun challenge. From this, I 
 work, Bluetooth, and backward compatibility with existing solutions. This immediately preceded my work on my next Flutter
 library, google_mediapipe_pose_detection, where I further expanded my abilities in this area.&lt;/p&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>Personal Site</title>
+      <link>http://localhost:1313/post/web-projects/roundhouse/</link>
+      <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
+      <author>wiparker2020@gmail.com (William Parker)</author>
+      <guid>http://localhost:1313/post/web-projects/roundhouse/</guid>
+      
+        <description></description>
       
     </item>
     
@@ -1487,21 +1510,10 @@ a historical group and museum dedicated to preserving the history of the canal s
     
     <item>
       <title></title>
-      <link>http://localhost:1313/post/web-projects/personal-site/</link>
+      <link>http://localhost:1313/post/web-projects/inclusive-world/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/web-projects/personal-site/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/web-projects/roundhouse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>wiparker2020@gmail.com (William Parker)</author>
-      <guid>http://localhost:1313/post/web-projects/roundhouse/</guid>
+      <guid>http://localhost:1313/post/web-projects/inclusive-world/</guid>
       
         <description></description>
       

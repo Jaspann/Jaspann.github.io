@@ -25,7 +25,7 @@ postWidget:
   # - type: category
   #   title: Web Projects
   #   category: web-projects
-  #   count: 2
+  #   count: 3
   - type: category
     title: Software Libraries
     category: software-libraries
