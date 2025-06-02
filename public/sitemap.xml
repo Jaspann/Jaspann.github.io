@@ -401,13 +401,13 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/current-projects/thesis-selective-pose-detection/</loc>
+    <loc>http://localhost:1313/post/education/snhu-comp-sci/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/education/snhu-comp-sci/</loc>
+    <loc>http://localhost:1313/post/mobile-projects/pocket-llm/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -419,7 +419,19 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/web-projects/personal-site/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/post/web-projects/roundhouse/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/web-projects/unified-live-chat/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

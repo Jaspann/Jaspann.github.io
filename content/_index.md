@@ -14,26 +14,10 @@ introductionWidget:
   showSocial: true
 
 postWidget:
-  # - type: category
-  #   title: Work Experiences
-  #   category: work-experiences
-  #   count: 2
-  # - type: category
-  #   title: Current Projects
-  #   category: current-projects
-  #   count: 3
   - type: category
     title: AI Projects
     category: ai-projects
     count: 4
-  - type: category
-    title: Software Libraries
-    category: software-libraries
-    count: 3
-  # - type: category
-  #   title: Education
-  #   category: education
-  #   count: 2
   - type: category
     title: Mobile Projects
     category: mobile-projects
@@ -41,6 +25,14 @@ postWidget:
   # - type: category
   #   title: Web Projects
   #   category: web-projects
+  #   count: 2
+  - type: category
+    title: Software Libraries
+    category: software-libraries
+    count: 3
+  # - type: category
+  #   title: Education
+  #   category: education
   #   count: 2
   - type: category
     title: Community Work

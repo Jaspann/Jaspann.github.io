@@ -16,24 +16,29 @@ worked on from a technical perspective and show off the design process behind th
 The date of the post the approximate date I finished the project, not the date of writing.
 
 Here is a list of all of the posts I have planned:
-- [x] Moore's Falls Eagle Scout Project
-- [x] APCSA TA
-- [ ] SNHU Computer Science Club VP
-- [ ] FreeMoveVR
-- [ ] SJSU MS Thesis
-- [ ] Unified Live Chat
-- [ ] SJSU MS AI Education
-- [ ] SNHU Comp Sci Education
-- [x] 3tene AHK
-- [x] Eventified
-- [x] FlightSure
-- [x] ChordLlama
-- [x] Multi-Repo Coding Assistant
-- [x] Pond Jumper
-- [ ] RoundHouse
-- [ ] Yabi
-- [x] Flutter M BLE
-- [x] Google Mediapipe Pose Detection
-- [ ] Arity Android Engineer Intern
-- [x] TVM Search
+
+Soon:
+- Personal Site
+- PocketLLM
+- RoundHouse
+- Unified Live Chat
+- Yabi
+
+Future:
+- FreeMoveVR
+- SJSU MS AI Education
+- SNHU Comp Sci Education
+
+Completed Pages:
+- Moore's Falls Eagle Scout Project
+- APCSA TA
+- 3tene AHK
+- Eventified
+- FlightSure
+- ChordLlama
+- Multi-Repo Coding Assistant
+- Pond Jumper
+- Flutter M BLE
+- Google Mediapipe Pose Detection
+- TVM Search
 
