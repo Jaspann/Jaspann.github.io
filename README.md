@@ -5,7 +5,7 @@ worked on from a technical perspective and show off the design process behind th
 The date of the post the approximate date I finished the project, not the date of writing.
 
 ### Dev Steps
-To run the server in development mode: `hugo server --noHTTPCache `
+To run the server in development mode: `hugo server --noHTTPCache`
 
 Before committing:
 - `hugo --cleanDestinationDir --gc`
